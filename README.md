@@ -1,25 +1,25 @@
-# Título do Projeto
+# VolunTech
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas - PUC Minas`
 
-`DISCIPLINA`
+`Desenvolvimento de Aplicação Web Front-End`
 
-`SEMESTRE`
+`1º Semestre/2024`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+O Objetivo geral deste projeto é desenvolver uma plataforma web denominada VolunTech, para facilitar o acesso a informações sobre instituições de caridade e oportunidades de trabalho voluntário.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Frederico Vieira Cintra Karklin Tavares
+* João Victor Nery dos Santos
+* Lis Maria Lima Moreno
+* Lucas Barbosa Costa
+* Pedro Henrique da Silva Durães
+* Tatiana Alves Medeiros
 
 ## Orientador
 
-* Nome completo do professor
+* Prof. Hayala Nepomuceno Curto
 
 # Documentação
 
@@ -37,7 +37,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
 
 # Hospedagem
 
-* Insira o endereço eletrônico público de acesso ao conteúdo publicado. 
+A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech">aqui</a> para acessá-lo. 
 
 # Código-Fonte
 
