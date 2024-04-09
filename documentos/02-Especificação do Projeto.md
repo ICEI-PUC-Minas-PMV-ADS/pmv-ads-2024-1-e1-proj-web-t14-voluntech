@@ -92,7 +92,7 @@
 |ID      | Descrição               |Prioridade |
 |--------|-------------------------|----|
 | RNF-01 |  A aplicação deve ser publicada em um ambiente acessível público na internet. | Alta | 
-| RNF-02 |  A aplicação deverá ser responsiva permitindo a visualização em diversos dispositos de forma adequada. | Média | 
+| RNF-02 | A aplicação deverá ser responsiva permitindo a visualização em diversos dispositos de forma adequada. | Média |
 | RNF-03 |  A aplicação deve ser compatível com os principais navegadores do mercado: Google Chrome, Firefox e Microsoft Edge. | Alta | 
 | RNF-04 |  A aplicação deve dispor o filtro de instituições de caridade em menos de 4 segundos. | Alta |
 
