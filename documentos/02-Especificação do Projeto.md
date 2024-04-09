@@ -68,7 +68,7 @@
 | Como Doador | Encontrar quais instituições de caridade estão disponíveis em determinada localização. | Para que eu possa contribuir com as instituições de caridade.                              |
 | Como Voluntário | Desejo ceder meu capital humano de acordo com minhas qualificações. | Para que eu possa contribuir com as instituições de caridade.                                     |
 | Como Instuição de Caridade | Me conectar com potenciais doadores. | Dar continuidade aos projetos de caridade.                    |
-| Como Instuição de Caridade | Captar potenciais voluntários especializados ou não. | Que possam apoiar os projetos das instituições                                                  |
+| Como Instuição de Caridade | Captar potenciais voluntários especializados ou não. | Que possam apoiar os projetos das instituições.                                                  |
 
 ## Requisitos do Projeto
 
@@ -83,7 +83,7 @@
 |  RF-03  |  Criar um mecanismo para postagem de necessidades das instituições de caridade. | Média |
 |  RF-04  |  Criar um mecanismo (feed) para exibir as postagens das necessidades das instituições de caridade. | Média |
 |  RF-05  |  Criar uma seção de comentários e avaliações referentes às instituições de caridade deixadas por voluntários/doadores. | Baixa |
-|  RF-06  |  Criar um mecanismo de ranking das instituições de caridade | Baixa |
+|  RF-06  |  Criar um mecanismo de ranking das instituições de caridade. | Baixa |
 
 **Prioridade: Alta / Média / Baixa. 
 
