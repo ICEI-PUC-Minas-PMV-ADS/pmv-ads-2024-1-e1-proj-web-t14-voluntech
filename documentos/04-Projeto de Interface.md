@@ -30,7 +30,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Home page</b></h3>
 <p>A tela de home page apresenta banners que remetem para as páginas de instituições de caridade, avaliação das instituições e avalie as instituições.</p>
 
-![homepage](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=1-166&t=Q5NPOS6h8204ksB6-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![homepage](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/home-page.png)
 
 <figure> 
   <figcaption>Figura 3 - Tela Home Page
@@ -40,7 +40,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Sobre nós</b></h3>
 <p>A tela de sobre nós apresenta a VolunTech com sua missão, visão e valores.</p>
   
-![Sobre nós](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2051-913&t=iMoKbylqlVD6IvzS-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Sobre nós](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/sobre-nos.png)
 
 <figure> 
   <figcaption> Figura 4 - Tela Sobre nós
@@ -50,7 +50,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Instituições</b></h3>
 <p>A tela das instuições apresenta as instuições cadastradas.</p>
   
-![Instituições](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2051-915&t=phbJCw2HVSGg0MKx-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Instituições](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/instituicoes.png)
 
 <figure> 
   <figcaption> Figura 5 - Tela das Instituições
@@ -60,7 +60,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Feed</b></h3>
 <p>A tela de feed mostra a interação entre instituições e doadores/voluntários.</p>
   
-![Feed](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2103-846&t=hb5TaxWW96hvDcyM-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Feed](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/feed.png)
 
 <figure> 
   <figcaption> Figura 6 - Tela de Feed
@@ -70,7 +70,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Portal das Instituições</b></h3>
 <p>A tela de portal das instituições apresenta o cadastro das instituições e como elas podem interagir na plataforma.</p>
   
-![Portal das Instituições](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2051-917&t=ex8nb4KDV3eqhDOm-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Portal das Instituições](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/portal-das-instituicoes.png)
 
 <figure> 
   <figcaption> Figura 7 - Tela do Portal das Instituições
@@ -80,7 +80,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Login</b></h3>
 <p>A tela de login apresenta onde os doadores e voluntários podem entrar com seu login e senha.</p>
   
-![Login](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2119-915&t=bWnWCB3hBarCYj7i-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Login](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/login.png)
 
 <figure> 
   <figcaption> Figura 8 - Tela de Login
@@ -90,7 +90,7 @@ As telas do sistema apresentam uma estrutura comum que é apresentada na figura 
 <h3><b>Tela - Atualização de Cadastro</b></h3>
 <p>A tela de atualização de cadastro das instituições para corrigir dados importantes.</p>
   
-![Atualização de Cadastro](https://www.figma.com/proto/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=2129-38&t=VU4fmaclXqfUvnXt-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A166&mode=design)
+![Atualização de Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/atualizacao-de-cadastro.png)
 
 <figure> 
   <figcaption> Figura 9 - Tela de Atualização de Cadastro
