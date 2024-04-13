@@ -66,8 +66,8 @@ As ferramentas empregadas no projeto são:
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/README.md                           |
 | Documentos do projeto               | GitHub                             | https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech                            |
-| Projeto de Interface                | Figma                              | http://....                            |
-| Gerenciamento do Projeto            | GitHub Projects                    | http://....                            |
+| Projeto de Interface                | Figma                              | https://www.figma.com/file/FSealTMKgpfkNy7DE6vyA1/VolunTech?type=design&node-id=0-1&mode=design                            |
+| Gerenciamento do Projeto            | GitHub Projects                    | https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/1005                          |
 | Hospedagem                          | GitHub Pages                       | http://....                            |
 
 
