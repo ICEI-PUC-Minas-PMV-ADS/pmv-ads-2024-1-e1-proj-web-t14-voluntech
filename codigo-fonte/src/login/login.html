@@ -73,61 +73,65 @@
     </header>
     <!-- Fim Cabeçalho -->
 
+
+   
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>login</title>
+  <title>Login</title>
   <style>
-    body{
-      font-family: Verdana;
-      background-image: element(snow);
-    }
-    div{
-      background-color: rgba(109, 183, 173, 0,9);
-      position:absolute;
+    body {
+      background-color: snow;
+      font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
+      }
+
+    .login-form {
+      position: absolute;
       top: 50%;
       left: 50%;
+      width: 300px;
+      margin: 2px;
+      padding: 70px;      
+      border-radius: 10%;     
       transform: translate(-50%,-50%);
       padding: 70px;
       border-radius: 15%;
-      color: white;
+      color: #6db7ab;
     }
-    input{
-      padding: 10px;
-      border: none;
-      outline: none;
-      font-size: 15px;
+
+    .login-form h2 {
+      margin-top: 0;
     }
-    button{
-      background-color: rgb(109, 185, 175);
-      border-color: darkslategray;
+
+    .login-form input {
+      width: 100%;
       padding: 10px;
-      width: 80%;
-      border-radius: 15px;
-      color: white;
+      margin: 10px 0;
+      border:#6db7ab;      
+    }
+
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      background-color: #6db7ab;     
       cursor: pointer;
     }
     button:hover{
       background-color: darkcyan;
+      font: color snow;
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Login</h1>
-    <input type="text"placeholder= "E-mail">
-    <br><br>
-    <input type="password"placeholder="Senha">
-    <br><br>
-    <button>Entrar Agora</button>
-    <br><br>
-    <h5>
-    <input type="text"placeholder="Não possui conta? Cadastre-se agora!"></h5>
-
-
+  <div class="login-form">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+      <input type="text" name="username" placeholder="E-mail">
+      <input type="password" name="password" placeholder="Senha">
+      <button type="submit">Entrar</button>
+      <h6>Não possui conta? Cadastre-se!</h6>
+    </form>
   </div>
   
 </body>
