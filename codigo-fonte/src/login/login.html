@@ -84,6 +84,19 @@
       background-color: snow;
       font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
       }
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      background-color: snow;
+    }
+    .areaLogin img {
+    width: 420px;}
+      
 
     .login-form {
       position: absolute;
@@ -91,23 +104,26 @@
       left: 50%;
       width: 300px;
       margin: 2px;
-      padding: 70px;      
-      border-radius: 10%;     
-      transform: translate(-50%,-50%);
-      padding: 70px;
+      padding: 40px;      
+      border-radius: 5%;     
+      transform: translate(-50%,-50%);      
       border-radius: 15%;
       color: #6db7ab;
+      box-shadow:  10px 10px 40px #6db7ab;
+      gap: 5px
     }
 
     .login-form h2 {
-      margin-top: 0;
+      margin-top: 0;    
     }
 
     .login-form input {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
-      border:#6db7ab;      
+      border:none;
+      transition: all linear 160ms;
+      outline: none;      
     }
 
     .login-form button {
@@ -116,10 +132,14 @@
       margin: 10px 0;
       background-color: #6db7ab;     
       cursor: pointer;
+      font-size: 2,3em;
     }
     button:hover{
-      background-color: darkcyan;
-      font: color snow;
+      background-color: darkcyan;           
+    }
+    input:hover {
+      background-color: #beeee000;
+
     }
   </style>
 </head>
@@ -130,7 +150,7 @@
       <input type="text" name="username" placeholder="E-mail">
       <input type="password" name="password" placeholder="Senha">
       <button type="submit">Entrar</button>
-      <h6>Não possui conta? Cadastre-se!</h6>
+      <input type="submit" value="Não possui conta? Cadastre-se!">
     </form>
   </div>
   
