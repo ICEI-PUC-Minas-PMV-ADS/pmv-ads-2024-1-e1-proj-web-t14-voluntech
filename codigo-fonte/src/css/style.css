@@ -49,13 +49,12 @@ a {
 
 .btn-2 {
   width: 250px;
-  height: 45px;
+  height: 35px;
   color: white;
   background-color: lime;
   border-color: lime;
   border-radius: 5px;
   margin-right: 35px;
-  color: white
 }
 
 .btn-2:hover {
@@ -80,7 +79,6 @@ a {
   background-color:red;
   border-color:red;
   border-radius: 5px;
-  color: white
 }
 
 .btn-3:hover {
@@ -101,17 +99,6 @@ a {
   height: 510px;
   border-left: 1px solid;
   margin-left: 300px;
-  ;
-}
-
-h4 {
-  margin-left: 100px;
-  margin-top: 100px;
-}
-
-h2 {
-  margin-left: 90px;
-  height: 45px;
 }
 
 .centered {
