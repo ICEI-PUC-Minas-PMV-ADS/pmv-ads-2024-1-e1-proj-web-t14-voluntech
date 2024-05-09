@@ -129,48 +129,43 @@ h4 {
   margin-left: 70px;
   margin-top: 100px;
   float: left;
-}
-
-form {
-  margin-top: 15px;
-}
-
-.container-fluid {
-  margin-top: 15px;
+  padding-top: 3%;
 }
 
 .btn-2 {
   width: 220px;
   height: 35px;
   color: white;
-  background-color: SeaGreen;
-  border-color: SeaGreen;
+  background-color: lime;
+  border-color: lime;
   border-radius: 5px;
-  margin-right: 35px;
+  margin-left: 60px;
 }
 
 .btn-2:hover {
   width: 220px;
   height: 35px;
   color: white;
-  background-color: MediumSeaGreen;
-  border-color: MediumSeaGreen;
+  background-color: lime;
+  border-color: lime;
   border-radius: 5px;
-  margin-right: 35px;
+  opacity: 0.7;
+  translate: 1px;
 }
 
 .btn-2:focus {
-  background-color: MediumSeaGreen;
-  border-color: MediumSeaGreen;
+  background-color: lime;
+  border-color: lime;
 }
 
 .btn-3 {
   width: 220px;
   height: 35px;
   color: white;
-  background-color: Maroon;
-  border-color: Maroon;
+  background-color: red;
+  border-color: red;
   border-radius: 5px;
+  margin-left: 55px;
 }
 
 .btn-3:hover {
@@ -180,6 +175,8 @@ form {
   background-color: red;
   border-color: red;
   border-radius: 5px;
+  opacity: 0.7;
+  translate: 1px;
 }
 
 .btn-3:focus {
@@ -188,7 +185,7 @@ form {
 }
 
 .linha-vertical {
-  height: 530px;
+  height: 550px;
   border-left: 1px solid;
   margin-left: 300px;
 }
