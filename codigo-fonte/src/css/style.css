@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   line-height: 1.5em;
 }
@@ -73,8 +73,8 @@ a {
 .btn-3 {
   width: 200px;
   height: 45px;
-  background-color: red;
-  border-color: red;
+  background-color:red;
+  border-color:red;
   border-radius: 5px;
 }
 
@@ -105,4 +105,4 @@ h2 {
   display: block;
   max-width: 50rem;
   margin: 0 auto;
-   }
+}
