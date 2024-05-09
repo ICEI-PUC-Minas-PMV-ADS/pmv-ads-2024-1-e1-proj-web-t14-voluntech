@@ -24,6 +24,9 @@
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7b34264bcc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -32,11 +35,15 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-color">
       <div class="container mt-3 mb-3">
         <a href="index.html" class="navbar-brand">
-          <img src="img/logo.png" width="140" alt="" />
-          VolunTech
+          <img src="src/img/logo.png" width="140" alt=""/> 
+          VolunTech 
         </a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#nav-principal"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -65,84 +72,91 @@
   <!-- Fim Cabeçalho -->
 
   <!-- Início do Formulário -->
-   <div><h4>Editar Perfil</h4>
+  <div class="container-fluid">
+
+    <button type="button" class="btn btn-lg btn-light float-left ml-2">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <h4 class="mt-2">Editar Perfil</h4>
+
     <div class="linha-vertical">
-        <form action="#" method="POST">
-          <div class="row justify-content-left ml-5">
-            <div class="col-md-4 form-group">
-              <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
-              <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
-                placeholder="Nome da instituição" required />
-            </div>
-            <div class="col-md-4 form-group">
-              <label for="cidade" class="form-label">Cidade:</label>
-              <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required />
-            </div>
-          </div>
+      <form action="#" method="POST">
 
-          <div class="row justify-content-left ml-5">
-            <div class="col-md-4 form-group">
-              <label for="email" class="form-label">E-mail:</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
-            </div>
-            <div class="col-md-4 form-group">
-              <label for="telefone" class="form-label">Telefone Fixo:</label>
-              <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone"
-                required />
-            </div>
+        <div class="row justify-content-left ml-5">
+          <div class="col-md-4 form-group">
+            <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
+            <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
+              placeholder="Nome da instituição" required />
           </div>
+          <div class="col-md-4 form-group">
+            <label for="cidade" class="form-label">Cidade:</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required />
+          </div>
+        </div>
 
-          <div class="row justify-content-left ml-5">
-            <div class="col-md-4 form-group">
-              <label for="cnpj" class="form-label">CNPJ:</label>
-              <input type="text" class="form-control" id="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ"
-                required />
-            </div>
-            <div class="col-md-4 form-group">
-              <label for="celular" class="form-label">Celular:</label>
-              <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular"
-                required />
-            </div>
+        <div class="row justify-content-left ml-5">
+          <div class="col-md-4 form-group">
+            <label for="email" class="form-label">E-mail:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
           </div>
+          <div class="col-md-4 form-group">
+            <label for="telefone" class="form-label">Telefone Fixo:</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone"
+              required />
+          </div>
+        </div>
 
-          <div class="row justify-content-left ml-5">
-            <div class="col-md-4 form-group">
-              <label for="cep" class="form-label">CEP:</label>
-              <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="CEP" required />
-            </div>
-            <div class="col-md-4 form-group">
-              <label for="categorias" class="form-label">Categorias:</label>
-              <select class="form-control" id="categorias" name="categorias">
-                <option value="">--- Selecione uma opção ---</option>
-                <option value="alimenticio">Alimentício</option>
-                <option value="bancario">Bancário</option>
-                <option value="comercio">Comércio Varejista</option>
-                <option value="contrucaoCivil">Construção Civil</option>
-                <option value="educacao">Educação</option>
-                <option value="logisticaTransporte">
-                  Logística e Transporte
-                </option>
-                <option value="saude">Saúde</option>
-                <option value="outras">Outras</option>
-              </select>
-            </div>
+        <div class="row justify-content-left ml-5">
+          <div class="col-md-4 form-group">
+            <label for="cnpj" class="form-label">CNPJ:</label>
+            <input type="text" class="form-control" id="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ" required />
           </div>
-          <div class="row justify-content-left ml-5">
-            <div class="col-md-8 form-group">
-              <label for="formGroupExampleInput">Necessidades:</label>
-              <input type="text" class="form-control " id="formGroupExampleInput"
-                placeholder="Exemplo: Necessitamos de Fraldas">
-            </div>
+          <div class="col-md-4 form-group">
+            <label for="celular" class="form-label">Celular:</label>
+            <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular"
+              required />
           </div>
-          <div class="row justify-content-center">
-         <p>
-          <div class="row">
-            <div class="d-grid gap-2 mx-auto">
-                <button class="btn-2" type="button">Salvar</button>
-            </div>
-          </div>
+        </div>
 
-        </form>
+        <div class="row justify-content-left ml-5">
+          <div class="col-md-4 form-group">
+            <label for="cep" class="form-label">CEP:</label>
+            <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="CEP" required />
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="categorias" class="form-label">Categorias:</label>
+            <select class="form-control" id="categorias" name="categorias">
+              <option value="">----- Selecione uma opção -----</option>
+              <option value="alimenticio">Alimentício</option>
+              <option value="bancario">Bancário</option>
+              <option value="comercio">Comércio Varejista</option>
+              <option value="contrucaoCivil">Construção Civil</option>
+              <option value="educacao">Educação</option>
+              <option value="logisticaTransporte">
+                Logística e Transporte
+              </option>
+              <option value="saude">Saúde</option>
+              <option value="outras">Outras</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row justify-content-left ml-5">
+          <div class="col-md-8 form-group">
+            <label for="formGroupExampleInput">Necessidades:</label>
+            <input type="text" class="form-control " id="formGroupExampleInput"
+              placeholder="Exemplo: Necessitamos de Fraldas">
+          </div>
+        </div>
+        <div class="row justify-content-left ml-5">
+          <div class="d-grid gap-2 mx-5">
+            <button class="btn-3 ml-5 mr-5 fixed-position" type="button">Cancelar</button>
+            <button class="btn-2 fixed-position" type="button">Salvar</button>
+          </div>
+        </div>
+
+      </form>
     </div>
     <!-- Fim do Formulário -->
 </body>
