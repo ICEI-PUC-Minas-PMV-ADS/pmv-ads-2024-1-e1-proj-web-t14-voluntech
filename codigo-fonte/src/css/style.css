@@ -143,7 +143,6 @@ h4 {
   margin-left: 70px;
   margin-top: 100px;
   float: left;
-  padding-top: 3%;
 }
 
 .btn-2 {
@@ -153,7 +152,7 @@ h4 {
   background-color: lime;
   border-color: lime;
   border-radius: 5px;
-  margin-left: 60px;
+  margin-left: 75px;
 }
 
 .btn-2:hover {
@@ -179,7 +178,7 @@ h4 {
   background-color: red;
   border-color: red;
   border-radius: 5px;
-  margin-left: 55px;
+  margin-left: 50px;
 }
 
 .btn-3:hover {
@@ -199,7 +198,7 @@ h4 {
 }
 
 .linha-vertical {
-  height: 550px;
+  height: 545px;
   border-left: 1px solid;
   margin-left: 300px;
 }
