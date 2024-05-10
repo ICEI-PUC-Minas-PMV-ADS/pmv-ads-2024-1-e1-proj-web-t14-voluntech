@@ -123,6 +123,20 @@ input:hover {
   background-color: #beeee000;
 }
 
+/* Estilos página Sobre Nos - Tatiana*/
+
+.page {
+  font-family: Verdana;
+  background-color: snow;
+  font-size: 1, 5;
+  border-radius: 4%;
+  position: relative;
+  margin: 20px 1;
+  top: 20%;
+  left: 20%;
+
+}
+
 /* Estilos Gerais da Lucas */
 
 h4 {
