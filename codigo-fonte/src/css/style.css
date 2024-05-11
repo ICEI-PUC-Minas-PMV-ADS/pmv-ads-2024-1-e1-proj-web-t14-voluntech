@@ -123,17 +123,64 @@ input:hover {
   background-color: #beeee000;
 }
 
-/* Estilos página Sobre Nos - Tatiana*/
+/* Estilos página Sobre Nos - Tatiana */
 
-.page {
+#sobre-nos {
   font-family: Verdana;
   background-color: snow;
-  font-size: 1, 5;
+  padding: 2%;
+  margin: 3px 0;
   border-radius: 4%;
+  float: left;
+  border: 4px solid snow;
+  top: 22%;
+  position: fixed;
+  text-align: justify;
+  box-shadow: 10px 10px 40px #6db7ab;
+  transform: translate(5%, 4%);
+}
+#sobre-nos h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  }
+
+#sobre-nos p {
+  font-size: 16px;
+  line-height: 1.5em;
+ }
+
+#sobre-nos p {
+  list-style-type: none;
+  padding: 1;
+}
+
+#sobre-nos p {
+  margin-bottom: 5px;
+}
+
+#sobre-nos a {
+  color: #000;
+  text-decoration: none;
+}
+
+#sobre-nos a:hover {
+  color: #87cceb;
+  text-decoration: underline;
+}
+#img {
+  float: right;
+  margin: left 1%;
+  border-radius: 12%;
   position: relative;
-  margin: 20px 1;
-  top: 20%;
-  left: 20%;
+  padding: 5px;
+  top: 100px;
+  max-width: 300px;
+  max-height: 300px;
+  width: -60px;
+  height: -80%;
+  box-shadow: 2px 2px 6px #6db7ab;
+  transform: translate(-25%, 42%);
 
 }
 
