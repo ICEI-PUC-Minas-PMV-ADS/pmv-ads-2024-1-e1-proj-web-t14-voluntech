@@ -184,15 +184,15 @@ input:hover {
   font-family: Verdana;
   background-color: snow;
   padding: 2%;
-  margin: 3px 0;
+  margin: 1px 0;
   border-radius: 4%;
   float: left;
   border: 1px solid snow;
   top: 22%;
   position: fixed;
   text-align: justify;
-  box-shadow: 2px 2px 6px #6D8485;
-  transform: translate(5%, 4%);
+  box-shadow: 1px 1px 5px #6D8485;
+  transform: translate(0.5%, 4%);
 }
 #sobre-nos h1 {
   font-size: 40px;
@@ -211,7 +211,7 @@ input:hover {
 }
 
 #sobre-nos p {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 #sobre-nos a {
@@ -225,16 +225,16 @@ input:hover {
 }
 #img {
   float: right;
-  margin: left 1%;
+  margin: left 2%;
   border-radius: 12%;
   position: relative;
-  padding: 5px;
+  padding: 4px;
   top: 100px;
-  max-width: 300px;
-  max-height: 300px;
-  width: -60px;
-  height: -80%;
-  transform: translate(-25%, 42%);
+  max-width: 270px;
+  max-height: 270px;
+  width: -59px;
+  height: -79%;
+  transform: translate(-7%, 19%);
 
 }
 
