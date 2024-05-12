@@ -1,5 +1,19 @@
 /* Estilos Gerais */
 
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 5px;
+}
+
+.navbar-nav .btn {
+  margin-top: 5px; /* ajuste conforme necessário */
+  margin-bottom: 5px; /* ajuste conforme necessário */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +39,7 @@ a:hover {
 }
 
 #nav-principal a:link, #nav-principal a:visited {
-  color: #FFF;
+  color: #eeeeee;
   padding: 8px 12px;
 }
 
@@ -37,12 +51,12 @@ a:hover {
 
 .bg-color {
   /* background-image: linear-gradient(white,lightblue); */
-  background-color: deepskyblue;
+  background-color: #1f2f30ff;
   color: white;
 }
 
 .bg-color:hover {
-  background-color: skyblue;
+  background-color: #1f2f30ff;
 }
 
 .cadastro {
