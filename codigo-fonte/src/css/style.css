@@ -1,19 +1,5 @@
 /* Estilos Gerais */
 
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-nav .nav-item {
-  padding: 0 5px;
-}
-
-.navbar-nav .btn {
-  margin-top: 5px; /* ajuste conforme necessário */
-  margin-bottom: 5px; /* ajuste conforme necessário */
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -61,12 +47,6 @@ a:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 40px;
   font-weight: bold;
-}
-
-.nav-principal,
-li,
-a {
-  color: white;
 }
 
 /* Estilos Gerais da Lis */
