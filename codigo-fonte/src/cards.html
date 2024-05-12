@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cards" />
-    <meta name="author" content="Fred" />
+    <meta name="author" content="Lis" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <title>Cards</title>
     <link rel="stylesheet" href="css/style.css">
@@ -30,11 +30,12 @@
   </head>
 
   <body>
-
-    <header>
+     <!-- Início Cabeçalho -->
+     <header>
       <nav class="navbar navbar-expand-sm navbar-light bg-color">
+<<<<<<< Updated upstream
         <div class="container">
-          <a href="index.html" class="navbar-brand">
+          <a href="../index.html" class="navbar-brand">
             <img src="img/logo.png" width="140" alt="VolunTech"/>
           </a>
   
@@ -67,66 +68,138 @@
           </div>
         </div>
       </nav>
-    </header>
+  </header>
+  <!-- Fim Cabeçalho -->
 
     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Exemplo de Album</h1>
-          <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-          <p>
-            <a href="#" class="btn btn-primary my-2">Main call to action</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-          </p>
+          <h1 class="jumbotron-heading">Instituições</h1>
         </div>
       </section>
-
+      
       <div class="album py-5 bg-light">
         <div class="container">
-
           <div class="row">
+            <div class="col-md-4 form-group">
+              <label for="estado" class="form-label">Estado:</label>
+              <select class="form-control" id="categorias" name="categorias">
+                <option value="">------- Selecione uma opção -------</option>
+                  <option value="Acre">AC</option>
+                  <option value="Alagoas">AL</option>
+                  <option value="Amapá">AP</option>
+                  <option value="Amazonas">AM</option>
+                  <option value="Bahia">BA</option>
+                  <option value="Ceará">CE</option>
+                  <option value="Distrito Federal">DF</option>
+                  <option value="Espírito Santo">ES</option>
+                  <option value="Goiás">GO</option>
+                  <option value="Maranhão">MA</option>
+                  <option value="Mato Grosso">MT</option>
+                  <option value="Mato Grosso do Sul">MS</option>
+                  <option value="Minas Gerais">MG</option>
+                  <option value="Pará">PA</option>
+                  <option value="Paraíba">PB</option>
+                  <option value="Paraná">PR</option>
+                  <option value="Pernambuco">PE</option>
+                  <option value="Piauí">PI</option>
+                  <option value="Rio de Janeiro">RJ</option>
+                  <option value="Rio Grande do Norte">RN</option>
+                  <option value="Rio Grande do Sul">RS</option>
+                  <option value="Rondônia">RO</option>
+                  <option value="Roraima">RR</option>
+                  <option value="Santa Catarina">SC</option>
+                  <option value="São Paulo">SP</option>
+                  <option value="Sergipe">SE</option>
+                  <option value="Tocantins">TO</option>
+              </select>
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="cidade" class="form-label">Cidade:</label>
+            <select class="form-control" id="categorias" name="categorias">
+              <option value="">------- Selecione uma opção -------</option>
+                <option value="Aracaju">Aracaju</option>
+                <option value="Belém">Belém</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+                <option value="Boa Vista">Boa Vista</option>
+                <option value="Brasília">Brasília</option>
+                <option value="Campo Grande">Campo Grande</option>
+                <option value="Cuiabá">Cuiabá</option>
+                <option value="Curitiba">Curitiba</option>
+                <option value="Florianópolis">Florianópolis</option>
+                <option value="Fortaleza">Fortaleza</option>
+                <option value="Goiânia">Goiânia</option>
+                <option value="João Pessoa">João Pessoa</option>
+                <option value="Macapá">Macapá</option>
+                <option value="Maceió">Maceió</option>
+                <option value="Manaus">Manaus</option>
+                <option value="Natal">Natal</option>
+                <option value="Palmas">Palmas</option>
+                <option value="Porto Alegre">Porto Alegre</option>
+                <option value="Porto Velho">Porto Velho</option>
+                <option value="Recife">Recife</option>
+                <option value="Rio Branco">Rio Branco</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Salvador">Salvador</option>
+                <option value="São Luís">São Luís</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Teresina">Teresina</option>
+                <option value="Vitória">Vitória</option>
+            </select>
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="categorias" class="form-label">Categorias:</label>
+          <select class="form-control" id="categorias" name="categorias">
+            <option value="">------- Selecione uma opção -------</option>
+              <option value="alimenticio">Alimentício</option>
+              <option value="bancario">Bancário</option>
+              <option value="comercio">Comércio Varejista</option>
+              <option value="contrucaoCivil">Construção Civil</option>
+              <option value="educacao">Educação</option>
+              <option value="logisticaTransporte">Logística e Transporte</option>
+              <option value="saude">Saúde</option>
+              <option value="outras">Outras</option>
+          </select>
+       </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Anjinhos Protetores - Resgate e abrigo de animais.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Anjinhos Protetores</p>
+                  <p class="card-text">Resgate e abrigo de animais</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Arte em Ação - Apoio à cultura.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Arte em Ação</p>
+                  <p class="card-text">Apoio à cultura</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Educar para Transformar - Apoio educacional para crianças.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Educar para Transformar</p>
+                  <p class="card-text">Apoio educacional para crianças</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
@@ -134,91 +207,42 @@
 
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Esporte para Todos - Desportivo.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Esporte para Todos</p>
+                  <p class="card-text">Incentivo a práticas desportivas</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Lares Felizes - Acolhimento a crianças órfãs.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Lares Felizes</p>
+                  <p class="card-text">Acolhimento a crianças órfãs</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top" src="img/Mãos que Alimentam - Cozinha solidária.jpg" height="230" alt="Card image cap">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text">Mãos que Alimentam</p>
+                  <p class="card-text">Cozinha solidária</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
                     </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
@@ -229,15 +253,7 @@
 
     </main>
 
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-      </div>
-    </footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
