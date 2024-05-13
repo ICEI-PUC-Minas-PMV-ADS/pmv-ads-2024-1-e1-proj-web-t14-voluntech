@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal das Instituições">
+    <meta name="description" content="Home Page">
     <meta name="author" content="Fred Karklin">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <title>VolunTech</title>
@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-color">
             <div class="container mt-3 mb-3">
-                <a href="../index.html" class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
                     <img src="src/img/logo.png" width="140" alt=""> 
                 </a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
@@ -50,56 +50,52 @@
     <main role="main">
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <div class="container">
-                <h1 class="display-3">VolunTech</h1>
-                <p>Conectando boas ações</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais &raquo;</a></p>
+            <div class="containersize">
+                <h1 class="card-titulo">VolunTech</h1>
+                <p><a class="botao" href="src/sobre.html" role="button">Saiba mais &raquo;</a></p>
             </div>
         </div>
         <div class="container">
             <!-- Example row of columns -->
             <div class="row">
                 <div class="col-md-4">
+                    <a href="src/instituicoes.html" class="card-link">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="src/img/Anjinhos Protetores - Resgate e abrigo de animais.jpg" height="230" alt="Card image cap">
+                      <img class="card-img-top" src="src/img/search.png" height="230" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text">Anjinhos Protetores</p>
-                        <p class="card-text">Resgate e abrigo de animais</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
-                          </div>
+                        <p class="card-title">Busque por instituições</p>
+                        <p class="card-text">Encontre instituições de acordo com o estado, cidade ou categoria </p>
+                        <div class="d-flex justify-content-between align-items-center">                          
                         </div>
                       </div>
                     </div>
+                        </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a href="src/feed.html" class="card-link">
+                    <div class="card mb-4 box-shadow">
+                      <img class="card-img-top" src="src/img/volunteering.png" height="230" alt="Card image cap">
+                      <div class="card-body">
+                        <p class="card-title">Ajude de outra forma</p>
+                        <p class="card-text">Saiba as necessidades das instituições de caridade em sua cidade</p>
+                        <div class="d-flex justify-content-between align-items-center">                          
+                        </div>
+                      </div>
+                    </div>
+                        </a>
                   </div>
                   <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="src/img/Arte em Ação - Apoio à cultura.jpg" height="230" alt="Card image cap">
+                    <a href="src/portal-das-instituicoes.html" class="card-link">
+                      <img class="card-img-top" src="src/img/register.png" height="230" alt="Card image cap">
                       <div class="card-body">
-                        <p class="card-text">Arte em Ação</p>
-                        <p class="card-text">Apoio à cultura</p>
+                        <p class="card-title">Cadastrar instituição</p>
+                        <p class="card-text">Registre uma instituição de caridade</p>
                         <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
-                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="src/img/Educar para Transformar - Apoio educacional para crianças.jpg" height="230" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-text">Educar para Transformar</p>
-                        <p class="card-text">Apoio educacional para crianças</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    </a>
                   </div>
             <hr>
         </div> <!-- /container -->
@@ -108,7 +104,7 @@
 
     <!-- Rodapé -->
     <footer class="container">
-        <p>&copy; VolunTech 2024</p>
+        <p>&copy; VolunTech</p>
     </footer>
     <!-- Fim Rodapé -->
 
