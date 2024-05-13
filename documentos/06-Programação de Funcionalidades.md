@@ -185,7 +185,7 @@ RF-08: Criar uma página de login para as instituições de caridade.
 
 ### Estrutura de Dados
 <ul>
-  <li>login.html/li>
+  <li>login.html</li>
 </ul>
 
 ### Instruções de acesso
