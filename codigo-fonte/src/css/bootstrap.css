@@ -405,6 +405,7 @@ h6, .h6 {
   font-size: 4.5rem;
   font-weight: 300;
   line-height: 1.2;
+  color: #FFFFFF;
 }
 
 .display-4 {
@@ -4832,6 +4833,9 @@ input[type="button"].btn-block {
 
 .card-title {
   margin-bottom: 0.75rem;
+  font-size: 20px;
+  font-weight: 600;
+  color: #3d445c;
 }
 
 .card-subtitle {
@@ -4839,8 +4843,9 @@ input[type="button"].btn-block {
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.card-text {
   margin-bottom: 0;
+  color: #858EAD;
 }
 
 .card-link:hover {
@@ -4899,7 +4904,9 @@ input[type="button"].btn-block {
 .card-img-bottom {
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  width: 100%;
+  width: 30%;
+  height: 30%;
+  padding: 1.25rem;
 }
 
 .card-img,
@@ -5312,10 +5319,13 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .jumbotron {
+  height: 500px;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+  background-image: url(../img/background.png);
+  background-size: cover;
 }
 
 @media (min-width: 576px) {
