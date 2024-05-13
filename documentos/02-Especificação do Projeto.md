@@ -78,12 +78,15 @@
 
 |ID    | Descrição                | Prioridade |
 |-------|---------------------------------|----|
+| RF-00 |  A aplicação deve possuir uma página inicial contendo hyperlinks para as demais features do site | Alta | 
 | RF-01 |  Criar um mecanismo para cadastro das instituições de caridade. | Alta | 
 |  RF-02  |  Criar um mecanismo (catálogo) para exibir as instituições cadastradas disponíveis para voluntariado/doações. | Alta |
 |  RF-03  |  Criar um mecanismo para postagem de necessidades das instituições de caridade. | Média |
 |  RF-04  |  Criar um mecanismo (feed) para exibir as postagens das necessidades das instituições de caridade. | Média |
 |  RF-05  |  Criar uma seção de comentários e avaliações referentes às instituições de caridade deixadas por voluntários/doadores. | Baixa |
 |  RF-06  |  Criar um mecanismo de ranking das instituições de caridade. | Baixa |
+|  RF-07  |  Criar uma página contendo informações a respeito da VolunTech | Média |
+|  RF-08  |  Criar uma página de login para as instituições de caridade. | Alta |
 
 **Prioridade: Alta / Média / Baixa. 
 
