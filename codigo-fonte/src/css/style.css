@@ -30,6 +30,12 @@ a:hover {
   align-items: center;
 }
 
+.nav-principal,
+li,
+a {
+  color: white;
+}
+
 .navbar-nav .nav-item {
   padding: 0 5px;
 }
@@ -65,14 +71,6 @@ a:hover {
   font-weight: bold;
 }
 
-<<<<<<< Updated upstream
-=======
-.nav-principal,
-li,
-a {
-  color: white;
-}
-
 .card-titulo {
   margin-bottom: 0.75rem;
   font-size: 85px;
@@ -91,6 +89,7 @@ a {
   background-color: #e9ecef;
   border-radius: 0.3rem;
   background-image: url(../img/background.png);
+  background-repeat: no-repeat;
 }
 
 .containersize {
@@ -116,7 +115,6 @@ a {
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #FFFFFF;
   background-color: transparent;
   border-color: #FFFFFF;
   padding: 0.5rem 1rem;
@@ -125,7 +123,25 @@ a {
   border-radius: 0.3rem;
 }
 
->>>>>>> Stashed changes
+.botao:link,
+.botao:visited {
+  color: #FFFFFF;
+}
+
+.botao:active {
+  background-color: #FFFFFF;
+  color: #1f2f30ff;
+}
+
+.botao:hover {
+  background-color: #FFFFFF;
+  color: #1f2f30ff;
+}
+
+.botao:focus {
+  outline: 0;
+}
+
 /* Estilos Gerais da Lis */
 
 :root {
@@ -138,6 +154,7 @@ a {
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: calc(var(--jumbotron-padding-y) * 2);
