@@ -37,7 +37,7 @@ O Objetivo geral deste projeto é desenvolver uma plataforma web denominada Volu
 
 # Hospedagem
 
-A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech">aqui</a> para acessá-lo. 
+A aplicação em HTML/CSS/JS é um projeto que pode ser utilizado tanto em servidores como em navegadores web. Clique <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/">aqui</a> para acessá-lo. 
 
 # Código-Fonte
 
