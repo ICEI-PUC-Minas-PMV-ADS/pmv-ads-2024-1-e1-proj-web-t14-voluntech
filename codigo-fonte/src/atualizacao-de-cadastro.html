@@ -80,17 +80,22 @@
     <h4 class="mt-2">Editar Perfil</h4>
 
     <div class="linha-vertical">
-      <form action="#" method="POST">
-
+      <form action="#" class="was-validated" method="POST" novalidate>
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
             <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
             <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
               placeholder="Nome da instituição" required />
+              <div class="valid-feedback">validado!</div>
+              <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
           </div>
+          <div class="valid-feedback">validado!</div>
+          <div class="invalid-feedback">Por Favor, preencha o Nome da Instituição.</div>
           <div class="col-md-4 form-group">
             <label for="cidade" class="form-label">Cidade:</label>
             <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required />
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha a Cidade.</div>
           </div>
         </div>
 
@@ -98,11 +103,15 @@
           <div class="col-md-4 form-group">
             <label for="email" class="form-label">E-mail:</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o E-mail.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="telefone" class="form-label">Telefone Fixo:</label>
             <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone"
               required />
+              <div class="valid-feedback">validado!</div>
+              <div class="invalid-feedback">Por favor, preencha o Telefone Fixo.</div>
           </div>
         </div>
 
@@ -110,22 +119,28 @@
           <div class="col-md-4 form-group">
             <label for="cnpj" class="form-label">CNPJ:</label>
             <input type="text" class="form-control" id="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ" required />
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o CNPJ.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="celular" class="form-label">Celular:</label>
             <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular"
               required />
+              <div class="valid-feedback">validado!</div>
+              <div class="invalid-feedback">Por favor, preencha o Celular.</div>
           </div>
         </div>
 
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
-            <label for="cep" class="form-label">CEP:</label>
+            <label for="cep" class="form-check-label">CEP:</label>
             <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="CEP" required />
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o Cep.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="categorias" class="form-label">Categorias:</label>
-            <select class="form-control" id="categorias" name="categorias">
+            <select class="form-control" id="categorias" name="categorias" required>
               <option value="">----- Selecione uma opção -----</option>
               <option value="alimenticio">Alimentício</option>
               <option value="bancario">Bancário</option>
@@ -138,6 +153,8 @@
               <option value="saude">Saúde</option>
               <option value="outras">Outras</option>
             </select>
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, selecione uma Opção.</div>
           </div>
         </div>
 
@@ -145,7 +162,9 @@
           <div class="col-md-8 form-group">
             <label for="formGroupExampleInput">Necessidades:</label>
             <input type="text" class="form-control " id="formGroupExampleInput"
-              placeholder="Exemplo: Necessitamos de Fraldas">
+              placeholder="Exemplo: Necessitamos de Fraldas" required/>
+              <div class="valid-feedback">validado!</div>
+              <div class="invalid-feedback">Por favor, preencha o campo.</div>
           </div>
         </div>
         <div class="row justify-content-left ml-5">
@@ -153,8 +172,8 @@
             <button class="btn-3 ml-5 mr-5" type="button">Cancelar</button>
             <button class="btn-2" type="button">Salvar</button>
           </div>
+          
         </div>
-
       </form>
     </div>
     <!-- Fim do Formulário -->
