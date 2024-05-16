@@ -109,7 +109,8 @@
         </div>
         <div class="col-lg-6 form-group">
           <label for="telefone" class="form-label">Telefone Fixo:</label>
-          <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone" required>
+          <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone"
+            required>
           <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
         </div>
@@ -124,7 +125,8 @@
         </div>
         <div class="col-lg-6 form-group">
           <label for="celular" class="form-label">Celular:</label>
-          <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular" required>
+          <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular"
+            required>
           <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
         </div>
@@ -158,30 +160,27 @@
       <button type="submit" class="btn btn-primary btn-lg ml-1">Salvar</button>
     </form>
   </div>
-<!-- Fim do Formulário -->
+  <!-- Fim do Formulário -->
 
-<!-- Validação do Formulário -->
-<script>
-  (() => {
-    'use strict'
+  <!-- Validação do Formulário -->
+  <script>
+    (() => {
+      'use strict'
+      const forms = document.querySelectorAll('.needs-validation')
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
 
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-  })()
-</script>
-<!-- Fim da Validação do Formulário -->
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+  </script>
+  <!-- Fim da Validação do Formulário -->
 
 </body>
 

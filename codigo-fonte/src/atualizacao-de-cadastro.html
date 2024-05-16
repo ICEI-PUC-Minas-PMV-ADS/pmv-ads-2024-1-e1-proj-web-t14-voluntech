@@ -34,15 +34,12 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-light bg-color">
       <div class="container">
-        <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/" class="navbar-brand">
-          <img src="img/logo.png" width="140" alt="VolunTech"/>
+        <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/"
+          class="navbar-brand">
+          <img src="img/logo.png" width="140" alt="VolunTech" />
         </a>
 
-        <button
-          class="navbar-toggler"
-          data-toggle="collapse"
-          data-target="#nav-principal"
-        >
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -80,63 +77,61 @@
     <h4 class="mt-2">Editar Perfil</h4>
 
     <div class="linha-vertical">
-      <form action="#" class="was-validated" method="POST" novalidate>
+      <form action="#" class="needs-validation" method="post" novalidate>
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
             <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
             <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
-              placeholder="Nome da instituição" required />
-              <div class="valid-feedback">validado!</div>
-              <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
+              placeholder="Nome da instituição" required>
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
           </div>
-          <div class="valid-feedback">validado!</div>
-          <div class="invalid-feedback">Por Favor, preencha o Nome da Instituição.</div>
           <div class="col-md-4 form-group">
             <label for="cidade" class="form-label">Cidade:</label>
-            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required />
+            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
             <div class="valid-feedback">validado!</div>
-            <div class="invalid-feedback">Por favor, preencha a Cidade.</div>
+            <div class="invalid-feedback">Por favor, preencha a cidade corretamente.</div>
           </div>
         </div>
 
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
             <label for="email" class="form-label">E-mail:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
             <div class="valid-feedback">validado!</div>
-            <div class="invalid-feedback">Por favor, preencha o E-mail.</div>
+            <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="telefone" class="form-label">Telefone Fixo:</label>
             <input type="tel" class="form-control" id="telefone" name="telefone" maxlength="10" placeholder="Telefone"
-              required />
-              <div class="valid-feedback">validado!</div>
-              <div class="invalid-feedback">Por favor, preencha o Telefone Fixo.</div>
+              required>
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
           </div>
         </div>
 
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
             <label for="cnpj" class="form-label">CNPJ:</label>
-            <input type="text" class="form-control" id="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ" required />
+            <input type="text" class="form-control" id="cnpj" name="cnpj" maxlength="14" placeholder="CNPJ" required>
             <div class="valid-feedback">validado!</div>
-            <div class="invalid-feedback">Por favor, preencha o CNPJ.</div>
+            <div class="invalid-feedback">Por favor, preencha o CNPJ corretamente.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="celular" class="form-label">Celular:</label>
             <input type="tel" class="form-control" id="celular" name="celular" maxlength="11" placeholder="Celular"
-              required />
-              <div class="valid-feedback">validado!</div>
-              <div class="invalid-feedback">Por favor, preencha o Celular.</div>
+              required>
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
           </div>
         </div>
 
         <div class="row justify-content-left ml-5">
           <div class="col-md-4 form-group">
             <label for="cep" class="form-check-label">CEP:</label>
-            <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="CEP" required />
+            <input type="text" class="form-control" id="cep" name="cep" maxlength="8" placeholder="CEP" required>
             <div class="valid-feedback">validado!</div>
-            <div class="invalid-feedback">Por favor, preencha o Cep.</div>
+            <div class="invalid-feedback">Por favor, preencha o CEP corretamente.</div>
           </div>
           <div class="col-md-4 form-group">
             <label for="categorias" class="form-label">Categorias:</label>
@@ -147,14 +142,12 @@
               <option value="comercio">Comércio Varejista</option>
               <option value="contrucaoCivil">Construção Civil</option>
               <option value="educacao">Educação</option>
-              <option value="logisticaTransporte">
-                Logística e Transporte
-              </option>
+              <option value="logisticaTransporte">Logística e Transporte</option>
               <option value="saude">Saúde</option>
               <option value="outras">Outras</option>
             </select>
             <div class="valid-feedback">validado!</div>
-            <div class="invalid-feedback">Por favor, selecione uma Opção.</div>
+            <div class="invalid-feedback">Por favor, selecione uma opção válida.</div>
           </div>
         </div>
 
@@ -162,21 +155,42 @@
           <div class="col-md-8 form-group">
             <label for="formGroupExampleInput">Necessidades:</label>
             <input type="text" class="form-control " id="formGroupExampleInput"
-              placeholder="Exemplo: Necessitamos de Fraldas" required/>
-              <div class="valid-feedback">validado!</div>
-              <div class="invalid-feedback">Por favor, preencha o campo.</div>
+              placeholder="Exemplo: Necessitamos de Fraldas" required>
+            <div class="valid-feedback">validado!</div>
+            <div class="invalid-feedback">Por favor, digite alguma necessidade.</div>
           </div>
         </div>
+
         <div class="row justify-content-left ml-5">
           <div class="d-grid gap-2 mx-5">
             <button class="btn-3 ml-5 mr-5" type="button">Cancelar</button>
-            <button class="btn-2" type="button">Salvar</button>
+            <button class="btn-2" type="submit">Salvar</button>
           </div>
-          
         </div>
+
       </form>
     </div>
     <!-- Fim do Formulário -->
+
+    <!-- Validação do Formulário -->
+    <script>
+      (() => {
+        'use strict'
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+          form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+          }, false)
+        })
+      })()
+    </script>
+    <!-- Fim da Validação do Formulário -->
 </body>
 
 </html>
