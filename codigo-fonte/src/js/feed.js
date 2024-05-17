@@ -1,3 +1,4 @@
+document.getElementById('cardProfile').style.display = 'none';
 
 const mensagemAlerta = "Sua publicação foi enviada com sucesso!";
 
@@ -19,7 +20,7 @@ function createAndAddPost() {
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center">
             <div class="mr-2">
-              <img class="rounded" width="45" src="img/profileExample.png" alt="" />
+              <img class="rounded" width="45" src="img/perfil.png" alt="" />
             </div>
             <div class="ml-2">
               <div class="h5 m-0">Novo Usuário</div>
