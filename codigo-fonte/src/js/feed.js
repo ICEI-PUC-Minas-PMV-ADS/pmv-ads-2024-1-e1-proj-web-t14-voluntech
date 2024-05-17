@@ -12,7 +12,7 @@ function createAndAddPost() {
   if (messageContent.trim() !== "") {
     // Cria um novo elemento de postagem
     var newPost = document.createElement('div');
-    newPost.className = 'card gedf-card border-secondary mb-3';
+    newPost.className = 'card gedf-card border mb-3';
     
     // Define o conteúdo HTML da nova postagem
     newPost.innerHTML = `
