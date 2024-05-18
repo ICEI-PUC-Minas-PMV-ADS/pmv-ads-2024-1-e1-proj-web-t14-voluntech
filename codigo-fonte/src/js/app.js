@@ -14,7 +14,6 @@
     }, false)
   })
 })()
-
 // Fim da Validação do Formulário
 
 // Store form data in local storage
