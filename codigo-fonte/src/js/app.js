@@ -1,3 +1,23 @@
+// Validação do Formulário
+(() => {
+  'use strict'
+  const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+// Fim da Validação do Formulário
+
+// Store form data in local storage
 const form = document.getElementById('form');
 
 form.addEventListener('submit', (event) => {
