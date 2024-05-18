@@ -1,5 +1,6 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,36 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <title>VolunTech</title>
     <link rel="stylesheet" href="codigo-fonte/src/css/style.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="codigo-fonte/src/css/bootstrap.css">
-    
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <!-- Início Cabeçalho -->
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-color">
-            <div class="container mt-3 mb-3">
+            <div class="container">
                 <a href="index.html" class="navbar-brand">
-                    <img src="codigo-fonte/src/img/logo.png" width="140" alt="LogoMarca"> 
+                    <img src="codigo-fonte/src/img/logo.png" width="140" alt="LogoMarca">
                 </a>
                 <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
                     <span class="navbar-toggler-icon"></span>
@@ -35,7 +55,8 @@
                             <a href="codigo-fonte/src/feed.html" class="nav-principal">Feed</a>
                         </li>
                         <li class="nav-item">
-                            <a href="codigo-fonte/src/portal-das-instituicoes.html" class="nav-principal">Portal das Instituições</a>
+                            <a href="codigo-fonte/src/portal-das-instituicoes.html" class="nav-principal">Portal das
+                                Instituições</a>
                         </li>
                         <li class="nav-item">
                             <a href="codigo-fonte/src/login.html" class="btn btn-outline-light ml-1 mt-1">Entrar</a>
@@ -61,61 +82,58 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="codigo-fonte/src/instituicoes.html" class="card-link">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="codigo-fonte/src/img/search.png" height="230" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-title">Busque por instituições</p>
-                        <p class="card-text">Encontre instituições de acordo com o estado, cidade ou categoria.</p>
-                        <div class="d-flex justify-content-between align-items-center">                          
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="codigo-fonte/src/img/search.png" height="230"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-title">Busque por instituições</p>
+                                <p class="card-text">Encontre instituições de acordo com o estado, cidade ou categoria.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                        </a>
-                  </div>
-                  <div class="col-md-4">
+                    </a>
+                </div>
+                <div class="col-md-4">
                     <a href="codigo-fonte/src/feed.html" class="card-link">
-                    <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="codigo-fonte/src/img/volunteering.png" height="230" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-title">Ajude de outra forma</p>
-                        <p class="card-text">Saiba as necessidades das instituições de caridade em sua cidade.</p>
-                        <div class="d-flex justify-content-between align-items-center">                          
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="codigo-fonte/src/img/volunteering.png" height="230"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-title">Ajude de outra forma</p>
+                                <p class="card-text">Saiba as necessidades das instituições de caridade em sua cidade.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                        </a>
-                  </div>
-                  <div class="col-md-4">
+                    </a>
+                </div>
+                <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                    <a href="codigo-fonte/src/portal-das-instituicoes.html" class="card-link">
-                      <img class="card-img-top" src="codigo-fonte/src/img/register.png" height="230" alt="Card image cap">
-                      <div class="card-body">
-                        <p class="card-title">Cadastrar instituição</p>
-                        <p class="card-text">Registre uma instituição de caridade em nossa plataforma.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                        </div>
-                      </div>
+                        <a href="codigo-fonte/src/portal-das-instituicoes.html" class="card-link">
+                            <img class="card-img-top" src="codigo-fonte/src/img/register.png" height="230"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-title">Cadastrar instituição</p>
+                                <p class="card-text">Registre uma instituição de caridade em nossa plataforma.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
                     </div>
                     </a>
-                  </div>
-            <hr>
-        </div> <!-- /container -->
+                </div>
+                <hr>
+            </div> <!-- /container -->
     </main>
     <!-- Fim Conteúdo Principal -->
 
     <!-- Rodapé -->
-    <footer class="container text-center">
+    <footer class="footer text-center">
         <p>&copy;VolunTech</p>
     </footer>
     <!-- Fim Rodapé -->
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
-
-    <!-- Ajuste JS -->
+</body>
 
 </html>
