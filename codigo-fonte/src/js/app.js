@@ -69,7 +69,19 @@ cnpj.addEventListener('input', () => {
 
 // Máscara para CEP com Expressão Regular
 const cep = document.getElementById("cep");
-cep.addEventListener('input', () => {
+const endereco = document.getElementById("endereco");
+
+cep.addEventListener('input', assync => {
   cep.value = cep.value.replace(/\D/g, '');
   cep.value = cep.value.replace(/^(\d{5})(\d)/, '$1-$2');
+
+  const url = `https://viacep.com.br/ws/${cep.value}/json/`;
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (data.erro) {
+        return 'CEP inválido.';
+      }
+      endereco.value = data.logradouro + ' - ' + data.bairro + ' - ' + data.localidade + '/' + data.uf;
+    });
 })

@@ -85,63 +85,88 @@
 
     <form action="" class="needs-validation" id="form" method="post" novalidate>
       <div class="form-row">
-        <div class="col-lg-6 form-group">
+        <div class="col-lg-6 form-group has-validation">
           <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
           <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
             placeholder="Nome da instituição" required>
-          <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
         </div>
-        <div class="col-lg-6 form-group">
-          <label for="cidade" class="form-label">Cidade:</label>
-          <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Cidade" required>
-          <div class="valid-feedback">Validado!</div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="cep" class="form-label">CEP:</label>
+          <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP" required>
           <div class="invalid-feedback">Por favor, preencha o nome da cidade corretamente.</div>
         </div>
       </div>
 
       <div class="form-row">
-        <div class="col-lg-6 form-group">
+        <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+          <input type="email" class="form-control" id="email" name="email"
+            placeholder="E-mail" required>
+          <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="endereco" class="form-label">Endereço:</label>
+          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
+          <div class="invalid-feedback">Por favor, preencha o nome da cidade corretamente.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <!--
+        <div class="col-lg-6 form-group">
+          <label for="user" class="form-label">Usuário:</label>
+          <input type="text" class="form-control" id="user" name="user" placeholder="Digite seu usuário" required>
           <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
         </div>
+        -->
 
         <div class="col-lg-6 form-group">
+          <label for="user" class="form-label">Usuário:</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="user" name="user" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Por favor, escolha um usuário válido.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
           <label for="telefone" class="form-label">Telefone Fixo:</label>
           <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
             required>
-          <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
         </div>
       </div>
 
       <div class="form-row">
-        <div class="col-lg-6 form-group">
-          <label for="cnpj" class="form-label">CNPJ:</label>
-          <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
-            placeholder="CNPJ" required>
-          <div class="valid-feedback">Validado!</div>
-          <div class="invalid-feedback">Por favor, preencha o CNPJ corretamente.</div>
+        <div class="col-lg-6 form-group has-validation">
+          <label for="password" class="form-label">Senha:</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Senha" required>
+          <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
         </div>
-        <div class="col-lg-6 form-group">
+
+        <div class="col-lg-6 form-group has-validation">
           <label for="celular" class="form-label">Celular:</label>
           <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
             required>
-          <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
         </div>
       </div>
 
       <div class="form-row">
-        <div class="col-lg-6 form-group">
-          <label for="cep" class="form-label">CEP:</label>
-          <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="CEP" required>
-          <div class="valid-feedback">Validado!</div>
-          <div class="invalid-feedback">Por favor, preencha o CEP corretamente.</div>
+        <div class="col-lg-6 form-group has-validation">
+          <label for="cnpj" class="form-label">CNPJ:</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
+            placeholder="CNPJ" required>
+          <div class="invalid-feedback">Por favor, preencha o CNPJ corretamente.</div>
         </div>
-        <div class="col-lg-6 form-group">
+
+        <div class="col-lg-6 form-group has-validation">
           <label for="categorias" class="form-label">Categorias:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
             <option value="">------- Selecione uma opção -------</option>
@@ -154,7 +179,6 @@
             <option value="saude">Saúde</option>
             <option value="outras">Outras</option>
           </select>
-          <div class="valid-feedback">Validado!</div>
           <div class="invalid-feedback">Por favor, selecione uma opção válida.</div>
         </div>
       </div>
