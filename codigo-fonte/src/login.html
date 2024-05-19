@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portal das Instituições" />
+  <meta name="description" content="Login" />
   <meta name="author" content="Tatiana" />
   <meta name="keywords" content="HTML, CSS, JavaScript" />
   <title>Login</title>
@@ -23,7 +23,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
-</head>
+  <script src="js/login.js"></script>
+  </head>
 
 <body>
   <!-- Início Cabeçalho -->
@@ -66,11 +67,15 @@
   <body>
     <div class="login-form">
       <h2>Login</h2>
-      <form action="login.php" method="post">
-        <input type="email" name="username" placeholder="E-mail" />
-        <input type="password" name="password" placeholder="Senha" />
-        <button type="submit">Entrar</button>
-        <input type="submit" value="Não possui conta? Cadastre-se!" />
+      <form action="" class="needs-validation" id="login" method="post" novalidate>
+        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+        <div class="invalid-feedback"></div>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Senha" required>
+        <div class="invalid-feedback"></div>
+        <button type="submit" onclick="logar()">Entrar</button>
+        <a href="portal-das-instituicoes.html">
+          <input type="button" value="Não possui conta? Cadastre-se!">
+        </a>
       </form>
     </div>
 
