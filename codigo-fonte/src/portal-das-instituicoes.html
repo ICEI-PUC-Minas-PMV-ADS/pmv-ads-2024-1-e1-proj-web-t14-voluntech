@@ -92,7 +92,7 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
           <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP" required>
-          <div class="invalid-feedback">Por favor, preencha o nome da cidade corretamente.</div>
+          <div class="invalid-feedback">Por favor, preencha o CEP corretamente.</div>
         </div>
       </div>
 
@@ -100,13 +100,13 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
-          <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
+          <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="bairro" class="form-label">Bairro:</label>
           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
-          <div class="invalid-feedback">Por favor, preencha o nome da cidade corretamente.</div>
+          <div class="invalid-feedback">Por favor, preencha o nome do bairro corretamente.</div>
         </div>
       </div>
 
@@ -116,7 +116,9 @@
           <div class="input-group">
 
             <input name="password" type="password" value="" class="input form-control" id="password" placeholder="Senha"
-              required="true" aria-label="Senha" aria-describedby="basic-addon1" />
+              required="true" aria-label="Senha" aria-describedby="basic-addon1" name="password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" />
             <div class="input-group-append">
               <span class="input-group-text" onclick="password_show_hide();">
                 <i class="fas fa-eye" id="show_eye"></i>
@@ -124,7 +126,13 @@
               </span>
             </div>
           </div>
-          <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
+          <div id="message">
+            <h3>A senha deve conter o seguinte:</h3>
+            <p id="letter" class="invalid">Uma <b>letra minúscula</b></p>
+            <p id="capital" class="invalid">Uma <b>letra maiúscula</b></p>
+            <p id="number" class="invalid">Um <b>número</b></p>
+            <p id="length" class="invalid">Mínimo <b>8 caracteres</b></p>
+          </div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
@@ -153,11 +161,11 @@
 
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
-          <label for="categorias" class="form-label">Categorias:</label>
+          <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
             <option value="">------- Selecione uma opção -------</option>
-            <option value="alimenticio">Alimentício</option>
-            <option value="bancario">Bancário</option>
+            <option value="alimenticio">Alimentícia</option>
+            <option value="bancario">Bancária</option>
             <option value="comercio">Comércio Varejista</option>
             <option value="contrucaoCivil">Construção Civil</option>
             <option value="educacao">Educação</option>
