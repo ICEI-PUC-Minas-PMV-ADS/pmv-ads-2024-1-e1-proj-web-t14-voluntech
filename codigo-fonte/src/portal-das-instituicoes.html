@@ -65,24 +65,18 @@
   <!-- Fim Cabeçalho -->
 
   <!-- Início do Formulário -->
-  <div class="container-lg mt-2">
+  <div class="container-lg">
     <h1 class="cadastro">Faça seu cadastro</h1>
 
-    <div class="form-row float-right w-55 ml-3">
-
-      <div class="col-lg-12 form-group">
-        <img src="img/perfil.png" alt="Perfil">
-
-        <div class="form-group is-invalid">
-          <label for="exampleFormControlFile1">Escolha sua imagem de perfil</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
-        </div>
-        <div class="valid-feedback">Validado!</div> <!-- corrigir o feedback -->
-        <div class="invalid-feedback">Escolha o formato de uma imagem válida.</div>
+    <!-- Início da Imagem -->
+    <div class="form-row float-right">
+      <div class="col-lg-6 form-group">
+        <img src="img/cadastro.png" alt="Cadastro">
       </div>
-
     </div>
+    <!-- Fim da Imagem -->
 
+    <!-- Início do Formulário -->
     <form action="" class="needs-validation" id="form" method="post" novalidate>
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
@@ -102,32 +96,14 @@
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
-          <input type="email" class="form-control" id="email" name="email"
-            placeholder="E-mail" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
           <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
-          <label for="endereco" class="form-label">Endereço:</label>
-          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
+          <label for="bairro" class="form-label">Bairro:</label>
+          <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
           <div class="invalid-feedback">Por favor, preencha o nome da cidade corretamente.</div>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <!--
-        <div class="col-lg-6 form-group">
-          <label for="user" class="form-label">Usuário:</label>
-          <input type="text" class="form-control" id="user" name="user" placeholder="Digite seu usuário" required>
-          <div class="valid-feedback">Validado!</div>
-          <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
-        </div>
-
-        <div class="col-lg-6 form-group has-validation">
-          <label for="telefone" class="form-label">Telefone Fixo:</label>
-          <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
-            required>
-          <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
         </div>
       </div>
 
@@ -139,10 +115,26 @@
         </div>
 
         <div class="col-lg-6 form-group has-validation">
-          <label for="celular" class="form-label">Celular:</label>
-          <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
+          <label for="cidade" class="form-label">Cidade:</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
             required>
-          <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
+          <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-lg-6 form-group has-validation">
+          <label for="cnpj" class="form-label">CNPJ:</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
+            placeholder="CNPJ" required>
+          <div class="invalid-feedback">Por favor, preencha o CNPJ corretamente.</div>
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="telefone" class="form-label">Telefone Fixo:</label>
+          <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
+            required>
+          <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
         </div>
       </div>
 
@@ -162,13 +154,22 @@
           </select>
           <div class="invalid-feedback">Por favor, selecione uma opção válida.</div>
         </div>
+
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="celular" class="form-label">Celular:</label>
+          <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
+            required>
+          <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
+        </div>
       </div>
 
       <button type="submit" class="btn btn-primary btn-lg ml-1">Salvar</button>
     </form>
+    <!-- Fim do Formulário -->
   </div>
-  <!-- Fim do Formulário -->
 
+  <!-- JavaScript -->
   <script src="js/app.js"></script>
 
 </body>

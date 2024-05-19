@@ -17,7 +17,7 @@
 // Fim da Validação do Formulário
 
 // Store form data in local storage
-const form = document.getElementById('#form');
+const form = document.getElementById('form');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent default form submission
@@ -41,7 +41,7 @@ form.addEventListener('submit', (event) => {
 });
 
 // Máscara para Telefone com Expressão Regular
-const telefone = document.getElementById("#telefone");
+const telefone = document.getElementById("telefone");
 telefone.addEventListener('input', () => {
   telefone.value = telefone.value.replace(/\D/g, '');
   telefone.value = telefone.value.replace(/^(\d{2})(\d)/g, '($1) $2');
@@ -49,7 +49,7 @@ telefone.addEventListener('input', () => {
 })
 
 // Máscara para Celular com Expressão Regular
-const celular = document.getElementById("#celular");
+const celular = document.getElementById("celular");
 celular.addEventListener('input', () => {
   celular.value = celular.value.replace(/\D/g, '');
   celular.value = celular.value.replace(/^(\d{2})(\d)/g, '($1) $2');
@@ -57,7 +57,7 @@ celular.addEventListener('input', () => {
 })
 
 // Máscara para CNPJ com Expressão Regular
-const cnpj = document.getElementById("#cnpj");
+const cnpj = document.getElementById("cnpj");
 cnpj.addEventListener('input', () => {
   cnpj.value = cnpj.value.replace(/\D/g, '');
   cnpj.value = cnpj.value.replace(/^(\d{2})(\d)/, '$1.$2');
@@ -67,8 +67,8 @@ cnpj.addEventListener('input', () => {
 })
 
 // Máscara para CEP com Expressão Regular
-const cep = document.getElementById("#cep");
-const endereco = document.getElementById("endereco");
+const cep = document.getElementById("cep");
+const endereco = document.getElementById("bairro");
 
 cep.addEventListener('input', assync => {
   cep.value = cep.value.replace(/\D/g, '');
@@ -81,6 +81,7 @@ cep.addEventListener('input', assync => {
       if (data.erro) {
         return 'CEP inválido.';
       }
-      endereco.value = data.logradouro + ' - ' + data.bairro + ' - ' + data.localidade + '/' + data.uf;
+      bairro.value = data.logradouro + ' - ' + data.bairro;
+      cidade.value = data.localidade + ' / ' + data.uf;
     });
 })
