@@ -208,7 +208,7 @@ footer p {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
+  width: 350px;
   margin: 2px;
   padding: 40px;
   border-radius: 5%;
@@ -224,7 +224,7 @@ footer p {
 }
 
 .login-form input {
-  width: 100%;
+  width: 280px;
   padding: 10px;
   margin: 10px 0px;
   font-size: 0.85em;
@@ -234,9 +234,9 @@ footer p {
 }
 
 .login-form button {
-  width: 100%;
+  width: 280px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 10px 0px;
   color: white;
   background-color: #1f2f30ff;
   border: none;
@@ -305,12 +305,13 @@ input:hover {
   border-radius: 12%;
   position: relative;
   padding: 4px;
-  top: 100px;
-  max-width: 270px;
-  max-height: 270px;
-  width: -59px;
-  height: -79%;
-  transform: translate(-7%, 19%);
+  top: 0px;
+  bottom: 0px;
+  max-width: 400px;
+  max-height: 400px;
+  width: -60px;
+  height: -80%;
+  transform: translate(-10%, 20%);
 }
 
 /* Estilos Gerais do Lucas */

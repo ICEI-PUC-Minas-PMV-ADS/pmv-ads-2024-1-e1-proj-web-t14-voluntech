@@ -24,6 +24,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7b34264bcc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -70,7 +73,7 @@
 
     <!-- Início da Imagem -->
     <div class="form-row float-right">
-      <div class="col-lg-6 form-group">
+      <div class="col-lg-12 form-group">
         <img src="img/cadastro.png" alt="Cadastro">
       </div>
     </div>
@@ -110,7 +113,17 @@
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
           <label for="password" class="form-label">Senha:</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Senha" required>
+          <div class="input-group">
+
+            <input name="password" type="password" value="" class="input form-control" id="password" placeholder="Senha"
+              required="true" aria-label="Senha" aria-describedby="basic-addon1" />
+            <div class="input-group-append">
+              <span class="input-group-text" onclick="password_show_hide();">
+                <i class="fas fa-eye" id="show_eye"></i>
+                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+              </span>
+            </div>
+          </div>
           <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
         </div>
 
