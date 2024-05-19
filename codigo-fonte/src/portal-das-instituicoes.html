@@ -8,8 +8,8 @@
   <meta name="author" content="João Victor" />
   <meta name="keywords" content="HTML, CSS, JavaScript" />
   <title>Portal das Instituições</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -74,7 +74,7 @@
     <!-- Início da Imagem -->
     <div class="form-row float-right">
       <div class="col-lg-12 form-group">
-        <img src="img/cadastro.png" alt="Cadastro">
+        <img src="img/cadastro.png" alt="Cadastro" />
       </div>
     </div>
     <!-- Fim da Imagem -->
@@ -85,28 +85,88 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
           <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
-            placeholder="Nome da instituição" required>
-          <div class="invalid-feedback">Por favor, preencha o nome da instituição corretamente.</div>
+            placeholder="Nome da instituição" required />
+          <div class="invalid-feedback">
+            Por favor, preencha o nome da instituição corretamente.
+          </div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
-          <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP" required>
-          <div class="invalid-feedback">Por favor, preencha o CEP corretamente.</div>
+          <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP"
+            required />
+          <div class="invalid-feedback">
+            Por favor, preencha o CEP corretamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-lg-6 form-group has-validation">
+          <label for="cnpj" class="form-label">CNPJ:</label>
+          <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
+            placeholder="CNPJ" required />
+          <div class="invalid-feedback">
+            Por favor, preencha o CNPJ corretamente.
+          </div>
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="bairro" class="form-label">Bairro:</label>
+          <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required />
+          <div class="invalid-feedback">
+            Por favor, preencha o nome do bairro corretamente.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col-lg-6 form-group has-validation">
+          <label for="categorias" class="form-label">Categoria:</label>
+          <select class="custom-select" id="categorias" name="categorias" required>
+            <option value="">------- Selecione uma opção -------</option>
+            <option value="alimenticio">Setor Alimentício</option>
+            <option value="bancario">Setor Bancário</option>
+            <option value="comercio">Comércio Varejista</option>
+            <option value="contrucaoCivil">Construção Civil</option>
+            <option value="educacao">Educação</option>
+            <option value="logisticaTransporte">
+              Logística e Transporte
+            </option>
+            <option value="saude">Saúde</option>
+            <option value="outras">Outras</option>
+          </select>
+          <div class="invalid-feedback">
+            Por favor, selecione uma opção válida.
+          </div>
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="cidade" class="form-label">Cidade:</label>
+          <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
+            required />
+          <div class="invalid-feedback">
+            Por favor, preencha o telefone fixo corretamente.
+          </div>
         </div>
       </div>
 
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
-          <div class="invalid-feedback">Por favor, preencha o e-mail corretamente.</div>
+          <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
+          <div class="invalid-feedback">
+            Por favor, preencha o e-mail corretamente.
+          </div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
-          <label for="bairro" class="form-label">Bairro:</label>
-          <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required>
-          <div class="invalid-feedback">Por favor, preencha o nome do bairro corretamente.</div>
+          <label for="telefone" class="form-label">Telefone Fixo:</label>
+          <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
+            required />
+          <div class="invalid-feedback">
+            Por favor, preencha o telefone fixo corretamente.
+          </div>
         </div>
       </div>
 
@@ -114,7 +174,6 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="password" class="form-label">Senha:</label>
           <div class="input-group">
-
             <input name="password" type="password" value="" class="input form-control" id="password" placeholder="Senha"
               required="true" aria-label="Senha" aria-describedby="basic-addon1" name="password"
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
@@ -127,7 +186,7 @@
             </div>
           </div>
           <div id="message">
-            <h3>A senha deve conter o seguinte:</h3>
+            <h3>A senha deve conter:</h3>
             <p id="letter" class="invalid">Uma <b>letra minúscula</b></p>
             <p id="capital" class="invalid">Uma <b>letra maiúscula</b></p>
             <p id="number" class="invalid">Um <b>número</b></p>
@@ -136,63 +195,24 @@
         </div>
 
         <div class="col-lg-6 form-group has-validation">
-          <label for="cidade" class="form-label">Cidade:</label>
-          <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
-            required>
-          <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="col-lg-6 form-group has-validation">
-          <label for="cnpj" class="form-label">CNPJ:</label>
-          <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
-            placeholder="CNPJ" required>
-          <div class="invalid-feedback">Por favor, preencha o CNPJ corretamente.</div>
-        </div>
-
-        <div class="col-lg-6 form-group has-validation">
-          <label for="telefone" class="form-label">Telefone Fixo:</label>
-          <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
-            required>
-          <div class="invalid-feedback">Por favor, preencha o telefone fixo corretamente.</div>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="col-lg-6 form-group has-validation">
-          <label for="categorias" class="form-label">Categoria:</label>
-          <select class="custom-select" id="categorias" name="categorias" required>
-            <option value="">------- Selecione uma opção -------</option>
-            <option value="alimenticio">Alimentícia</option>
-            <option value="bancario">Bancária</option>
-            <option value="comercio">Comércio Varejista</option>
-            <option value="contrucaoCivil">Construção Civil</option>
-            <option value="educacao">Educação</option>
-            <option value="logisticaTransporte">Logística e Transporte</option>
-            <option value="saude">Saúde</option>
-            <option value="outras">Outras</option>
-          </select>
-          <div class="invalid-feedback">Por favor, selecione uma opção válida.</div>
-        </div>
-
-
-        <div class="col-lg-6 form-group has-validation">
           <label for="celular" class="form-label">Celular:</label>
           <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
-            required>
-          <div class="invalid-feedback">Por favor, preencha o celular corretamente.</div>
+            required />
+          <div class="invalid-feedback">
+            Por favor, preencha o celular corretamente.
+          </div>
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary btn-lg ml-1">Salvar</button>
+      <button type="submit" class="btn btn-primary btn-lg ml-1">
+        Salvar
+      </button>
     </form>
     <!-- Fim do Formulário -->
   </div>
 
   <!-- JavaScript -->
   <script src="js/app.js"></script>
-
 </body>
 
 </html>
