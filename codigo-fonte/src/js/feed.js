@@ -1,4 +1,4 @@
-document.getElementById('cardProfile').style.display = 'none';
+//document.getElementById('cardProfile').style.display = 'none';
 
 const mensagemAlerta = "Sua publicação foi enviada com sucesso!";
 
@@ -7,7 +7,7 @@ const botaoPublicar = document.querySelector('#publicar');
 // Função para criar e adicionar uma nova postagem
 function createAndAddPost() {
   // Obtém o conteúdo da textarea
-  var messageContent = document.getElementById('message').value;
+  var messageContent = document.getElementById('publicacao').value;
 
   if (messageContent.trim() !== "") {
     // Cria um novo elemento de postagem
@@ -52,7 +52,7 @@ function createAndAddPost() {
     document.getElementById('posts-section').prepend(newPost);
 
     // Limpa a textarea
-    document.getElementById('message').value = '';
+    document.getElementById('publicacao').value = '';
 
     // Exibe uma mensagem de alerta
     alert(mensagemAlerta);
