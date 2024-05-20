@@ -302,16 +302,22 @@ input:hover {
 #img {
   float: right;
   margin: left 2%;
-  border-radius: 12%;
+  border-radius: 10%;
   position: relative;
   padding: 4px;
-  top: 0px;
-  bottom: 0px;
-  max-width: 400px;
-  max-height: 400px;
+  top: 45%;
+  bottom: 6%;
+  max-width: 250px;
+  max-height: 250px;
   width: -60px;
   height: -80%;
   transform: translate(-10%, 20%);
+}
+
+img {
+  min-width: 100px;
+  height: auto;
+  object-fit:scale-down;
 }
 
 /* Estilos Gerais do Lucas */
