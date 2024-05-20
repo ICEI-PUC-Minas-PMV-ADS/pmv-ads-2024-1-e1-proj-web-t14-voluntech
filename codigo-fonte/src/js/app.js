@@ -1,4 +1,4 @@
-// Validação do Formulário
+// Validação do formulário de cadastro geral
 (() => {
   'use strict';
   const forms = document.querySelectorAll('.needs-validation');
@@ -42,11 +42,16 @@ form.addEventListener('submit', (event) => {
     // Armazena o array atualizado no localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-    // Exibe uma mensagem de sucesso
-    const successMessage = document.createElement('div');
-    successMessage.classList.add('alert', 'alert-success');
-    successMessage.textContent = 'Cadastro realizado com sucesso!';
-    form.insertAdjacentElement('afterend', successMessage);
+    // Exibe um modal de sucesso
+    const modal = document.getElementById('modal');
+    modal.classList.add('modal');
+    form.insertAdjacentElement('afterend', modal);
+
+    // Botão para salvar o modal
+    const btnSaveModal = document.getElementById('btnSaveModal');
+    btnSaveModal.addEventListener('click', () => {
+      modal.remove('modal');
+    });
 
     // Redireciona para a página de login após 3 segundos
     setTimeout(() => {
@@ -113,14 +118,14 @@ cep.addEventListener('input', async () => {
     .then(response => response.json())
     .then(data => {
       if (data.erro) {
-        return 'CEP inválido.';
+        return alert('CEP inválido');
       }
       bairro.value = data.logradouro + ' - ' + data.bairro;
       cidade.value = data.localidade + ' / ' + data.uf;
     });
 });
 
-// Botão com efeito para senha
+// Botão com efeito hide/show para senha
 function password_show_hide() {
   var x = document.getElementById('password');
   var show_eye = document.getElementById('show_eye');
