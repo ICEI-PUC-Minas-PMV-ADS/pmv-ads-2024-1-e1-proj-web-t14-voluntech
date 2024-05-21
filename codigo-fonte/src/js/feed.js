@@ -1,3 +1,4 @@
+//visualizacao do editar perfil
 document.getElementById('cardProfile').style.display = 'none';
 
 const mensagemAlerta = "Sua publicação foi enviada com sucesso!";
