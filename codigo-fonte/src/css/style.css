@@ -331,17 +331,24 @@ h4 {
 }
 
 .btn-2 {
-  width: 220px;
-  height: 35px;
+  width: 135px;
+  height: 28px;
   color: white;
   background-color: lime;
   border-color: lime;
-  border-radius: 5px;
+  border-radius: 5%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-2:hover {
-  width: 220px;
-  height: 35px;
+.btn-3 .btn-2 {
+  display: flex;
+}
+
+  .btn-2:hover {
+  width: 135px;
+  height: 28px;
   color: white;
   background-color: lime;
   border-color: lime;
@@ -356,8 +363,8 @@ h4 {
 }
 
 .btn-3 {
-  width: 220px;
-  height: 35px;
+  width: 135px;
+  height: 28px;
   color: white;
   background-color: red;
   border-color: red;
@@ -365,8 +372,8 @@ h4 {
 }
 
 .btn-3:hover {
-  width: 220px;
-  height: 35px;
+  width: 135px;
+  height: 28px;
   color: white;
   background-color: red;
   border-color: red;
@@ -380,10 +387,12 @@ h4 {
   border-color: red;
 }
 
-.linha-vertical {
+@media (min-width: 990px) {
+  .linha-vertical {
   height: 575px;
   border-left: 1px solid;
   margin-left: 300px;
+  }
 }
 
 .centered {
@@ -392,6 +401,26 @@ h4 {
   margin: 0 auto;
 }
 
+div > div {
+  display: inline-block;
+}
+
+.modal {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
 /* Estilos Gerais do João */
 
 /* Style all input fields */

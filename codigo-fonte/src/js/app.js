@@ -295,3 +295,4 @@ function checkFormFields() {
 formFields.forEach((field) => {
   field.addEventListener('input', checkFormFields);
 });
+
