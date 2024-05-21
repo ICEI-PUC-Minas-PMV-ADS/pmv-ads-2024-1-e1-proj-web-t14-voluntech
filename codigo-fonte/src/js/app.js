@@ -49,7 +49,7 @@ form.addEventListener("submit", (event) => {
     // Exibe um modal de sucesso de cadastro
     Swal.fire({
       title: 'Sucesso!',
-      text: 'Login efetuado com sucesso.',
+      text: 'Cadastro efetuado com sucesso.',
       icon: 'success',
       confirmButtonText: 'OK',
       customClass: {
