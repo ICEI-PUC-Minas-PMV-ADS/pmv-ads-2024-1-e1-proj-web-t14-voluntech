@@ -1,4 +1,4 @@
-//document.getElementById('cardProfile').style.display = 'none';
+document.getElementById('cardProfile').style.display = 'none';
 
 const mensagemAlerta = "Sua publicação foi enviada com sucesso!";
 
