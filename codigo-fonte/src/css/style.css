@@ -258,16 +258,19 @@ input:hover {
 #sobre-nos {
   font-family: Verdana;
   background-color: snow;
-  padding: 2%;
+  padding: 5%;
+  width:max-content;
+  height: min-content;
   margin: 1px 0;
   border-radius: 4%;
-  float: left;
+  float:auto;
   border: 1px solid snow;
   top: 22%;
-  position: fixed;
+  position:sticky;
   text-align: justify;
-  box-shadow: 1px 1px 5px #6d8485;
-  transform: translate(0.5%, 4%);
+  box-shadow: 2px 2px 5px #6d8485;
+  transform: translate(2%, 24%);
+  display: grid;  
 }
 #sobre-nos h1 {
   font-size: 40px;
@@ -304,21 +307,20 @@ input:hover {
   margin: left 2%;
   border-radius: 10%;
   position: relative;
-  padding: 4px;
-  top: 45%;
+  padding: 2px;
+  top: 30%;
   bottom: 6%;
   max-width: 250px;
   max-height: 250px;
   width: -60px;
   height: -80%;
   transform: translate(-10%, 20%);
-}
-
-img {
-  min-width: 100px;
-  height: auto;
-  object-fit:scale-down;
-}
+ }
+.container > div > img {  
+  width: max-content;  
+  height: auto;  
+  object-fit: cover;  
+ }
 
 /* Estilos Gerais do Lucas */
 
