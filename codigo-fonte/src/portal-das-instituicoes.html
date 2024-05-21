@@ -90,18 +90,14 @@
           <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
           <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
             placeholder="Nome da instituição" required />
-          <div class="invalid-feedback">
-            Por favor, preencha o nome da instituição corretamente.
-          </div>
+          
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
           <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP"
             required />
-          <div class="invalid-feedback">
-            Por favor, preencha o CEP corretamente.
-          </div>
+          
         </div>
       </div>
 
@@ -110,17 +106,13 @@
           <label for="cnpj" class="form-label">CNPJ:</label>
           <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
             placeholder="CNPJ" required />
-          <div class="invalid-feedback">
-            Por favor, preencha o CNPJ corretamente.
-          </div>
+          
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="bairro" class="form-label">Bairro:</label>
           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required />
-          <div class="invalid-feedback">
-            Por favor, preencha o nome do bairro corretamente.
-          </div>
+          
         </div>
       </div>
 
@@ -140,18 +132,13 @@
             <option value="saude">Saúde</option>
             <option value="outras">Outras</option>
           </select>
-          <div class="invalid-feedback">
-            Por favor, selecione uma opção válida.
-          </div>
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="cidade" class="form-label">Cidade:</label>
           <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
             required />
-          <div class="invalid-feedback">
-            Por favor, preencha o telefone fixo corretamente.
-          </div>
+          
         </div>
       </div>
 
@@ -159,18 +146,13 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
-          <div class="invalid-feedback">
-            Por favor, preencha o e-mail corretamente.
-          </div>
+          
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="telefone" class="form-label">Telefone Fixo:</label>
           <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
             required />
-          <div class="invalid-feedback">
-            Por favor, preencha o telefone fixo corretamente.
-          </div>
         </div>
       </div>
 
@@ -202,19 +184,16 @@
           <label for="celular" class="form-label">Celular:</label>
           <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
             required />
-          <div class="invalid-feedback">
-            Por favor, preencha o celular corretamente.
-          </div>
         </div>
       </div>
 
       <!-- Botão com trigger modal -->
-      <button type="submit" class="btn btn-primary btn-lg ml-1" data-toggle="modal" data-target="#modal">
+      <button type="submit" class="btn btn-primary btn-lg ml-1" id="btnSaveModal" data-toggle="modal" data-target="#modal">
         Salvar
       </button>
       
 
-      <!-- Modal HTML -->
+      <!-- Modal HTML
       <div id="modal" class="modal fade">
         <div class="modal-dialog modal-confirm">
           <div class="modal-content">
@@ -231,7 +210,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Modal
       <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true">
@@ -260,6 +239,9 @@
 
   <!-- JavaScript -->
   <script src="js/app.js"></script>
+
+  <!-- Sweet Alert -->
+  <script src="js/sweetalert2.js"></script>
 </body>
 
 </html>

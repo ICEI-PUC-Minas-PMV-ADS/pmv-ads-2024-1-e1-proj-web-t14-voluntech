@@ -47,20 +47,31 @@ form.addEventListener("submit", (event) => {
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     // Exibe um modal de sucesso de cadastro
-    const modal = document.getElementById("modal");
-    modal.classList.add("modal");
-    form.insertAdjacentElement("afterend", modal);
-
-    // Botão para salvar o modal de cadastro
-    const btnSaveModal = document.getElementById("btnSaveModal");
-    btnSaveModal.addEventListener("click", () => {
-      modal.remove("modal");
+    Swal.fire({
+      title: 'Sucesso!',
+      text: 'Login efetuado com sucesso.',
+      icon: 'success',
+      confirmButtonText: 'OK',
+      customClass: {
+        confirmButton: "btn btn-success",
+      },
+      buttonsStyling: false
+    }).then(() => {
+      setTimeout(() => {
+        window.location.href = "login.html"; // Substitua pelo URL da sua página de login
+      }, 2000);
     });
 
-    // Redireciona para a página de login após 3 segundos
-    setTimeout(() => {
-      window.location.href = "login.html"; // Substitua pelo URL da sua página de login
-    }, 5000);
+  } else {
+    Swal.fire({
+      title: "Erro!",
+      text: "Preencha todos os campos!",
+      icon: "error",
+      customClass: {
+        confirmButton: "btn btn-danger",
+      },
+      buttonsStyling: false
+    });
   }
 });
 
@@ -122,7 +133,7 @@ cep.addEventListener("input", async () => {
     .then((response) => response.json())
     .then((data) => {
       if (data.erro) {
-        return alert("CEP inválido");
+        return;
       }
       bairro.value = data.logradouro + " - " + data.bairro;
       cidade.value = data.localidade + " / " + data.uf;

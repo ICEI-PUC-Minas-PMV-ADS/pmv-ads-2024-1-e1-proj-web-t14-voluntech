@@ -1,20 +1,42 @@
-// Validação Login
-function logar() {
-    var email = document.getElementById("email").value;
-    var senha = document.getElementById("password").value;
+//Fazer login com localStorage e usar os botões do Swal
+function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
     // Recupera os dados dos usuários cadastrados no localStorage
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
     // Verifica se há algum usuário com o email fornecido
-    const usuario = usuarios.find(user => user.email === email);
+    const usuario = usuarios.find(user => user.email === email && user.password === password);
 
-    if (usuario && usuario.password === senha) { // Ajuste na comparação da senha
-        localStorage.setItem("acesso", true);
-        window.location.href = 'login.html';
-        alert("Login efetuado com sucesso!");
+    if (usuario && usuario.email === email && usuario.password === password) { // Ajuste na comparação da senha
+        localStorage.setItem('logado', true);
+
+        Swal.fire({
+            title: 'Sucesso!',
+            text: 'Login efetuado com sucesso.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            customClass: {
+                confirmButton: "btn btn-success",
+            },
+            buttonsStyling: false
+        }).then(() => {
+            setTimeout(() => {
+                window.location.href = "../../index.html"; // Substitua pelo URL da sua página de login
+            }, 2000);
+        });
     } else {
-        alert("Email ou senha inválido!");
-        window.location.href = 'login.html';
+        Swal.fire({
+            title: "Erro!",
+            text: "Preencha todos os campos!",
+            icon: "error",
+            customClass: {
+                confirmButton: "btn btn-danger",
+            },
+            buttonsStyling: false
+        }).then(() => {
+            window.location.href = 'login.html';
+        });
     }
 }
