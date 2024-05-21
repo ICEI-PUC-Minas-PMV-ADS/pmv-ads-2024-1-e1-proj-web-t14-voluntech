@@ -1,4 +1,4 @@
-//Fazer login com localStorage e usar os botões do Swal
+// Fazer login com localStorage e usar os botões do Swal
 function login() {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -9,8 +9,9 @@ function login() {
     // Verifica se há algum usuário com o email fornecido
     const usuario = usuarios.find(user => user.email === email && user.password === password);
 
-    if (usuario && usuario.email === email && usuario.password === password) { // Ajuste na comparação da senha
-        localStorage.setItem('logado', true);
+    if (usuario && usuario.email === email && usuario.password === password) {
+        // Define a variável de controle para indicar que o usuário está logado
+        localStorage.setItem('logado', 'true'); // Ajuste aqui para definir como string 'true'
 
         Swal.fire({
             title: 'Sucesso!',
@@ -23,20 +24,18 @@ function login() {
             buttonsStyling: false
         }).then(() => {
             setTimeout(() => {
-                window.location.href = "../../index.html"; // Substitua pelo URL da sua página de login
+                window.location.href = "../../index.html"; // Substitua pelo URL da sua página principal
             }, 2000);
         });
     } else {
         Swal.fire({
             title: "Erro!",
-            text: "Preencha todos os campos!",
+            text: "Email ou senha inválido!",
             icon: "error",
             customClass: {
                 confirmButton: "btn btn-danger",
             },
             buttonsStyling: false
-        }).then(() => {
-            window.location.href = 'login.html';
         });
     }
 }
