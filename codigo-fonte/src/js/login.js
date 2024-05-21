@@ -11,7 +11,7 @@ function logar() {
 
     if (usuario && usuario.password === senha) { // Ajuste na comparação da senha
         localStorage.setItem("acesso", true);
-        window.location.href = 'atualizacao-de-cadastro.html';
+        window.location.href = 'login.html';
         alert("Login efetuado com sucesso!");
     } else {
         alert("Email ou senha inválido!");

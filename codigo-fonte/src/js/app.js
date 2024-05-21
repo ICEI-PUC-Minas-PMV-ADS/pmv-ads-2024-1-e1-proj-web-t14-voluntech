@@ -46,12 +46,12 @@ form.addEventListener("submit", (event) => {
     // Armazena o array atualizado no localStorage
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    // Exibe um modal de sucesso
+    // Exibe um modal de sucesso de cadastro
     const modal = document.getElementById("modal");
     modal.classList.add("modal");
     form.insertAdjacentElement("afterend", modal);
 
-    // Botão para salvar o modal
+    // Botão para salvar o modal de cadastro
     const btnSaveModal = document.getElementById("btnSaveModal");
     btnSaveModal.addEventListener("click", () => {
       modal.remove("modal");
@@ -60,7 +60,7 @@ form.addEventListener("submit", (event) => {
     // Redireciona para a página de login após 3 segundos
     setTimeout(() => {
       window.location.href = "login.html"; // Substitua pelo URL da sua página de login
-    }, 3000);
+    }, 5000);
   }
 });
 
@@ -205,7 +205,8 @@ myInput.onkeyup = function () {
   }
 };
 
-// redirecionar para página principal -- lucas
+// Função para redirecionar para página principal
+// Author: lucas
 function redir() {
   window.location.href = "/pmv-ads-2024-1-e1-proj-web-t14-voluntech/index.html"; // redireciona para página principal
 }
@@ -220,11 +221,12 @@ const btnSaveModal = document.getElementById("btnSaveModal");
 btnSaveModal.addEventListener("click", () => {
   modal.remove("modal");
 });
-// desabilitar botão salvar caso não esteja preenchido formulário
+
+// Desabilitar botão salvar caso não esteja preenchido formulário
 const button = document.getElementById("btn-2");
 button.style.opacity = 0.7;
 button.disabled = true;
-//
+
 const nomeInstituicaoField = document.getElementById("nomeInstituicao");
 const cepField = document.getElementById("cep");
 const cnpjField = document.getElementById("cnpj");
@@ -260,7 +262,7 @@ function checkFormFields() {
   });
 }
 
-// desabilitar e habilitar botão com checagem
+// Desabilitar e habilitar botão com checagem
 function checkFormFields() {
   let fieldsFilled = true;
 
@@ -278,7 +280,6 @@ function checkFormFields() {
     button.disabled = true;
   }
 }
-
 
 formFields.forEach((field) => {
   field.addEventListener('input', checkFormFields);
