@@ -1,5 +1,7 @@
 # VolunTech
 
+![Logo VolunTech](codigo-fonte/src/img/logo.png)
+
 `Análise e Desenvolvimento de Sistemas - PUC Minas`
 
 `Desenvolvimento de Aplicação Web Front-End`
