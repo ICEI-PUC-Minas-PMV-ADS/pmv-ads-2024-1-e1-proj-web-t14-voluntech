@@ -55,7 +55,7 @@
               <a href="portal-das-instituicoes.html" class="nav-link">Portal das Instituições</a>
             </li>
             <li class="nav-item">
-              <a href="login.html" class="btn btn-outline-light ml-1 mt-1">Entrar</a>
+              <a id="linkEntrarSair" href="login.html" class="btn btn-outline-light ml-1 mt-1">Entrar</a>
             </li>
           </ul>
         </div>
@@ -71,8 +71,8 @@
         <div class="card border mb-3">
           <img class="card-img-top mx-auto" src="img/perfil.png" alt="Card image" style="width: 120px" />
           <div class="card-body mx-auto">
-            <h5 class="card-title">Exemplo 1</h5>
-            <button type="button" class="btn btn-secondary" href="atualizacao-de-cadastro.html">
+            <h5 class="card-title text-center" id="nomeEditarPerfil"></h5>
+            <button type="button" class="btn btn-secondary" id="btnEditarPerfil">
               Editar Perfil
             </button>
           </div>
@@ -95,7 +95,7 @@
               <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
                 <div class="form-group">
                   <label class="sr-only" for="message">post</label>
-                  <textarea class="form-control" id="publicacao" rows="6"
+                  <textarea class="form-control" id="publicacao" rows="3"
                     placeholder="Descreva qual sua necessidade mais importante no momento:"></textarea>
                 </div>
               </div>
@@ -121,7 +121,7 @@
                     <img class="rounded" width="45" src="img/perfil.png" alt="" />
                   </div>
                   <div class="ml-2">
-                    <div class="h5 m-0">Exemplo 1</div>
+                    <div class="h5 m-0">Lar dos Idosos</div>
                   </div>
                 </div>
                 <div>
@@ -158,6 +158,9 @@
     </div>
   </div>
 </body>
+
 <script src="js/feed.js"></script>
+<!-- Sweet Alert -->
+<script src="js/sweetalert2.js"></script>
 
 </html>
