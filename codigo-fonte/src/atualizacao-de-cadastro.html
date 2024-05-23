@@ -69,57 +69,54 @@
 
   <!-- Início do Formulário -->
   <div class="container-fluid mt-1">
-    <a href="feed.html">
-      <button type="button" class="btn btn-lg btn-light float-left ml-2">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-    </a>
-
-    <h4 class="mt-2">Editar Perfil</h4>
+    <div class="container mt-6">
+      <a href="feed.html" class="btn btn-light float-left">
+        <i class="fas fa-chevron-left"></i> Voltar para o Feed
+      </a>
 
     <div class="linha-vertical ml-4" id="pagina">
       <form action="#" class="needs-validation" id="form" method="post" novalidate>
         <div class="row justify-content-left ml-5">
-          <div class="col-md-4 form-group">
+          <div class="col-md-6 form-group">
             <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
           <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
             placeholder="Nome da instituição" required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o nome da instituição corretamente.
-          </div>
+          </div>-->
         </div>
 
-        <div class="col-lg-4 form-group has-validation">
+        <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
           <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP"
             required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o CEP corretamente.
-          </div>
+          </div>-->
         </div>
       </div>
 
       <div class="row justify-content-left ml-5">
-        <div class="col-md-4 form-group has-validation">
+        <div class="col-md-6 form-group has-validation">
           <label for="cnpj" class="form-label">CNPJ:</label>
           <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
             placeholder="CNPJ" required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o CNPJ corretamente.
-          </div>
+          </div>-->
         </div>
 
-        <div class="col-lg-4 form-group has-validation">
+        <div class="col-lg-6 form-group has-validation">
           <label for="bairro" class="form-label">Bairro:</label>
           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required />
-          <div class="invalid-feedback">
+         <!-- <div class="invalid-feedback">
             Por favor, preencha o nome do bairro corretamente.
-          </div>
+          </div>-->
         </div>
       </div>
 
       <div class="row justify-content-left ml-5">
-        <div class="col-md-4 form-group has-validation">
+        <div class="col-md-6 form-group has-validation">
           <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
             <option value="">------- Selecione uma opção -------</option>
@@ -134,42 +131,42 @@
             <option value="saude">Saúde</option>
             <option value="outras">Outras</option>
           </select>
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, selecione uma opção válida.
-          </div>
+          </div>-->
         </div>
 
-        <div class="col-lg-4 form-group has-validation">
+        <div class="col-lg-6 form-group has-validation">
           <label for="cidade" class="form-label">Cidade:</label>
           <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
             required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o telefone fixo corretamente.
-          </div>
+          </div>-->
         </div>
       </div>
 
       <div class="row justify-content-left ml-5">
-        <div class="col-md-4 form-group has-validation">
+        <div class="col-md-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o e-mail corretamente.
-          </div>
+          </div>-->
         </div>
 
-        <div class="col-lg-4 form-group has-validation">
+        <div class="col-lg-6 form-group has-validation">
           <label for="telefone" class="form-label">Telefone Fixo:</label>
           <input type="text" class="form-control" id="telefone" name="telefone" maxlength="14" placeholder="Telefone"
             required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o telefone fixo corretamente.
-          </div>
+          </div>-->
         </div>
       </div>
 
       <div class="row justify-content-left ml-5">
-        <div class="col-md-4 form-group has-validation">
+        <div class="col-md-6 form-group has-validation">
           <label for="password" class="form-label">Senha:</label>
           <div class="input-group">
             <input name="password" type="password" value="" class="input form-control" id="password" placeholder="Senha"
@@ -192,25 +189,25 @@
           </div>
         </div>
 
-        <div class="col-lg-4 form-group has-validation">
+        <div class="col-lg-6 form-group has-validation">
           <label for="celular" class="form-label">Celular:</label>
           <input type="text" class="form-control" id="celular" name="celular" maxlength="15" placeholder="Celular"
             required />
-          <div class="invalid-feedback">
+          <!--<div class="invalid-feedback">
             Por favor, preencha o celular corretamente.
-          </div>
+          </div>-->
         </div>
       </div>
 
-        <div class="row justify-content-left ml-5">
-          <div class="d-grid gap-2 mx-5">
-            <button class="btn-3 mr-4" id="btn-3" type="reset">Cancelar</button>
-          <div>
-            <button type="submit" class="btn-2" id="btn-2" data-toggle="modal" data-target="#modal">
-              Salvar
-            </button>
+      <div class="row justify-content-left ml-5">
+        <div class="col-auto">
+          <button class="btn btn-danger mr-2" id="btn-3" type="reset">Cancelar</button>
+          <button type="submit" class="btn btn-success" id="btn-2" data-toggle="modal" data-target="#modal">Salvar</button>
+        </div>
+      </div>
 
       <!-- Modal -->
+      <!--
       <div class="modal fade justify-content-center" id="modal" tabindex="-1" aria-labelledby="Modal" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -230,12 +227,14 @@
           </div>
         </div>
       </div>
-
+      -->
       </form>
     </div>
     <!-- Fim do Formulário -->
 
     <script src="js/app.js"></script>
+    <!-- Sweet Alert -->
+    <script src="js/sweetalert2.js"></script>
 
 </body>
 

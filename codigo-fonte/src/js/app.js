@@ -64,7 +64,7 @@ form.addEventListener("submit", (event) => {
 
   } else {
     Swal.fire({
-      title: "Erro!",
+      title: "Aviso!",
       text: "Preencha todos os campos!",
       icon: "error",
       customClass: {
