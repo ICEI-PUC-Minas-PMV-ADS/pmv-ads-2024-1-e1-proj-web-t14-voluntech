@@ -1,4 +1,4 @@
-# VolunTech
+# VolunTech: Onde suas buscas encontram propósito.
 
 ![Logo VolunTech](codigo-fonte/src/img/logo.png)
 
