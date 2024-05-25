@@ -216,9 +216,7 @@ myInput.onkeyup = function () {
   }
 };
 
-// Função para redirecionar para página principal
 // Author: lucas
-
 
 // Exibe um modal de sucesso
 const modal = document.getElementById("Salvar");
