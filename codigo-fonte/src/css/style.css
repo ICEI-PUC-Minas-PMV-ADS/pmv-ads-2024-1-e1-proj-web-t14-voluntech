@@ -371,7 +371,7 @@ form {
 }
 
 .linha-vertical {
-  height: 575px;
+  height: 574px;
   border-left: 1px solid;
   margin-left: 300px;
 }
@@ -382,9 +382,9 @@ form {
   margin: 0 auto;
 }
 
-@media (max-width: 990px) {
+@media (min-width: 990px) {
   .linha-vertical {
-  height: 574px;
+  height: 560px;
   border-left: 1px solid;
   margin-left: 300px;
   }
@@ -428,7 +428,7 @@ input[type=submit] {
   background: white;
   color: #000;
   position: relative;
-  padding: 20px;
+  padding: 10px;
   margin-top: 10px;
 }
 
