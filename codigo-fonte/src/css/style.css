@@ -329,63 +329,52 @@ h4 {
   margin-top: 100px;
   float: left;
 }
-/*
-#btn-2 {
-  width: 135px;
-  height: 28px;
-  color: white;
-  background-color: lime;
-  border-color: lime;
-  border-radius: 5%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
+
+h4:hover {
+  color: #000;
+  text-decoration: none;
 }
 
-#btn-3 #btn-2 {
-  display: flex;
+form {
+  margin-top: 25px;
+  float: left;
 }
 
-#btn-2:hover {
-  width: 135px;
-  height: 28px;
+.btn-1 {
+  color: #000;
+  text-decoration: none;
+}
+
+.btn-1:hover {
+  color: #000;
+}
+
+.btn-2 {
+  width: 250px;
+  height: 35px;
   color: white;
-  background-color: lime;
-  border-color: lime;
   border-radius: 5px;
-  opacity: 0.7;
-  translate: 1px;
+  margin-left: 100px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-#btn-2:focus {
-  background-color: lime;
-  border-color: lime;
-}
-
-#btn-3 {
-  width: 135px;
-  height: 28px;
+.btn-3 {
+  width: 250px;
+  height: 35px;
   color: white;
-  background-color: red;
-  border-color: red;
   border-radius: 5px;
+  margin-left: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-#btn-3:hover {
-  width: 135px;
-  height: 28px;
-  color: white;
-  background-color: red;
-  border-color: red;
-  border-radius: 5px;
-  opacity: 0.7;
-  translate: 1px;
+.linha-vertical {
+  height: 575px;
+  border-left: 1px solid;
+  margin-left: 300px;
 }
-
-#btn-3:focus {
-  background-color: red;
-  border-color: red;
-}*/
 
 .centered {
   display: block;
@@ -393,15 +382,15 @@ h4 {
   margin: 0 auto;
 }
 
-@media (min-width: 990px) {
+@media (max-width: 990px) {
   .linha-vertical {
-  height: 575px;
+  height: 574px;
   border-left: 1px solid;
   margin-left: 300px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .modal:before {
     display: inline-block;
     vertical-align: middle;
@@ -409,6 +398,11 @@ h4 {
     height: 100%;
   }
 }
+
+@media screen and (min-width: 900px) {
+
+}
+
 /* Estilos Gerais do João */
 
 /* Style all input fields */
@@ -463,89 +457,4 @@ input[type=submit] {
   position: relative;
   left: -35px;
   content: "✖";
-}
-
-/* Estilo para o modal de cadastro */
-.modal-confirm {		
-	color: #434e65;
-	width: 525px;
-}
-.modal-confirm .modal-content {
-	padding: 20px;
-	font-size: 16px;
-	border-radius: 5px;
-	border: none;
-}
-.modal-confirm .modal-header {
-	background: #47c9a2;
-	border-bottom: none;   
-	position: relative;
-	text-align: center;
-	margin: -20px -20px 0;
-	border-radius: 5px 5px 0 0;
-	padding: 35px;
-}
-.modal-confirm h4 {
-	text-align: center;
-	font-size: 36px;
-	margin: 10px 0;
-}
-.modal-confirm .form-control, .modal-confirm .btn {
-	min-height: 40px;
-	border-radius: 3px; 
-}
-
-.modal-confirm .close {
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	color: #fff;
-	text-shadow: none;
-	opacity: 0.5;
-}
-.modal-confirm .close:hover {
-	opacity: 0.8;
-}
-.modal-confirm .icon-box {
-	color: #fff;		
-	width: 95px;
-	height: 95px;
-	display: inline-block;
-	border-radius: 50%;
-	z-index: 9;
-	border: 5px solid #fff;
-	padding: 15px;
-	text-align: center;
-}
-.modal-confirm .icon-box i {
-	font-size: 64px;
-	margin: -4px 0 0 -4px;
-}
-.modal-confirm.modal-dialog {
-	margin-top: 80px;
-}
-.modal-confirm .btn, .modal-confirm .btn:active {
-	color: #fff;
-	border-radius: 4px;
-	background: #eeb711 !important;
-	text-decoration: none;
-	transition: all 0.4s;
-	line-height: normal;
-	border-radius: 30px;
-	margin-top: 10px;
-	padding: 6px 20px;
-	border: none;
-}
-.modal-confirm .btn:hover, .modal-confirm .btn:focus {
-	background: #eda645 !important;
-	outline: none;
-}
-.modal-confirm .btn span {
-	margin: 1px 3px 0;
-	float: left;
-}
-.modal-confirm .btn i {
-	margin-left: 1px;
-	font-size: 20px;
-	float: right;
 }

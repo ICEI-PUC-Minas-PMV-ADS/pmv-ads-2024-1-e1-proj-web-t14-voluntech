@@ -218,9 +218,7 @@ myInput.onkeyup = function () {
 
 // Função para redirecionar para página principal
 // Author: lucas
-function redir() {
-  window.location.href = "/pmv-ads-2024-1-e1-proj-web-t14-voluntech/index.html"; // redireciona para página principal
-}
+
 
 // Exibe um modal de sucesso
 const modal = document.getElementById("Salvar");
@@ -295,4 +293,3 @@ function checkFormFields() {
 formFields.forEach((field) => {
   field.addEventListener('input', checkFormFields);
 });
-
