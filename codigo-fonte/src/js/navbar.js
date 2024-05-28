@@ -8,7 +8,7 @@ function atualizarLinkEntrarSair() {
       linkEntrarSair.innerText = 'Sair';
     } else {
       // Se o usuário não estiver logado, mantém o href para a página de login
-      linkEntrarSair.href = 'login.html';
+      linkEntrarSair.href = 'https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/codigo-fonte/src/login.html';
       // Mantém o texto do link como "Entrar"
       linkEntrarSair.innerText = 'Entrar';
     }
