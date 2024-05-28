@@ -13,6 +13,9 @@ function login() {
         // Define a variável de controle para indicar que o usuário está logado
         localStorage.setItem('logado', 'true'); // Ajuste aqui para definir como string 'true'
 
+        // Define o nome da instituição do usuário logado no localStorage
+        localStorage.setItem('nomeInstituicaoLogada', usuario.nomeInstituicao);
+
         Swal.fire({
             title: 'Sucesso!',
             text: 'Login efetuado com sucesso.',

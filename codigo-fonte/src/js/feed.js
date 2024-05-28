@@ -2,26 +2,26 @@ document.getElementById('cardProfile').style.display = 'none';
 
 const botaoPublicar = document.querySelector('#publicar');
 
-// Variável para armazenar o nome da instituição
-var instituicao = "";
+
 
 if (localStorage.getItem('logado') === 'true') {
   // Mostra a div de perfil
   document.getElementById('cardProfile').style.display = 'block';
 
-  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+  // Recupera o nome da instituição do usuário logado do localStorage
+  const nomeInstituicaoLogada = localStorage.getItem('nomeInstituicaoLogada');
 
-  // Verifica se há usuários cadastrados
-  if (usuarios.length > 0) {
-    const primeiroUsuario = usuarios[0];
-    // Obtém o nome da instituição do primeiro usuário
-    instituicao = primeiroUsuario.nomeInstituicao;
+  // Verifica se o nome da instituição do usuário logado está disponível
+  if (nomeInstituicaoLogada) {
     // Define o nome da instituição no perfil
-    document.getElementById('nomeEditarPerfil').innerText = instituicao;
+    document.getElementById('nomeEditarPerfil').innerText = nomeInstituicaoLogada;
   } else {
-    console.error("Nenhum usuário cadastrado.");
+    console.error("Nome da instituição do usuário logado não encontrado.");
   }
 }
+
+// Variável para armazenar o nome da instituição
+const instituicao = localStorage.getItem('nomeInstituicaoLogada');
 
 // Função para criar e adicionar uma nova postagem
 function createAndAddPost() {
@@ -119,26 +119,4 @@ botaoPublicar.addEventListener('click', function() {
 document.getElementById('btnEditarPerfil').addEventListener('click', function() {
   // Redireciona o usuário para a página de atualização de cadastro
   window.location.href = 'atualizacao-de-cadastro.html';
-});
-
-
-// Função para verificar e atualizar o link de entrar/sair
-function atualizarLinkEntrarSair() {
-  var linkEntrarSair = document.getElementById('linkEntrarSair');
-  if (localStorage.getItem('logado') === 'true') {
-    // Se o usuário estiver logado, altera o href para a página de logout (ou para onde você deseja que o link de sair leve)
-    linkEntrarSair.href = 'login.html'; // Atualize para o link de logout correto
-    // Altera o texto do link para "Sair"
-    linkEntrarSair.innerText = 'Sair';
-  } else {
-    // Se o usuário não estiver logado, mantém o href para a página de login
-    linkEntrarSair.href = 'login.html';
-    // Mantém o texto do link como "Entrar"
-    linkEntrarSair.innerText = 'Entrar';
-  }
-}
-
-// Chama a função para atualizar o link de entrar/sair quando a página carregar
-document.addEventListener('DOMContentLoaded', function() {
-  atualizarLinkEntrarSair();
 });
