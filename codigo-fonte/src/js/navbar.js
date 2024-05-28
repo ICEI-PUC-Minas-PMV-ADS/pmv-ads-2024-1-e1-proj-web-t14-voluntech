@@ -3,7 +3,7 @@ function atualizarLinkEntrarSair() {
     var linkEntrarSair = document.getElementById('linkEntrarSair');
     if (localStorage.getItem('logado') === 'true') {
       // Se o usuário estiver logado, altera o href para a página de logout
-      linkEntrarSair.href = 'login.html'; // Atualize para o link de logout correto
+      linkEntrarSair.href = 'https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/'; // Atualize para o link de logout correto
       // Altera o texto do link para "Sair"
       linkEntrarSair.innerText = 'Sair';
     } else {
