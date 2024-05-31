@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.error("Nome da instituição do usuário logado não encontrado.");
     }
+    
   }
 
   // Recupera todas as postagens armazenadas
@@ -81,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <i class="fa fa-ellipsis-h"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                <a class="dropdown-item" href="#">Denunciar</a>
+                <a class="dropdown-item denunciar-btn" href="#" >Denunciar</a>
               </div>
             </div>
           </div>
@@ -171,4 +172,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Redireciona o usuário para a página de atualização de cadastro
     window.location.href = 'atualizacao-de-cadastro.html';
   });
+  // Adiciona um evento de clique ao botão de denúncia
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('denunciar-btn')) {
+      Swal.fire({
+        title: "Denúncia Registrada!",
+        text: "Sua denúncia foi registrada com sucesso.",
+        icon: "success",
+        customClass: {
+          confirmButton: "btn btn-success",
+        },
+        buttonsStyling: false
+      });
+    }
+  });
+
 });
