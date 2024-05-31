@@ -2,8 +2,6 @@ document.getElementById('cardProfile').style.display = 'none';
 
 const botaoPublicar = document.querySelector('#publicar');
 
-// Definindo postagens no escopo global
-let postagens = [];
 
 document.addEventListener('DOMContentLoaded', function() {
   // Verifica se o usuário está logado
