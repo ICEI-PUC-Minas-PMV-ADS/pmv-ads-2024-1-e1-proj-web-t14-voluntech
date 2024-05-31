@@ -32,7 +32,7 @@ function login() {
         });
     } else {
         Swal.fire({
-            title: "Erro!",
+            title: "Aviso!",
             text: "Email ou senha inválido!",
             icon: "error",
             customClass: {
