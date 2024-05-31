@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
         title: "Aviso!",
         text: "Você precisa estar logado para publicar.",
         icon: "error",
+        footer: '<a href="portal-das-instituicoes.html">Cadastre-se aqui!</a>',
         customClass: {
           confirmButton: "btn btn-danger",
         },
