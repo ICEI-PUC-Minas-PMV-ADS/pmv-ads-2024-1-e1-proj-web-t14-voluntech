@@ -232,16 +232,17 @@
     
     localStorage.setItem("bairro" , document.querySelector("input#bairro").value)
     
-    
     localStorage.setItem("cidade" , document.querySelector("input#cidade").value)
-    
-    localStorage.setItem("email" , document.querySelector("input#email").value)
     
     localStorage.setItem("telefone" , document.querySelector("input#telefone").value)
     
     localStorage.setItem("password" , document.querySelector("input#password").value)
     
     localStorage.setItem("celular" , document.querySelector("input#celular").value)
+
+    localStorage.setItem("email", document.querySelector("input#email").value)
+    
+    localStorage.setItem("categorias" , document.querySelector("input#categorias").value)
 
   }
 
@@ -255,16 +256,16 @@
  
   document.querySelector("#bairro").value = localStorage.getItem("bairro");
 
-
-
   document.querySelector("#cidade").value = localStorage.getItem("cidade");
-
-  document.querySelector("#email").value = localStorage.getItem("email").value;
 
   document.querySelector("#telefone").value = localStorage.getItem("telefone");
 
   document.querySelector("#password").value = localStorage.getItem("password");
 
   document.querySelector("#celular").value = localStorage.getItem("celular");
+ 
+  document.querySelector("input#email").value = localStorage.getItem("email");
 
+  document.querySelector("input#categorias").value = localStorage.setItem("categorias");
   }
+ 
