@@ -131,13 +131,23 @@ document.addEventListener('DOMContentLoaded', function() {
           title: "Aviso!",
           text: "Por favor, escreva uma mensagem antes de publicar.",
           icon: "error",
-          footer: '<a href="portal-das-instituicoes.html">Cadastre-se aqui!</a>',
           customClass: {
             confirmButton: "btn btn-danger",
           },
           buttonsStyling: false
         });
       }
+    } else {
+      Swal.fire({
+        title: "Aviso!",
+        text: "Você precisa estar logado para publicar.",
+        icon: "error",
+        footer: '<a href="portal-das-instituicoes.html">Cadastre-se aqui!</a>',
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      });
     }
   }
 
