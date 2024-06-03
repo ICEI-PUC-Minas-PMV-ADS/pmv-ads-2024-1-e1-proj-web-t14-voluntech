@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:codigo-fonte/src/css/style.css
 /* Estilos Gerais */
 
 * {
@@ -185,6 +186,12 @@ footer p {
 
 .box-shadow {
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 /* Estilos Gerais da Tatiana */
@@ -453,8 +460,46 @@ input[type=submit] {
   color: red;
 }
 
+<<<<<<< Updated upstream
 .invalid:before {
   position: relative;
   left: -35px;
   content: "✖";
 }
+=======
+.nav-principal, li, a {
+    color: white;
+}
+=======
+/* Estilos Gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-color {
+    background-color: #87CEEB;
+}
+
+.cadastro {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.nav-principal, li, a {
+    color: white;
+}
+>>>>>>> Stashed changes:codigo-fonte/src/atualizacao_de_cadastro/css/style.css
+>>>>>>> Stashed changes

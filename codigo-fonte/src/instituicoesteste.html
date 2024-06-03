@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cards" />
+  <meta name="author" content="Lis" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <title>Instituições</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/7b34264bcc.js" crossorigin="anonymous"></script>
+  <script src="js/instituicoes.js" defer></script>
+  <script defer src="js/lista.instituicoes.js"></script>
+</head>
+
+<body>
+  <!-- Início Cabeçalho -->
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-color">
+      <div class="container">
+        <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2024-1-e1-proj-web-t14-voluntech/"
+          class="navbar-brand">
+          <img src="img/logo.png" width="140" alt="VolunTech" />
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="sobre.html" class="nav-link">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a href="instituicoes.html" class="nav-link">Instituições</a>
+            </li>
+            <li class="nav-item">
+              <a href="feed.html" class="nav-link">Feed</a>
+            </li>
+            <li class="nav-item">
+              <a href="portal-das-instituicoes.html" class="nav-link">Portal das Instituições</a>
+            </li>
+            <li class="nav-item">
+              <a id="linkEntrarSair" href="login.html" class="btn btn-outline-light ml-1 mt-1">Entrar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- Fim Cabeçalho -->
+
+  <main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Instituições</h1>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <label for="estado" class="form-label">Estado:</label>
+            <select class="form-control" id="estado" name="estado">
+              <option value="">------- Selecione uma opção -------</option>
+              <option value="Acre">Acre</option>
+              <option value="Alagoas">Alagoas</option>
+              <option value="Amapa">Amapá</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Bahia">Bahia</option>
+              <option value="Ceara">Ceará</option>
+              <option value="DistritoFederal">Distrito Federal</option>
+              <option value="EspiritoSanto">Espírito Santo</option>
+              <option value="Goias">Goiás</option>
+              <option value="Maranhao">Maranhão</option>
+              <option value="MatoGrosso">Mato Grosso</option>
+              <option value="MatoGrossodoSul">Mato Grosso do Sul</option>
+              <option value="MinasGerais">Minas Gerais</option>
+              <option value="Para">Pará</option>
+              <option value="Paraiba">Paraíba</option>
+              <option value="Parana">Paraná</option>
+              <option value="Pernambuco">Pernambuco</option>
+              <option value="Piaui">Piauí</option>
+              <option value="RiodeJaneiro">Rio de Janeiro</option>
+              <option value="RioGrandedoNorte">Rio Grande do Norte</option>
+              <option value="RioGrandedoSul">Rio Grande do Sul</option>
+              <option value="Rondonia">Rondônia</option>
+              <option value="Roraima">Roraima</option>
+              <option value="SantaCatarina">Santa Catarina</option>
+              <option value="SaoPaulo">São Paulo</option>
+              <option value="Sergipe">Sergipe</option>
+              <option value="Tocantins">Tocantins</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="cidade" class="form-label">Cidade:</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Digite o nome da cidade">
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="categoria" class="form-label">Categorias:</label>
+            <select class="form-control" id="categoria" name="categoria">
+              <option value="">------- Selecione uma opção -------</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="cultura">Cultura</option>
+              <option value="protecaoAnimal">Proteção Animal</option>
+              <option value="contrucaoCivil">Construção Civil</option>
+              <option value="educacao">Educação</option>
+              <option value="esporte">Esporte</option>
+              <option value="saude">Saúde</option>
+              <option value="outras">Outras</option>
+            </select>
+          </div>
+
+          <section id="listaCards" class="d-flex flex-wrap justify-content-between"></section> 
+
+
+          <!-- Modal -->
+          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="infoModalLabel">Detalhes da Instituição</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <!-- Conteúdo será inserido dinamicamente -->
+                  <h5 id="modal-nome"></h5>
+                  <p><strong>Descrição:</strong> <span id="modal-descricao"></span></p>
+                  <p><strong>Missão:</strong> <span id="modal-missao"></span></p>
+                  <p><strong>Contato:</strong> <span id="modal-contato"></span></p>
+                  <p><strong>Endereço:</strong> <span id="modal-endereco"></span></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SCRIPT PARA GERAR CARDS DA LOCAL STORAGE -->
+            <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const cardONGJSON = localStorage.getItem('cardONG');
+            const cardONG = JSON.parse(cardONGJSON);
+
+            
+            // Função para gerar o HTML dos cards
+              function gerarCards() {
+                const container = document.getElementById('listaCards');
+                container.innerHTML = ''; 
+
+                const row = document.createElement('div');
+                row.classList.add('row', 'justify-content-center');
+
+                cardONG.forEach(instituicao => {
+                  const cardHTML = `
+                    <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}">
+                        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Imagem da instituição">
+                        <div class="card-body">
+                          <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
+                          <p class="card-text">${instituicao.categorias}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  `;
+                  row.insertAdjacentHTML('beforeend', cardHTML);
+                });
+                container.appendChild(row);
+              }
+
+            gerarCards();
+          });
+          </script>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+  <!-- Bootstrap core JavaScript
+        ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../../../../assets/js/vendor/popper.min.js"></script>
+      <script src="../../../../dist/js/bootstrap.min.js"></script>
+      <script src="../../../../assets/js/vendor/holder.min.js"></script>
+      <script src="js/navbar.js"></script>
+
+
+
+</html>
+
+

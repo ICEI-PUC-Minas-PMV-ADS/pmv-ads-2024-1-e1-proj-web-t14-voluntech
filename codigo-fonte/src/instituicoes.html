@@ -24,10 +24,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/7b34264bcc.js" crossorigin="anonymous"></script>
+  <script src="js/instituicoes.js" defer></script>
+  <script defer src="js/lista.instituicoes.js"></script>
 </head>
 
 <body>
@@ -81,100 +82,104 @@
         <div class="row">
           <div class="col-md-4 form-group">
             <label for="estado" class="form-label">Estado:</label>
-            <select class="form-control" id="categorias" name="categorias">
+            <select class="form-control" id="estado" name="estado">
               <option value="">------- Selecione uma opção -------</option>
-              <option value="Acre">AC</option>
-              <option value="Alagoas">AL</option>
-              <option value="Amapá">AP</option>
-              <option value="Amazonas">AM</option>
-              <option value="Bahia">BA</option>
-              <option value="Ceará">CE</option>
-              <option value="Distrito Federal">DF</option>
-              <option value="Espírito Santo">ES</option>
-              <option value="Goiás">GO</option>
-              <option value="Maranhão">MA</option>
-              <option value="Mato Grosso">MT</option>
-              <option value="Mato Grosso do Sul">MS</option>
-              <option value="Minas Gerais">MG</option>
-              <option value="Pará">PA</option>
-              <option value="Paraíba">PB</option>
-              <option value="Paraná">PR</option>
-              <option value="Pernambuco">PE</option>
-              <option value="Piauí">PI</option>
-              <option value="Rio de Janeiro">RJ</option>
-              <option value="Rio Grande do Norte">RN</option>
-              <option value="Rio Grande do Sul">RS</option>
-              <option value="Rondônia">RO</option>
-              <option value="Roraima">RR</option>
-              <option value="Santa Catarina">SC</option>
-              <option value="São Paulo">SP</option>
-              <option value="Sergipe">SE</option>
-              <option value="Tocantins">TO</option>
+              <option value="Acre">Acre</option>
+              <option value="Alagoas">Alagoas</option>
+              <option value="Amapa">Amapá</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Bahia">Bahia</option>
+              <option value="Ceara">Ceará</option>
+              <option value="DistritoFederal">Distrito Federal</option>
+              <option value="EspiritoSanto">Espírito Santo</option>
+              <option value="Goias">Goiás</option>
+              <option value="Maranhao">Maranhão</option>
+              <option value="MatoGrosso">Mato Grosso</option>
+              <option value="MatoGrossodoSul">Mato Grosso do Sul</option>
+              <option value="MinasGerais">Minas Gerais</option>
+              <option value="Para">Pará</option>
+              <option value="Paraiba">Paraíba</option>
+              <option value="Parana">Paraná</option>
+              <option value="Pernambuco">Pernambuco</option>
+              <option value="Piaui">Piauí</option>
+              <option value="RiodeJaneiro">Rio de Janeiro</option>
+              <option value="RioGrandedoNorte">Rio Grande do Norte</option>
+              <option value="RioGrandedoSul">Rio Grande do Sul</option>
+              <option value="Rondonia">Rondônia</option>
+              <option value="Roraima">Roraima</option>
+              <option value="SantaCatarina">Santa Catarina</option>
+              <option value="SaoPaulo">São Paulo</option>
+              <option value="Sergipe">Sergipe</option>
+              <option value="Tocantins">Tocantins</option>
             </select>
           </div>
           <div class="col-md-4 form-group">
             <label for="cidade" class="form-label">Cidade:</label>
-            <select class="form-control" id="categorias" name="categorias">
+            <select class="form-control" id="cidade" name="cidade">
               <option value="">------- Selecione uma opção -------</option>
               <option value="Aracaju">Aracaju</option>
-              <option value="Belém">Belém</option>
-              <option value="Belo Horizonte">Belo Horizonte</option>
-              <option value="Boa Vista">Boa Vista</option>
-              <option value="Brasília">Brasília</option>
-              <option value="Campo Grande">Campo Grande</option>
-              <option value="Cuiabá">Cuiabá</option>
+              <option value="Belem">Belém</option>
+              <option value="BeloHorizonte">Belo Horizonte</option>
+              <option value="BoaVista">Boa Vista</option>
+              <option value="Brasilia">Brasília</option>
+              <option value="CampoGrande">Campo Grande</option>
+              <option value="Cuiaba">Cuiabá</option>
               <option value="Curitiba">Curitiba</option>
-              <option value="Florianópolis">Florianópolis</option>
+              <option value="Florianopolis">Florianópolis</option>
               <option value="Fortaleza">Fortaleza</option>
-              <option value="Goiânia">Goiânia</option>
-              <option value="João Pessoa">João Pessoa</option>
-              <option value="Macapá">Macapá</option>
-              <option value="Maceió">Maceió</option>
+              <option value="Goiania">Goiânia</option>
+              <option value="JoaoPessoa">João Pessoa</option>
+              <option value="Macapa">Macapá</option>
+              <option value="Maceio">Maceió</option>
               <option value="Manaus">Manaus</option>
               <option value="Natal">Natal</option>
               <option value="Palmas">Palmas</option>
-              <option value="Porto Alegre">Porto Alegre</option>
-              <option value="Porto Velho">Porto Velho</option>
+              <option value="PortoAlegre">Porto Alegre</option>
+              <option value="PortoVelho">Porto Velho</option>
               <option value="Recife">Recife</option>
-              <option value="Rio Branco">Rio Branco</option>
-              <option value="Rio de Janeiro">Rio de Janeiro</option>
+              <option value="RioBranco">Rio Branco</option>
+              <option value="RiodeJaneiro">Rio de Janeiro</option>
               <option value="Salvador">Salvador</option>
-              <option value="São Luís">São Luís</option>
-              <option value="São Paulo">São Paulo</option>
+              <option value="SaoLuis">São Luís</option>
+              <option value="SaoPaulo">São Paulo</option>
               <option value="Teresina">Teresina</option>
-              <option value="Vitória">Vitória</option>
+              <option value="Vitoria">Vitória</option>
             </select>
           </div>
           <div class="col-md-4 form-group">
-            <label for="categorias" class="form-label">Categorias:</label>
-            <select class="form-control" id="categorias" name="categorias">
+            <label for="categoria" class="form-label">Categorias:</label>
+            <select class="form-control" id="categoria" name="categoria">
               <option value="">------- Selecione uma opção -------</option>
-              <option value="alimenticio">Alimentício</option>
-              <option value="bancario">Bancário</option>
-              <option value="comercio">Comércio Varejista</option>
+              <option value="alimentacao">Alimentação</option>
+              <option value="cultura">Cultura</option>
+              <option value="protecaoAnimal">Proteção Animal</option>
               <option value="contrucaoCivil">Construção Civil</option>
               <option value="educacao">Educação</option>
-              <option value="logisticaTransporte">Logística e Transporte</option>
+              <option value="esporte">Esporte</option>
               <option value="saude">Saúde</option>
               <option value="outras">Outras</option>
             </select>
           </div>
-          <div class="col-md-4">
-            <div class="card mb-4 box-shadow">
-              <img class="card-img-top" src="img/Anjinhos Protetores - Resgate e abrigo de animais.jpg" height="230"
-                alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Anjinhos Protetores</p>
-                <p class="card-text">Resgate e abrigo de animais</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
+
+          <section id="listaCards"></section>
+
+          <div class="cardONG col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte" data-categoria="protecaoAnimal"
+     data-nome="Anjinhos Protetores" data-descricao="Resgate e abrigo de animais" data-missao="Nossa missão é fornecer um lar temporário seguro e cuidados médicos para animais abandonados, até que possam ser adotados por famílias amorosas." data-contato="contato@anjinhosprotetores.org" data-endereco="Rua dos Anjos, 123, Belo Horizonte, MG">
+  <div class="card mb-4 box-shadow">
+    <img class="card-img-top" src="img/Anjinhos Protetores - Resgate e abrigo de animais.jpg" height="230" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Anjinhos Protetores</p>
+      <p class="card-text">Resgate e abrigo de animais</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#infoModal" onclick="showModal(this)">Saiba mais</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="cardONG col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte" data-categoria="cultura">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Arte em Ação - Apoio à cultura.jpg" height="230" alt="Card image cap">
               <div class="card-body">
@@ -188,7 +193,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="cardONG col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro" data-categoria="educacao">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Educar para Transformar - Apoio educacional para crianças.jpg"
                 height="230" alt="Card image cap">
@@ -204,7 +209,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="cardONG col-md-4" data-estado="SantaCatarina" data-cidade="Florianopolis" data-categoria="esporte">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Esporte para Todos - Desportivo.jpg" height="230" alt="Card image cap">
               <div class="card-body">
@@ -218,7 +223,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="cardONG col-md-4" data-estado="SaoPaulo" data-cidade="SaoPaulo" data-categoria="outras">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Lares Felizes - Acolhimento a crianças órfãs.jpg" height="230"
                 alt="Card image cap">
@@ -233,7 +238,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="cardONG col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro" data-categoria="alimentacao">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Mãos que Alimentam - Cozinha solidária.jpg" height="230"
                 alt="Card image cap">
@@ -251,8 +256,33 @@
         </div>
       </div>
     </div>
-
   </main>
+
+   <!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Detalhes da Instituição</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Conteúdo será inserido dinamicamente -->
+        <h5 id="modal-nome"></h5>
+        <p><strong>Descrição:</strong> <span id="modal-descricao"></span></p>
+        <p><strong>Missão:</strong> <span id="modal-missao"></span></p>
+        <p><strong>Contato:</strong> <span id="modal-contato"></span></p>
+        <p><strong>Endereço:</strong> <span id="modal-endereco"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 
@@ -267,6 +297,46 @@
   <script src="../../../../dist/js/bootstrap.min.js"></script>
   <script src="../../../../assets/js/vendor/holder.min.js"></script>
   <script src="js/navbar.js"></script>
+
+
+  <!-- SCRIPT PARA GERAR CARDS DA LOCAL STORAGE
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const cardONGJSON = localStorage.getItem('cardONG');
+    const cardONG = JSON.parse(cardONGJSON);
+
+    
+    // Função para gerar o HTML dos cards
+    function gerarCards() {
+      const container = document.getElementById('listaCards');
+      container.innerHTML = ''; 
+
+      cardONG.forEach(instituicao => {
+        const cardHTML = `
+          <div class="mt-4">
+            <div class="card">
+              <img class="card-img-top" src="https://via.placeholder.com/150" alt="Imagem da instituição">
+              <div class="card-body">
+                <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
+                <p class="card-text">${instituicao.cidade}</p>
+                <p class="card-text">${instituicao.categorias}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', cardHTML);
+      });
+    }
+
+    gerarCards();
+  });
+  </script> -->
+ 
 </body>
 
 </html>
