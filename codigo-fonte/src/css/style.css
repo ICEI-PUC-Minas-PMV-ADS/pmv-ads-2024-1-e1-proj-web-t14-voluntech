@@ -410,6 +410,29 @@ form {
 }
 
 /* Estilos Gerais do João */
+ 
+/* Mudar o nome do input para imagem */
+input[type='file'] {
+  display: none;
+}
+
+#image {
+  margin: 100px;
+  width: 280px;
+  height: 280px;
+}
+
+.image-wrapper label {
+  background-color: #3498db;
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+  padding: 6px 20px
+}
+
+.image-wrapper label:hover {
+  background-color: #2980b9
+}
 
 /* Style all input fields */
 input {

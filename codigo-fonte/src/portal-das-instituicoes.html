@@ -76,28 +76,35 @@
     <h1 class="cadastro">Faça seu cadastro</h1>
 
     <!-- Início da Imagem -->
-    <div class="form-row float-right">
-      <div class="col-lg-12 form-group">
-        <img src="img/cadastro.png" alt="Cadastro" />
+    <div class="form-row float-right" id="image">
+
+      <div class="col-lg">
+        <img src="img/perfil.png" alt="Perfil">
+
+        <div class="form-group image-wrapper">
+          <label for="input-image">Escolha sua imagem de perfil</label>
+          <input type="file" class="form-control-file" id="input-image" required>
+        </div>
       </div>
+
     </div>
     <!-- Fim da Imagem -->
 
     <!-- Início do Formulário -->
-    <form action="" class="needs-validation" id="form" method="post" novalidate>
+    <form action="" class="float-left needs-validation" id="form" method="post" novalidate>
       <div class="form-row">
         <div class="col-lg-6 form-group has-validation">
           <label for="nomeInstituicao" class="form-label">Nome da Instituição:</label>
           <input type="text" class="form-control" id="nomeInstituicao" name="nomeInstituicao"
             placeholder="Nome da instituição" required />
-          
+
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
           <input type="text" class="form-control" id="cep" name="cep" maxlength="9" placeholder="Digite o CEP"
             required />
-          
+
         </div>
       </div>
 
@@ -106,14 +113,13 @@
           <label for="descricao" class="form-label">Descrição:</label>
           <input type="text" class="form-control" id="descricao" name="descricao"
             placeholder="Descreva algo sobre a instituição..." required />
-          
+
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="rua" class="form-label">Rua:</label>
-          <input type="text" class="form-control" id="rua" name="rua" placeholder="Rua"
-            required />
-          
+          <input type="text" class="form-control" id="rua" name="rua" placeholder="Rua" required />
+
         </div>
       </div>
 
@@ -122,13 +128,13 @@
           <label for="cnpj" class="form-label">CNPJ:</label>
           <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
             placeholder="CNPJ" required />
-          
+
         </div>
 
         <div class="col-lg-6 form-group has-validation">
           <label for="bairro" class="form-label">Bairro:</label>
           <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro" required />
-          
+
         </div>
       </div>
 
@@ -136,7 +142,7 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
-            <option value="">------- Selecione uma opção -------</option>
+            <option value="">----- Selecione uma opção -----</option>
             <option value="alimenticio">Setor Alimentício</option>
             <option value="bancario">Setor Bancário</option>
             <option value="comercio">Comércio Varejista</option>
@@ -152,7 +158,7 @@
           <label for="cidade" class="form-label">Cidade:</label>
           <input type="text" class="form-control" id="cidade" name="cidade" maxlength="14" placeholder="Cidade"
             required />
-            
+
         </div>
       </div>
 
@@ -160,7 +166,7 @@
         <div class="col-lg-6 form-group has-validation">
           <label for="email" class="form-label">E-mail:</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required />
-          
+
         </div>
 
         <div class="col-lg-6 form-group has-validation">
@@ -202,6 +208,7 @@
       </div>
 
       <!-- Botão com trigger modal -->
+
       <button type="submit" class="btn btn-primary btn-lg" id="btnSaveModal" data-toggle="modal" data-target="#modal">
         Salvar
       </button>

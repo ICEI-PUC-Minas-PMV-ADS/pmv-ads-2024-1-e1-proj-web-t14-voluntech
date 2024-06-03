@@ -57,11 +57,11 @@ form.addEventListener("submit", (event) => {
       },
       buttonsStyling: false
     })
-    .then(() => {
-      setTimeout(() => {
-        window.location.href = "login.html"; // Substitua pelo URL da sua página de login
-      }, 2000);
-    });
+      .then(() => {
+        setTimeout(() => {
+          window.location.href = "login.html"; // Substitua pelo URL da sua página de login
+        }, 2000);
+      });
 
   } else {
     Swal.fire({
@@ -218,3 +218,11 @@ myInput.onkeyup = function () {
     length.classList.add("invalid");
   }
 };
+
+// Mudar o nome do input para imagem
+var $input = document.getElementById('input-image'),
+  $fileName = document.getElementById('input-image');
+
+$input.addEventListener('change', function () {
+  $fileName.textContent = this.value;
+});
