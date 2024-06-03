@@ -488,9 +488,10 @@ a {
     text-decoration: none;
 }
 
-.bg-color {
+/*.bg-color {
     background-color: #87CEEB;
 }
+Comentado pois está causando efeito hover na NAVBAR inteira*/
 
 .cadastro {
     font-family: Verdana, Geneva, Tahoma, sans-serif;

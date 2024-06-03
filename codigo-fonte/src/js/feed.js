@@ -2,7 +2,6 @@ document.getElementById('cardProfile').style.display = 'none';
 
 const botaoPublicar = document.querySelector('#publicar');
 
-
 document.addEventListener('DOMContentLoaded', function() {
   // Verifica se o usuário está logado
   if (localStorage.getItem('logado') === 'true') {
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       console.error("Nome da instituição do usuário logado não encontrado.");
     }
-    
   }
 
   // Recupera todas as postagens armazenadas
@@ -54,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Armazena a string JSON no localStorage
     localStorage.setItem('postagens', postagensString);
+
+    // Exibe a nova postagem na interface do usuário sem recarregar a página
+    exibirPostagem(postagem);
   }
 
   // Função para exibir uma postagem na interface do usuário
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cria um novo elemento de postagem
     var newPost = document.createElement('div');
     newPost.className = 'card gedf-card border mb-3';
-    
+
     // Define o conteúdo HTML da nova postagem, incluindo o nome da instituição
     newPost.innerHTML = `
       <div class="card-header">
@@ -109,15 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (localStorage.getItem('logado') === 'true') {
       // Verifica se há conteúdo na publicação
       if (messageContent.trim() !== "") {
-
         // Armazena o conteúdo publicado
         armazenarConteudoPublicado(messageContent);
-
-        // Recupera a última postagem adicionada
-        const novaPostagem = postagens[postagens.length - 1];
-
-        // Exibe a nova postagem na interface do usuário
-        exibirPostagem(novaPostagem);
 
         // Limpa a textarea
         document.getElementById('publicacao').value = '';
@@ -131,10 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             confirmButton: "btn btn-success",
           },
           buttonsStyling: false
-        }).then((result) => {
-          if (result.isConfirmed) {
-            window.location.reload();
-          }
         });
       } else {
         Swal.fire({
