@@ -56,7 +56,8 @@ form.addEventListener("submit", (event) => {
         confirmButton: "btn btn-success",
       },
       buttonsStyling: false
-    }).then(() => {
+    })
+    .then(() => {
       setTimeout(() => {
         window.location.href = "login.html"; // Substitua pelo URL da sua página de login
       }, 2000);
@@ -73,6 +74,7 @@ form.addEventListener("submit", (event) => {
       buttonsStyling: false
     });
   }
+
 });
 
 // Função para validar os campos do formulário
@@ -215,80 +217,3 @@ myInput.onkeyup = function () {
     length.classList.add("invalid");
   }
 };
-
- /*
-// Author: lucas
-// Exibe um modal de sucesso
-const modal = document.getElementById("Salvar");
-modal.classList.add("modal");
-form.insertAdjacentElement("afterend", modal);
-
-// Desabilitar botão salvar caso não esteja preenchido formulário
-const button2 = document.getElementById("btn-2");
-button2.disabled = true;
-
-// Desabilitar botão salvar caso não esteja preenchido formulário
-const button3 = document.getElementById("btn-3");
-button3.disabled = true;
-
-// Campos do formulário
-const nomeInstituicaoField = document.getElementById("nomeInstituicao");
-const cepField = document.getElementById("cep");
-const cnpjField = document.getElementById("cnpj");
-const bairroField = document.getElementById("bairro");
-const categoriasField = document.getElementById("categorias");
-const cidadeField = document.getElementById("cidade");
-const emailField = document.getElementById("email");
-const telefoneField = document.getElementById("telefone");
-const passwordField = document.getElementById("password");
-const celularField = document.getElementById("celular");
-
-const formFields = [
-  nomeInstituicaoField,
-  cepField,
-  cnpjField,
-  bairroField,
-  categoriasField,
-  cidadeField,
-  emailField,
-  telefoneField,
-  passwordField,
-  celularField,
-];
-
-// Função checagem campos preenchidos
-function checkFormFields() {
-  let fieldsFilled = true;
-
-  formFields.forEach((field) => {
-    if (field.value === "") {
-      fieldsFilled = false;
-    }
-  });
-}
-
-// Desabilitar e habilitar botão com checagem
-function checkFormFields() {
-  let fieldsFilled = true;
-
-  formFields.forEach((field) => {
-    if (field.value === "") {
-      fieldsFilled = false;
-    }
-  });
-
-  if (fieldsFilled) {
-    button.removeAttribute("disabled");
-    button.style.opacity = 1;
-    button.style.cursor = "pointer";
-  } else {
-    button.disabled = true;
-  }
-}
-
-formFields.forEach((field) => {
-  field.addEventListener('input', checkFormFields);
-
-  checkFormFields();
-});
-*/
