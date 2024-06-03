@@ -137,7 +137,8 @@ cep.addEventListener("input", async () => {
       if (data.erro) {
         return;
       }
-      bairro.value = data.logradouro + " - " + data.bairro;
+      rua.value = data.logradouro;
+      bairro.value = data.bairro;
       cidade.value = data.localidade + " / " + data.uf;
     });
 });

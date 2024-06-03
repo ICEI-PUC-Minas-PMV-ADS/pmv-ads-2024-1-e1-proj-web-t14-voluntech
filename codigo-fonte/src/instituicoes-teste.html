@@ -132,11 +132,11 @@
             </select>
           </div>
 
-          <section id="listaCards" class="d-flex flex-wrap justify-content-between"></section> 
-
+          <section id="listaCards" class="d-flex flex-wrap justify-content-between"></section>
 
           <!-- Modal -->
-          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -161,16 +161,15 @@
           </div>
 
           <!-- SCRIPT PARA GERAR CARDS DA LOCAL STORAGE -->
-            <script>
+          <script>
             document.addEventListener('DOMContentLoaded', () => {
-            const cardONGJSON = localStorage.getItem('cardONG');
-            const cardONG = JSON.parse(cardONGJSON);
+              const cardONGJSON = localStorage.getItem('cardONG');
+              const cardONG = JSON.parse(cardONGJSON);
 
-            
-            // Função para gerar o HTML dos cards
+              // Função para gerar o HTML dos cards
               function gerarCards() {
                 const container = document.getElementById('listaCards');
-                container.innerHTML = ''; 
+                container.innerHTML = '';
 
                 const row = document.createElement('div');
                 row.classList.add('row', 'justify-content-center');
@@ -196,8 +195,8 @@
                 container.appendChild(row);
               }
 
-            gerarCards();
-          });
+              gerarCards();
+            });
           </script>
         </div>
       </div>
@@ -205,20 +204,14 @@
   </main>
 </body>
 
-  <!-- Bootstrap core JavaScript
-        ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-      <script src="../../../../assets/js/vendor/popper.min.js"></script>
-      <script src="../../../../dist/js/bootstrap.min.js"></script>
-      <script src="../../../../assets/js/vendor/holder.min.js"></script>
-      <script src="js/navbar.js"></script>
-
-
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../../../assets/js/vendor/popper.min.js"></script>
+<script src="../../../../dist/js/bootstrap.min.js"></script>
+<script src="../../../../assets/js/vendor/holder.min.js"></script>
+<script src="js/navbar.js"></script>
 
 </html>
-
-
