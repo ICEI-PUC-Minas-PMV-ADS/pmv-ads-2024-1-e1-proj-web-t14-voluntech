@@ -1,5 +1,6 @@
 // Store form data in local storage
 const form = document.getElementById("form");
+const image = document.getElementById("input-image");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Evita a submissão padrão do formulário
@@ -24,6 +25,33 @@ form.addEventListener("submit", (event) => {
 
     // Armazena o array atualizado no localStorage
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    // Adiciona a imagem ao objeto
+    data.image = image.files[0];
+
+    // Validação da imagem
+    if (!data.image) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "Selecione uma imagem!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      });
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL(data.image);
+    reader.onload = (event) => {
+      const base64Image = event.target.result;
+      data.image = base64Image;
+
+      // Armazena o objeto atualizado no localStorage
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    };
 
     // Exibe um modal de sucesso de cadastro
     Swal.fire({

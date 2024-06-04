@@ -417,9 +417,11 @@ input[type='file'] {
 }
 
 #image {
-  margin: 100px;
-  width: 280px;
-  height: 280px;
+  
+  margin: 100px 0px;
+  width: 350px;
+  height: 350px;  
+  float: right;
 }
 
 .image-wrapper label {
@@ -432,6 +434,11 @@ input[type='file'] {
 
 .image-wrapper label:hover {
   background-color: #2980b9
+}
+
+#btnSaveModal {
+  margin-left: 52px;
+  margin-bottom: 10px;
 }
 
 /* Style all input fields */
