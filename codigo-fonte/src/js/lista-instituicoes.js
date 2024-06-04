@@ -51,7 +51,7 @@ let cardONG =
       "password": "Teste123",
       "celular": "(31) 99999-9999",
       "foto": src = "img/Anjinhos Protetores - Resgate e abrigo de animais.jpg"
-    }
+    },
   ]
 
 localStorage.setItem("cardONG", JSON.stringify(cardONG));
