@@ -28,7 +28,6 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/7b34264bcc.js" crossorigin="anonymous"></script>
   <script src="js/instituicoes.js" defer></script>
-  <script defer src="js/lista-instituicoes.js"></script>
 </head>
 
 <body>
@@ -163,7 +162,7 @@
 
           <section id="listaCards"></section>
 
-          <div class="cardONG col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte"
+          <div class="col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte"
             data-categoria="protecaoAnimal" data-nome="Anjinhos Protetores" data-descricao="Resgate e abrigo de animais"
             data-missao="Nossa missão é fornecer um lar temporário seguro e cuidados médicos para animais abandonados, até que possam ser adotados por famílias amorosas."
             data-contato="contato@anjinhosprotetores.org" data-endereco="Rua dos Anjos, 123, Belo Horizonte, MG">
@@ -183,7 +182,7 @@
             </div>
           </div>
 
-          <div class="cardONG col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte" data-categoria="cultura">
+          <div class="col-md-4" data-estado="MinasGerais" data-cidade="BeloHorizonte" data-categoria="cultura">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Arte em Ação - Apoio à cultura.jpg" height="230" alt="Card image cap">
               <div class="card-body">
@@ -197,7 +196,7 @@
               </div>
             </div>
           </div>
-          <div class="cardONG col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro" data-categoria="educacao">
+          <div class="col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro" data-categoria="educacao">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Educar para Transformar - Apoio educacional para crianças.jpg"
                 height="230" alt="Card image cap">
@@ -213,7 +212,7 @@
             </div>
           </div>
 
-          <div class="cardONG col-md-4" data-estado="SantaCatarina" data-cidade="Florianopolis"
+          <div class="col-md-4" data-estado="SantaCatarina" data-cidade="Florianopolis"
             data-categoria="esporte">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Esporte para Todos - Desportivo.jpg" height="230" alt="Card image cap">
@@ -228,7 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="cardONG col-md-4" data-estado="SaoPaulo" data-cidade="SaoPaulo" data-categoria="outras">
+          <div class="col-md-4" data-estado="SaoPaulo" data-cidade="SaoPaulo" data-categoria="outras">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Lares Felizes - Acolhimento a crianças órfãs.jpg" height="230"
                 alt="Card image cap">
@@ -243,7 +242,7 @@
               </div>
             </div>
           </div>
-          <div class="cardONG col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro"
+          <div class="col-md-4" data-estado="RiodeJaneiro" data-cidade="RiodeJaneiro"
             data-categoria="alimentacao">
             <div class="card mb-4 box-shadow">
               <img class="card-img-top" src="img/Mãos que Alimentam - Cozinha solidária.jpg" height="230"
@@ -301,43 +300,6 @@
   <script src="../../../../assets/js/vendor/holder.min.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/localstorage.js"></script>
-
-
-  <!-- SCRIPT PARA GERAR CARDS DA LOCAL STORAGE
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const cardONGJSON = localStorage.getItem('cardONG');
-      const cardONG = JSON.parse(cardONGJSON);
-
-      // Função para gerar o HTML dos cards
-      function gerarCards() {
-        const container = document.getElementById('listaCards');
-        container.innerHTML = '';
-
-        cardONG.forEach(instituicao => {
-          const cardHTML = `
-          <div class="mt-4">
-            <div class="card">
-              <img class="card-img-top" src="https://via.placeholder.com/150" alt="Imagem da instituição">
-              <div class="card-body">
-                <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
-                <p class="card-text">${instituicao.descricao}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-          container.insertAdjacentHTML('beforeend', cardHTML);
-        });
-      }
-
-      gerarCards();
-    });
-  </script> -->
 
 </body>
 

@@ -76,21 +76,20 @@
     <h1 class="cadastro ml-5">Faça seu cadastro</h1>
 
     <!-- Início da Imagem -->
-  <div class="form-row" id="image" name="image">
+    <div class="form-row" id="image" name="image">
 
-    <div class="col col-lg-12">
-      <img src="img/perfil.png" alt="Perfil">
+      <div class="col col-lg-12">
+        <img src="img/perfil.png" alt="Perfil">
 
-      <div class="form-group image-wrapper">
-        <label for="input-image">Escolha sua imagem de perfil</label>
-        <input type="file" class="form-control-file" id="input-image">
+        <div class="form-group image-wrapper">
+          <label for="input-image">Escolha sua imagem de perfil</label>
+          <input type="file" class="form-control-file" id="input-image" accept="image/*">
+        </div>
       </div>
+
+
     </div>
-    
-
-  </div>
-  <!-- Fim da Imagem -->
-
+    <!-- Fim da Imagem -->
 
     <!-- Início do Formulário -->
     <form action="" class="needs-validation" id="form" method="post" novalidate>
@@ -102,7 +101,7 @@
             placeholder="Nome da instituição" required />
 
         </div>
-        
+
 
         <div class="col-lg-6 form-group has-validation">
           <label for="cep" class="form-label">CEP:</label>
@@ -147,14 +146,14 @@
           <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
             <option value="">----- Selecione uma opção -----</option>
-              <option value="alimentacao">Alimentação</option>
-              <option value="cultura">Cultura</option>
-              <option value="protecaoAnimal">Proteção Animal</option>
-              <option value="contrucaoCivil">Construção Civil</option>
-              <option value="educacao">Educação</option>
-              <option value="esporte">Esporte</option>
-              <option value="saude">Saúde</option>
-              <option value="outras">Outras</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="cultura">Cultura</option>
+            <option value="protecaoAnimal">Proteção Animal</option>
+            <option value="contrucaoCivil">Construção Civil</option>
+            <option value="educacao">Educação</option>
+            <option value="esporte">Esporte</option>
+            <option value="saude">Saúde</option>
+            <option value="outras">Outras</option>
           </select>
         </div>
 

@@ -54,3 +54,40 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('modal-img').setAttribute('src', imgSrc);
     }
 });
+
+// função para mostrar as instutições como cards dinâmicos
+document.addEventListener('DOMContentLoaded', () => {
+    const usuariosJson = localStorage.getItem('usuarios');
+    const usuarios = JSON.parse(usuariosJson);
+
+    // Função para gerar o HTML dos cards
+    function gerarCards() {
+        const container = document.getElementById('listaCards');
+        container.innerHTML = '';
+
+        const row = document.createElement('div');
+        row.classList.add('row', 'justify-content-center');
+
+        usuarios.forEach(instituicao => {
+            const cardHTML = `
+                      <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
+                          <img class="card-img-top" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
+                          <div class="card-body">
+                            <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
+                            <p class="card-text">${instituicao.descricao}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    `;
+            row.insertAdjacentHTML('beforeend', cardHTML);
+        });
+        container.appendChild(row);
+    }
+
+    gerarCards();
+});

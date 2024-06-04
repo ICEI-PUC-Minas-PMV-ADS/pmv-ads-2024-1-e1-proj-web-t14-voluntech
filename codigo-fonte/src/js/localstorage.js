@@ -1,6 +1,7 @@
 // Store form data in local storage
 const form = document.getElementById("form");
 const image = document.getElementById("input-image");
+const imageShowed = document.getElementById("image-showed");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Evita a submissão padrão do formulário
@@ -23,35 +24,29 @@ form.addEventListener("submit", (event) => {
     // Adiciona os dados do novo usuário ao array
     usuarios.push(data);
 
-    // Armazena o array atualizado no localStorage
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    // Armazena a imagem no localStorage - Função sendo trabalhada
+    const imageSelected = image.files[0];
 
-    // Adiciona a imagem ao objeto
-    data.image = image.files[0];
+    if (imageSelected) {
+      const reader = new FileReader();
+      
+      reader.onload = function(event) {
+        const base64Image = event.target.result;
+        imageShowed.src = `data:image/jpeg;base64,${base64Image}`;
+        localStorage.setItem('imageSelected', base64Image);
+      };
 
-    // Validação da imagem
-    if (!data.image) {
-      Swal.fire({
-        title: "Aviso!",
-        text: "Selecione uma imagem!",
-        icon: "error",
-        customClass: {
-          confirmButton: "btn btn-danger",
-        },
-        buttonsStyling: false
-      });
-      return;
+      reader.readAsDataURL(imageSelected);
     }
 
-    const reader = new FileReader();
-    reader.readAsDataURL(data.image);
-    reader.onload = (event) => {
-      const base64Image = event.target.result;
-      data.image = base64Image;
+    // Verificar se há uma imagem armazenada no LocalStorage
+    const imageStored = localStorage.getItem('imageSelected');
+    if (imageStored) {
+      imageShowed.src = `data:image/jpeg;base64,${imageStored}`;
+    }
 
-      // Armazena o objeto atualizado no localStorage
-      localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    };
+    // Armazena o array atualizado no localStorage
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     // Exibe um modal de sucesso de cadastro
     Swal.fire({
@@ -63,8 +58,7 @@ form.addEventListener("submit", (event) => {
         confirmButton: "btn btn-success",
       },
       buttonsStyling: false
-    })
-      .then(() => {
+    }).then(() => {
         setTimeout(() => {
           window.location.href = "login.html"; // Substitua pelo URL da sua página de login
         }, 2000);
@@ -79,9 +73,8 @@ form.addEventListener("submit", (event) => {
         confirmButton: "btn btn-danger",
       },
       buttonsStyling: false
-    });
-  }
-
+    })
+  } 
 });
 
 // Função para validar os campos do formulário
