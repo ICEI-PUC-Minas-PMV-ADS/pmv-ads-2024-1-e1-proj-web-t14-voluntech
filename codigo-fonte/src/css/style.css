@@ -462,7 +462,7 @@ input[type=submit] {
 }
 
 #message p {
-  padding: 10px 35px;
+  padding: 10px 25px;
   font-size: 18px;
 }
 
@@ -473,7 +473,7 @@ input[type=submit] {
 
 .valid:before {
   position: relative;
-  left: -35px;
+  left: -25px;
   content: "✔";
 }
 
@@ -484,6 +484,6 @@ input[type=submit] {
 
 .invalid:before {
   position: relative;
-  left: -35px;
+  left: -25px;
   content: "✖";
 }
