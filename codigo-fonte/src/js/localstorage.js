@@ -1,7 +1,5 @@
 // Store form data in local storage
 const form = document.getElementById("form");
-const image = document.getElementById("input-image");
-const imageShowed = document.getElementById("image-showed");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault(); // Evita a submissão padrão do formulário
@@ -21,29 +19,22 @@ form.addEventListener("submit", (event) => {
     // Recupera os dados do localStorage, se existirem, ou inicializa um array vazio
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // Adiciona os dados do novo usuário ao array
-    usuarios.push(data);
-
-    // Armazena a imagem no localStorage - Função sendo trabalhada
-    const imageSelected = image.files[0];
-
+    // Armazena a imagem em base64
+    const imageSelected = document.getElementById("input-image").files[0];
     if (imageSelected) {
       const reader = new FileReader();
-      
+
       reader.onload = function(event) {
         const base64Image = event.target.result;
-        imageShowed.src = `data:image/jpeg;base64,${base64Image}`;
-        localStorage.setItem('imageSelected', base64Image);
+        data.image = base64Image; // Adiciona a imagem ao objeto de dados
+        localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Atualiza o localStorage
       };
 
       reader.readAsDataURL(imageSelected);
     }
 
-    // Verificar se há uma imagem armazenada no LocalStorage
-    const imageStored = localStorage.getItem('imageSelected');
-    if (imageStored) {
-      imageShowed.src = `data:image/jpeg;base64,${imageStored}`;
-    }
+    // Adiciona os dados do novo usuário ao array
+    usuarios.push(data);
 
     // Armazena o array atualizado no localStorage
     localStorage.setItem("usuarios", JSON.stringify(usuarios));

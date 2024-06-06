@@ -1,30 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     const estadoSelect = document.getElementById('estado');
-    const cidadeSelect = document.getElementById('cidade');
+    const cidadeInput = document.getElementById('cidade'); // Mudança de Select para Input
     const categoriaSelect = document.getElementById('categoria');
-    const cards = document.querySelectorAll('.cardONG');
+    let cards = []; // Armazenar os cards gerados
 
+    // Função para filtrar os cards
     function filterCards() {
-        const selectedEstado = estadoSelect.value;
-        const selectedCidade = cidadeSelect.value;
-        const selectedCategoria = categoriaSelect.value;
+        const selectedEstado = estadoSelect.value.trim().toLowerCase();
+        const selectedCidade = cidadeInput.value.trim().toLowerCase();
+        const selectedCategoria = categoriaSelect.value.trim().toLowerCase();
 
         console.log(`Estado selecionado: ${selectedEstado}`);
         console.log(`Cidade selecionada: ${selectedCidade}`);
         console.log(`Categoria selecionada: ${selectedCategoria}`);
 
         cards.forEach(card => {
-            const cardEstado = card.getAttribute('data-estado');
-            const cardCidade = card.getAttribute('data-cidade');
-            const cardCategoria = card.getAttribute('data-categoria');
+            const cardEstado = card.getAttribute('data-estado').trim().toLowerCase();
+            const cardCidade = card.getAttribute('data-cidade').trim().toLowerCase();
+            const cardCategoria = card.getAttribute('data-categoria').trim().toLowerCase();
 
             console.log(`Card: Estado: ${cardEstado}, Cidade: ${cardCidade}, Categoria: ${cardCategoria}`);
 
-            if (
-                (selectedEstado === '' || selectedEstado === cardEstado) &&
-                (selectedCidade === '' || selectedCidade === cardCidade) &&
-                (selectedCategoria === '' || selectedCategoria === cardCategoria)
-            ) {
+            // Condição para verificar se os filtros se aplicam ao card
+            const estadoMatch = selectedEstado === '' || selectedEstado === cardEstado;
+            const cidadeMatch = selectedCidade === '' || cardCidade.includes(selectedCidade);
+            const categoriaMatch = selectedCategoria === '' || selectedCategoria === cardCategoria;
+
+            if (estadoMatch && cidadeMatch && categoriaMatch) {
                 card.style.display = 'block';
             } else {
                 card.style.display = 'none';
@@ -32,30 +34,42 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Adiciona evento de mudança aos filtros
     estadoSelect.addEventListener('change', filterCards);
-    cidadeSelect.addEventListener('change', filterCards);
+    cidadeInput.addEventListener('input', filterCards); // Alterado para 'input'
     categoriaSelect.addEventListener('change', filterCards);
 
-    function showModal(button) {
-        const card = button.closest('.cardONG');
-
-        const nome = card.getAttribute('data-nome');
-        const descricao = card.getAttribute('data-descricao');
-        const missao = card.getAttribute('data-missao');
-        const contato = card.getAttribute('data-contato');
-        const endereco = card.getAttribute('data-endereco');
-        const imgSrc = card.querySelector('img').getAttribute('src');
-
-        document.getElementById('modal-nome').textContent = nome;
-        document.getElementById('modal-descricao').textContent = descricao;
-        document.getElementById('modal-missao').textContent = missao;
-        document.getElementById('modal-contato').textContent = contato;
-        document.getElementById('modal-endereco').textContent = endereco;
-        document.getElementById('modal-img').setAttribute('src', imgSrc);
+    // Função para mostrar os cards (adição para pegar os cards gerados)
+    function getCards() {
+        cards = document.querySelectorAll('.cardONG');
     }
+
+    // Chama a função para pegar os cards após carregamento da página
+    window.addEventListener('load', getCards);
 });
 
-// função para mostrar as instutições como cards dinâmicos
+
+
+function showModal(button) {
+    const card = button.closest('.cardONG');
+
+    const nome = card.getAttribute('data-nome');
+    const descricao = card.getAttribute('data-descricao');
+    const missao = card.getAttribute('data-missao');
+    const contato = card.getAttribute('data-contato');
+    const endereco = card.getAttribute('data-endereco');
+    const imgSrc = card.querySelector('img').getAttribute('src');
+
+    document.getElementById('modal-nome').textContent = nome;
+    document.getElementById('modal-descricao').textContent = descricao;
+    document.getElementById('modal-missao').textContent = missao;
+    document.getElementById('modal-contato').textContent = contato;
+    document.getElementById('modal-endereco').textContent = endereco;
+    document.getElementById('modal-img').setAttribute('src', imgSrc);
+}
+
+
+// Função para gerar os cards das instituições
 document.addEventListener('DOMContentLoaded', () => {
     const usuariosJson = localStorage.getItem('usuarios');
     const usuarios = JSON.parse(usuariosJson);
@@ -70,20 +84,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         usuarios.forEach(instituicao => {
             const cardHTML = `
-                      <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
-                          <img class="card-img-top" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
-                          <div class="card-body">
-                            <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
-                            <p class="card-text">${instituicao.descricao}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Saiba mais</button>
-                              </div>
+                <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
+                    <img class="card-img-top" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
+                    <div class="card-body">
+                        <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
+                        <p class="card-text">${instituicao.categorias}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#infoModal" onclick="showModal(this)">Saiba mais</button>
                             </div>
-                          </div>
                         </div>
-                      </div>
-                    `;
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="infoModalLabel">Detalhes da Instituição</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Conteúdo será inserido dinamicamente -->
+                                    <h5 id="modal-nome"></h5>
+                                    <p><strong>Descrição:</strong>${instituicao.descricao}<span id="modal-descricao"></span></p>
+                                    <p><strong>Missão:</strong>${instituicao.categorias}<span id="modal-missao"></span></p>
+                                    <p><strong>Contato:</strong>${instituicao.telefone}<span id="modal-contato"></span></p>
+                                    <p><strong>Endereço:</strong>${instituicao.rua}<span id="modal-endereco"></span></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
             row.insertAdjacentHTML('beforeend', cardHTML);
         });
         container.appendChild(row);
@@ -91,3 +129,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     gerarCards();
 });
+
