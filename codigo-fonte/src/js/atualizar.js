@@ -226,6 +226,10 @@
      
     localStorage.setItem("nomeInstituicao" , document.querySelector("input#nomeInstituicao").value)
     
+    localStorage.setItem("descricao" , document.querySelector("input#descricao").value)
+
+    localStorage.setItem("rua" , document.querySelector("input#rua").value)
+
     localStorage.setItem("cep" , document.querySelector("input#cep").value)
     
     localStorage.setItem("cnpj" , document.querySelector("input#cnpj").value)
@@ -251,6 +255,10 @@
   document.querySelector("input#nomeInstituicao").value = localStorage.getItem("nomeInstituicao");
   
   document.querySelector("#cep").value = localStorage.getItem("cep");
+
+  document.querySelector("#descricao").value = localStorage.getItem("descricao");
+
+  document.querySelector("#rua").value = localStorage.getItem("rua");
 
   document.querySelector("input#cnpj").value = localStorage.getItem("cnpj");
  
