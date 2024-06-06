@@ -3,10 +3,14 @@ document.getElementById('cardProfile').style.display = 'none';
 const botaoPublicar = document.querySelector('#publicar');
 
 document.addEventListener('DOMContentLoaded', function() {
+  const cardProfile = document.getElementById('cardProfile');
+  const profileImage = document.getElementById('profileImage');
+  const nomeEditarPerfil = document.getElementById('nomeEditarPerfil');
+
   // Verifica se o usuário está logado
   if (localStorage.getItem('logado') === 'true') {
     // Mostra a div de perfil
-    document.getElementById('cardProfile').style.display = 'block';
+    cardProfile.style.display = 'block';
 
     // Recupera o nome da instituição do usuário logado do localStorage
     const nomeInstituicaoLogada = localStorage.getItem('nomeInstituicaoLogada');
@@ -14,7 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verifica se o nome da instituição do usuário logado está disponível
     if (nomeInstituicaoLogada) {
       // Define o nome da instituição no perfil
-      document.getElementById('nomeEditarPerfil').innerText = nomeInstituicaoLogada;
+      nomeEditarPerfil.innerText = nomeInstituicaoLogada;
+      
+      // Recupera a imagem do perfil do usuário logado
+      const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+      const usuarioLogado = usuarios.find(usuario => usuario.nomeInstituicao === nomeInstituicaoLogada);
+      const imagemPerfil = usuarioLogado ? usuarioLogado.image : 'img/perfil.png';
+
+      // Define a imagem de perfil
+      profileImage.src = imagemPerfil;
     } else {
       console.error("Nome da instituição do usuário logado não encontrado.");
     }
@@ -28,20 +40,27 @@ document.addEventListener('DOMContentLoaded', function() {
     exibirPostagem(postagem);
   });
 
+  const botaoPublicar = document.querySelector('#publicar');
+
   // Função para armazenar o conteúdo publicado no localStorage
   function armazenarConteudoPublicado(messageContent) {
     // Recupera todas as postagens já armazenadas ou inicializa um array vazio
     const postagens = JSON.parse(localStorage.getItem('postagens')) || [];
     // Recupera o nome da instituição logada
     const nomeInstituicao = localStorage.getItem('nomeInstituicaoLogada');
+    // Recupera a imagem do perfil do usuário logado
+    const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    const usuarioLogado = usuarios.find(usuario => usuario.nomeInstituicao === nomeInstituicao);
+    const imagemPerfil = usuarioLogado ? usuarioLogado.image : 'img/perfil.png';
     // Obtém a data e hora atual
     const dataHoraAtual = new Date().toLocaleString();
 
-    // Cria um objeto JSON com o conteúdo da postagem e o nome da instituição
+    // Cria um objeto JSON com o conteúdo da postagem, o nome da instituição e a imagem do perfil
     const postagem = {
       instituicao: nomeInstituicao,
       conteudo: messageContent,
-      dataHora: dataHoraAtual
+      dataHora: dataHoraAtual,
+      imagemPerfil: imagemPerfil
     };
 
     // Adiciona a nova postagem ao array de postagens
@@ -63,13 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var newPost = document.createElement('div');
     newPost.className = 'card gedf-card border mb-3';
 
-    // Define o conteúdo HTML da nova postagem, incluindo o nome da instituição
+    // Define o conteúdo HTML da nova postagem, incluindo o nome da instituição e a imagem do perfil
     newPost.innerHTML = `
       <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center">
             <div class="mr-2">
-              <img class="rounded" width="45" src="img/perfil.png" alt="" />
+              <img class="rounded" width="45" src="${postagem.imagemPerfil}" alt="Imagem de Perfil" />
             </div>
             <div class="ml-2">
               <div class="h5 m-0">${postagem.instituicao}</div>
@@ -81,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <i class="fa fa-ellipsis-h"></i>
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">
-                <a class="dropdown-item denunciar-btn" href="#" >Denunciar</a>
+                <a class="dropdown-item denunciar-btn" href="#">Denunciar</a>
               </div>
             </div>
           </div>
@@ -161,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Redireciona o usuário para a página de atualização de cadastro
     window.location.href = 'atualizacao-de-cadastro.html';
   });
+
   // Adiciona um evento de clique ao botão de denúncia
   document.addEventListener('click', function(event) {
     if (event.target.classList.contains('denunciar-btn')) {
@@ -175,5 +195,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-
 });

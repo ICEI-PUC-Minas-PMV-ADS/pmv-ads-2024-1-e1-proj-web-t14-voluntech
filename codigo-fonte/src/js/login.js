@@ -15,7 +15,8 @@ function login() {
 
         // Define o nome da instituição do usuário logado no localStorage
         localStorage.setItem('nomeInstituicaoLogada', usuario.nomeInstituicao);
-
+        // Define o e-mail usuário logado no localStorage
+        localStorage.setItem('emailUsuarioLogado', usuario.email);
         Swal.fire({
             title: 'Sucesso!',
             text: 'Login efetuado com sucesso.',
