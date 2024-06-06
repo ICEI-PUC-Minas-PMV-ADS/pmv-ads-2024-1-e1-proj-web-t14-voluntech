@@ -96,6 +96,21 @@
 
       <div class="row justify-content-left ml-5">
         <div class="col-lg-6 form-group has-validation">
+          <label for="descricao" class="form-label">Descrição:</label>
+          <input type="text" class="form-control" id="descricao" name="descricao"
+            placeholder="Descreva algo sobre a instituição..." required />
+
+        </div>
+
+        <div class="col-lg-6 form-group has-validation">
+          <label for="rua" class="form-label">Rua:</label>
+          <input type="text" class="form-control" id="rua" name="rua" placeholder="Rua" required />
+
+        </div>
+      </div>
+
+      <div class="row justify-content-left ml-5">
+        <div class="col-lg-6 form-group has-validation">
           <label for="cnpj" class="form-label">CNPJ:</label>
           <input type="text" class="form-control" id="cnpj" name="cnpj" autocomplete="off" maxlength="18"
             placeholder="CNPJ" required />
@@ -185,7 +200,7 @@
         <div class="row justify-content-left">
           <div class="d-grid gap-2 col-12">
             <button type="submit" class="btn btn-danger btn-3" id="btn-3">Cancelar</button>
-            <button type="submit" class="btn btn-success btn-2" id="btn-2" data-toggle="modal" data-target="#modal" onclick="salvar ()">
+            <button type="submit" class="btn btn-success btn-2" id="btn-2" data-toggle="modal" data-target="#modal" onclick="atualizar()">
               Salvar
             </button>
           </div>
@@ -196,7 +211,8 @@
     <!-- Fim do Formulário -->
 
     <!-- JavaScript -->
-  <script src="js/atualizar.js"></script>
+  <script src="js/atualizar.js" defer></script>
+  <script src="js/app.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/localstorage.js"></script>
 

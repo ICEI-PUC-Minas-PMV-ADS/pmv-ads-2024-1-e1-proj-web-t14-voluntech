@@ -1,3 +1,4 @@
+// função para mostrar as instutições como cards dinâmicos
 document.addEventListener("DOMContentLoaded", function () {
     const estadoSelect = document.getElementById('estado');
     const cidadeInput = document.getElementById('cidade'); // Mudança de Select para Input
