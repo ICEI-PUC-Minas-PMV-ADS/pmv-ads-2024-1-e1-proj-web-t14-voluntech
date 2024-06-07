@@ -93,20 +93,6 @@
           
         </div>
       </div>
-      
-      <div class="row justify-content-left ml-5">
-        <div class="col-lg-6 form-group has-validation">
-          <label for="descricao" class="form-label">Descrição:</label>
-          <input type="text" class="form-control" id="descricao" name="descricao"
-            placeholder="Descreva algo sobre a instituição..." required />
-        </div>
-      
-
-      <div class="col-lg-6 form-group has-validation">
-        <label for="rua" class="form-label">Rua:</label>
-        <input type="text" class="form-control" id="rua" name="rua" placeholder="Rua" required />
-      </div>
-    </div>
 
       <div class="row justify-content-left ml-5">
         <div class="col-lg-6 form-group has-validation">
@@ -139,23 +125,20 @@
         </div>
       </div>
 
-      <div class="row justify-content-left ml-5">
+      <div class="form-row ml-5">
         <div class="col-lg-6 form-group has-validation">
           <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
-            <option value="">------- Selecione uma opção -------</option>
-            <option value="alimenticio">Setor Alimentício</option>
-            <option value="bancario">Setor Bancário</option>
-            <option value="comercio">Comércio Varejista</option>
+            <option value="">----- Selecione uma opção -----</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="cultura">Cultura</option>
+            <option value="protecaoAnimal">Proteção Animal</option>
             <option value="contrucaoCivil">Construção Civil</option>
             <option value="educacao">Educação</option>
-            <option value="logisticaTransporte">
-              Logística e Transporte
-            </option>
+            <option value="esporte">Esporte</option>
             <option value="saude">Saúde</option>
             <option value="outras">Outras</option>
           </select>
-          
         </div>
 
         <div class="col-lg-6 form-group has-validation">
@@ -227,7 +210,6 @@
 
     <!-- JavaScript -->
   <script src="js/atualizar.js" defer></script>
-  <script src="js/app.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/localstorage.js"></script>
 
