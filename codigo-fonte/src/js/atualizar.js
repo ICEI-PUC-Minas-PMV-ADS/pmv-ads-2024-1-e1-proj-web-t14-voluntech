@@ -1,18 +1,9 @@
-// atualizar o cadastro quando o usuário estiver logado
-function atualizar() {
-  const nomeInstituicaoLogada = localStorage.getItem('nomeInstituicaoLogada');
-  if (nomeInstituicaoLogada) {
-    const nomeInstituicao = document.querySelector('#nomeInstituicao');
-    nomeInstituicao.textContent = nomeInstituicaoLogada;
-  }
-}
-
-// Recupera os dados do localStorage, se existirem, ou inicializa um array vazio
-const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+// Recupera os dados dos usuários cadastrados no localStorage
+const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 // atualizar dados do usuário no localStorage
 
-localStorage.setItem("nomeInstituicao.value" , document.querySelector("input#nomeInstituicao").value)
+localStorage.setItem("usuarios" , document.querySelector("input#nomeInstituicao").value)
     
 localStorage.setItem("usuarios" , document.querySelector("input#descricao").value)
 
@@ -39,7 +30,7 @@ localStorage.setItem("categorias" , document.querySelector("input#categorias").v
 
 // Persistir dados do usuário logado no formulário
 
-document.querySelector("input#nomeInstituicao").value = localStorage.getItem("nomeInstituicao.value");
+document.querySelector("#nomeInstituicao").value = localStorage.getItem("usuarios");
 
 document.querySelector("#cep").value = localStorage.getItem("cep");
 
