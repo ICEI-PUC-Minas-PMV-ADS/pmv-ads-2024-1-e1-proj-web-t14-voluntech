@@ -7,6 +7,9 @@ function atualizar() {
   }
 }
 
+// Recupera os dados do localStorage, se existirem, ou inicializa um array vazio
+const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 // atualizar dados do usuário no localStorage
 
 localStorage.setItem("nomeInstituicao.value" , document.querySelector("input#nomeInstituicao").value)
