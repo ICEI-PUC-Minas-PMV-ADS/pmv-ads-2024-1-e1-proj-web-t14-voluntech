@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex justify-content-between align-items-center">
             <div class="mr-2">
-              <img class="rounded" width="45" src="${postagem.imagemPerfil}" alt="Imagem de Perfil" />
+              <img class="rounded" width="50" height="50" src="${postagem.imagemPerfil}" alt="Imagem de Perfil" />
             </div>
             <div class="ml-2">
               <div class="h5 m-0">${postagem.instituicao}</div>
