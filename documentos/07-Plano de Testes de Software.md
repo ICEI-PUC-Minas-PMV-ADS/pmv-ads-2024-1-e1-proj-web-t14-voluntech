@@ -1,14 +1,5 @@
 # Plano de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/02-Especifica%C3%A7%C3%A3o%20do%20Projeto.md"> Especificação do Projeto</a></span>, <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/04-Projeto%20de%20Interface.md">Projeto de Interface</a>
-
-Os requisitos para realização dos testes de software são:
-
-<ul>
-    <li>Site publicado na internet;</li>
-    <li>Navegador da internet: Chrome, Firefox ou Edge.</li>
-</ul>
-
 Os testes funcionais a serem realizados na aplicação são descritos a seguir.
 
 <table>
@@ -24,10 +15,10 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   <td>CT-01: Verificar o funcionamento dos links da página home</td>
   <td>
    <ul>
-    <li>RF-001: O site deve permitir ao usuário cadastrar uma conta.</li>
+    <li>RF-001: A página deve permitir ao usuário allterar seus dados nos campos do formulário com preenchimento automático.</li>
     <li>RF-002: O site deve permitir ao usuário fazer o login da sua conta.</li>
-    <li>RF-003: O site deve permitir ao usuário disponibilizar informações das disciplinas de tutoria e suas informações para contato.</li>
-    <li>RF-004: O site deve permitir ao usuário visualizar os detalhes do livro.</li>
+    <li>RF-003: O site deve permitir ao usuário disponibilizar informações das instituições para contato</li>
+    <li>RF-004: O site deve permitir ao usuário visualizar as necessidades das instituições.</li>
    </ul>
   </td>
   <td>Verificar se os links da página home estão encaminhando para as respectivas páginas corretamente.</td>
@@ -74,7 +65,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
    </ol>
    </td>
   <td>Todos as alterações cadastrais devem modificar o formulário e salvar no localStorage.</td>
-  <td>Fred, Lis e Tatiana</td>
+  <td>Lis</td>
  </tr>
 </table>
 
@@ -167,7 +158,7 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
    </ol>
    </td>
   <td>Ao efetuar o login o usuário é redirecionado para a página correspondente à sua solicitação. No caso de novos usuários, estes serão redirecinados para a página de cadastro.</td>
-  <td>Fred, Lis e Tatiana</td>
+  <td>Fred</td>
  </tr>
 </table>
 
@@ -235,6 +226,6 @@ Os testes funcionais a serem realizados na aplicação são descritos a seguir.
   <td>
     A postagem deve ser criada com sucesso, exibida corretamente no feed de postagens, incluindo nome, descrição e foto com a ordem cronológica das postagens mais recentes primeiro. Verificar ortografia nos avisos exibidos e se usuários não logados conseguem publicar. Testar os redirecionamentos das páginas.
 </td>
-  <td>Fred, Lis e Tatiana</td>
+  <td>Fred</td>
  </tr>
 </table>

@@ -68,7 +68,7 @@ Abra um navegador de Internet e informe a seguinte URL: https://github.com/ICEI-
 O acesso à tela de cadastro poderá ser feito através da opção de menu “Busque por instituições” na tela inicial (index). Além disso, poderá ser acessada ao clicar no texto “Instituições” contido na navbar. As estruturas de dados foram baseadas em HTML, CSS e JS.
 
 <figure> 
-  <img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/blob/main/documentos/img/instituicoes.jpg"
+  <img src="../documentos/img/instituicoes.jpg"
 </figure> 
 
 ### Requisito atendido
