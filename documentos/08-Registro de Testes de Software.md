@@ -27,6 +27,9 @@ Procedimento:
 9.	Responsividade em telas menores.
 10.	Teste em outros navegadores.
 
+Registro de testes:
+https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech/assets/120066201/e8b14a2e-1a8a-4c8b-a813-b7259be2393f
+
 Resultados:
 
 ●	Todos os links da página home encaminharam para as respectivas páginas corretamente.
