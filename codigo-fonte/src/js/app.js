@@ -142,10 +142,28 @@ myInput.onkeyup = function () {
   }
 };
 
-// Mudar o nome do input para imagem
-var $input = document.getElementById('input-image'),
-  $fileName = document.getElementById('input-image');
+// Mudar a foto no cadastro e redimensionar em 300 x 300
+const inputImage = document.getElementById("input-image");
 
-$input.addEventListener('change', function () {
-  $fileName.textContent = this.value;
+inputImage.addEventListener("change", function () {
+  readURL(this);
 });
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      $("#profile-image").attr("src", e.target.result);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+
+  $("#profile-image").css("width", "265px");
+  $("#profile-image").css("height", "265px");
+
+  $("#image").css("width", "300px");
+  $("#image").css("height", "300px");
+
+  $("#btnSaveModal").css("width", "600px");
+  $("#btnSaveModal").css("height", "40px");
+}
