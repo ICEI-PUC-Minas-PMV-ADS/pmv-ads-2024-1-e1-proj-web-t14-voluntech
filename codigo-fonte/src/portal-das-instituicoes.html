@@ -79,11 +79,11 @@
     <div class="form-row" id="image" name="image">
 
       <div class="col col-lg-12">
-        <img src="img/perfil.png" alt="Perfil">
+        <img src="img/perfil.png" alt="Foto de perfil" id="profile-image">
 
         <div class="form-group image-wrapper">
           <label for="input-image">Escolha sua imagem de perfil</label>
-          <input type="file" class="form-control-file" id="input-image" accept="image/*">
+          <input type="file" class="form-control-file" id="input-image" accept="image/*" onclick="readURL(this);">
         </div>
       </div>
 
