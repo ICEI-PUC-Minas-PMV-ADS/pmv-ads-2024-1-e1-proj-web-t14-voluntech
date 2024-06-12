@@ -32,18 +32,47 @@ document.querySelector("select#categorias").value = usuarioLogado.categorias;
 // Função para atualizar
 function atualizar() {
 
-  const nomeInstituicao = localStorage.setItem("nomeInstituicaoLogada", document.querySelector("input#nomeInstituicao").value);
-  const cep = localStorage.setItem("cep", document.querySelector("input#cep").value);
-  const descricao = localStorage.setItem("descricao", document.querySelector("input#descricao").value);
-  const rua = localStorage.setItem("rua", document.querySelector("input#rua").value);
-  const cnpj = localStorage.setItem("cnpj", document.querySelector("input#cnpj").value);
-  const bairro = localStorage.setItem("bairro", document.querySelector("input#bairro").value);
-  const cidade = localStorage.setItem("cidade", document.querySelector("input#cidade").value);
-  const telefone = localStorage.setItem("telefone", document.querySelector("input#telefone").value);
-  const password = localStorage.setItem("password", document.querySelector("input#password").value);
-  const celular = localStorage.setItem("celular", document.querySelector("input#celular").value);
-  const email = localStorage.setItem("email", document.querySelector("input#email").value);
-  const categorias = localStorage.setItem("categorias", document.querySelector("select#categorias").value);
+  // Atualizar os dados do formulário e mantê-los no localStorage
+  const nomeInstituicao = document.querySelector("input#nomeInstituicao").value;
+  const cep = document.querySelector("input#cep").value;
+  const descricao = document.querySelector("input#descricao").value;
+  const rua = document.querySelector("input#rua").value;
+  const cnpj = document.querySelector("input#cnpj").value;
+  const bairro = document.querySelector("input#bairro").value;
+  const cidade = document.querySelector("input#cidade").value;
+  const telefone = document.querySelector("input#telefone").value;
+  const password = document.querySelector("input#password").value;
+  const celular = document.querySelector("input#celular").value;
+  const email = document.querySelector("input#email").value;
+  const categorias = document.querySelector("select#categorias").value;
+
+  localStorage.setItem("nomeInstituicaoLogada", nomeInstituicao);
+  localStorage.setItem("cep", cep);
+  localStorage.setItem("descricao", descricao);
+  localStorage.setItem("rua", rua);
+  localStorage.setItem("cnpj", cnpj);
+  localStorage.setItem("bairro", bairro);
+  localStorage.setItem("cidade", cidade);
+  localStorage.setItem("password", password);
+  localStorage.setItem("telefone", telefone);
+  localStorage.setItem("celular", celular);
+  localStorage.setItem("email", email);
+  localStorage.setItem("categorias", categorias);
+
+  // Atualizar os dados do usuário logado
+  const indice = usuarios.findIndex((usuario) => usuario.email === email);
+  usuarios[indice].nomeInstituicao = nomeInstituicao;
+  usuarios[indice].cep = cep;
+  usuarios[indice].descricao = descricao;
+  usuarios[indice].rua = rua;
+  usuarios[indice].cnpj = cnpj;
+  usuarios[indice].bairro = bairro;
+  usuarios[indice].cidade = cidade;
+  usuarios[indice].password = password;
+  usuarios[indice].celular = celular;
+  usuarios[indice].email = email;
+  usuarios[indice].categorias = categorias;
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
   // Exibir mensagem de sucesso
   Swal.fire({
@@ -57,7 +86,7 @@ function atualizar() {
     buttonsStyling: false
   }).then(() => {
     setTimeout(() => {
-      window.location.href = "feed.html"; // Substitua pelo URL da sua página de feed
+      window.location.href = "atualizacao-de-cadastro.html"; // Substitua pelo URL da sua página de feed
     }
       , 2000);
   });
