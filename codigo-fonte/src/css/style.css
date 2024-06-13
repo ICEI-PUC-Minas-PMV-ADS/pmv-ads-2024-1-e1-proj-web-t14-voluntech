@@ -260,62 +260,48 @@ input:hover {
 }
 
 /* Estilos página Sobre Nos - Tatiana */
-
 #sobre-nos {
   font-family: Verdana;
   background-color: snow;
   padding: 5%;
-  width:max-content;
+  width: max-content;
   height: min-content;
   margin: 1px 0;
   border-radius: 4%;
-  float:auto;
   border: 1px solid snow;
   top: 22%;
-  position:sticky;
+  position: sticky;
   text-align: justify;
   box-shadow: 2px 2px 5px #6d8485;
   transform: translate(2%, 24%);
-  display: grid;  
+  display: grid;
 }
 #sobre-nos h1 {
   font-size: 40px;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 #sobre-nos p {
   font-size: 16px;
   line-height: 1.5em;
-}
-
-#sobre-nos p {
   list-style-type: none;
-  padding: 1;
-}
-
-#sobre-nos p {
   margin-bottom: 3px;
 }
-
 #sobre-nos a {
   color: #000;
   text-decoration: none;
 }
-
 #sobre-nos a:hover {
   color: #87cceb;
   text-decoration: underline;
 }
-
 #img {
   float: right;
-  margin: left 2%;
+  margin-left: 2%;
   border-radius: 10%;
   position: relative;
   padding: 2px;
   top: 30%;
-  bottom: 6%;
   max-width: 250px;
   max-height: 250px;
   width: -60px;
@@ -326,6 +312,26 @@ input:hover {
   width: max-content;  
   height: auto;  
   object-fit: cover;  
+}
+
+/* Media query para telas menores que 1200px */
+@media (max-width: 1200px) {
+  #sobre-nos {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 30%;
+  }
+  #img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    position: static;
+    transform: none;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Estilos Gerais do Lucas */
