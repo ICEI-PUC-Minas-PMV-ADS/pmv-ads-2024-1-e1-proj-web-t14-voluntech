@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios.forEach(instituicao => {
             const cardHTML = `
                 <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
-                    <img class="card-img-top" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
+                    <img class="card-img-top" width="300" height="300" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
                     <div class="card-body">
                         <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
                         <p class="card-text">${instituicao.descricao}</p>
