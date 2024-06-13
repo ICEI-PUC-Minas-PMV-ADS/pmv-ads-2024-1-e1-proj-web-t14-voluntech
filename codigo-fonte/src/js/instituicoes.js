@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <!-- Conteúdo será inserido dinamicamente -->
                                     <h5 id="modal-nome"></h5>
                                     <p><strong>Descrição:</strong> ${instituicao.descricao} <span id="modal-descricao"></span></p>
-                                    <p><strong>Missão:</strong> ${instituicao.categorias.charAt(0).toUpperCase() + instituicao.categorias.slice(1).toString().trim()}<span id="modal-missao"></span></p>
+                                    <p><strong>Missão:</strong> ${instituicao.categorias.toString().trim()}<span id="modal-missao"></span></p>
                                     <p><strong>Contato:</strong> ${instituicao.telefone + ' - ' + instituicao.celular} <span id="modal-contato"></span></p>
                                     <p><strong>Email:</strong> ${instituicao.email} <span id="modal-email"></span></p>
                                     <p><strong>Endereço:</strong> ${instituicao.rua + ' - ' + instituicao.bairro + ' - ' + instituicao.cidade} <span id="modal-endereco"></span></p>
