@@ -79,11 +79,11 @@
     <div class="form-row" id="image" name="image">
 
       <div class="col col-lg-12">
-        <img src="img/perfil.png" alt="Perfil">
+        <img src="img/perfil.png" alt="Foto de perfil" id="profile-image">
 
         <div class="form-group image-wrapper">
           <label for="input-image">Escolha sua imagem de perfil</label>
-          <input type="file" class="form-control-file" id="input-image" accept="image/*">
+          <input type="file" class="form-control-file" id="input-image" accept="image/*" onclick="readURL(this);">
         </div>
       </div>
 
@@ -146,14 +146,14 @@
           <label for="categorias" class="form-label">Categoria:</label>
           <select class="custom-select" id="categorias" name="categorias" required>
             <option value="">----- Selecione uma opção -----</option>
-            <option value="alimentacao">Alimentação</option>
-            <option value="cultura">Cultura</option>
-            <option value="protecaoAnimal">Proteção Animal</option>
-            <option value="contrucaoCivil">Construção Civil</option>
-            <option value="educacao">Educação</option>
-            <option value="esporte">Esporte</option>
-            <option value="saude">Saúde</option>
-            <option value="outras">Outras</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Cultura">Cultura</option>
+            <option value="Proteção Animal">Proteção Animal</option>
+            <option value="Construção Civil">Construção Civil</option>
+            <option value="Educação">Educação</option>
+            <option value="Esporte">Esporte</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Outras">Outras</option>
           </select>
         </div>
 
@@ -212,7 +212,7 @@
 
       <!-- Botão com trigger modal -->
 
-      <button type="submit" class="btn btn-primary btn-lg" id="btnSaveModal" data-toggle="modal" data-target="#modal" onclick="salvar ()">
+      <button type="submit" class="btn btn-primary btn-lg" id="btnSaveModal" data-toggle="modal" data-target="#modal">
         Salvar
       </button>
 
