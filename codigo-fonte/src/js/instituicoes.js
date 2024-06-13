@@ -83,7 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = document.createElement('div');
         row.classList.add('row', 'justify-content-center');
 
-        usuarios.forEach(instituicao => {
+        usuarios.forEach((instituicao, index) => {
+            const modalId = `infoModal${index}`; // Criando um id único para cada modal
             const cardHTML = `
                 <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
                     <img class="card-img-top" width="300" height="300" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
@@ -92,17 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="card-text">${instituicao.descricao}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#infoModal" onclick="showModal(this)">Saiba mais</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#${modalId}" onclick="showModal(this)">Saiba mais</button>
                             </div>
                         </div>
                     </div>
                     <!-- Modal -->
-                    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+                    <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="${modalId}Label"
                         aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="infoModalLabel">Detalhes da Instituição</h5>
+                                    <h5 class="modal-title" id="${modalId}Label">Detalhes da Instituição</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
