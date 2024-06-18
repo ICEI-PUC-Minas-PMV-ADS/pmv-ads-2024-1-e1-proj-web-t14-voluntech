@@ -91,3 +91,72 @@ function atualizar() {
       , 2000);
   });
 }
+
+// Função para excluir o cadastro
+function excluirCadastro() {
+  Swal.fire({
+    title: 'Tem certeza?',
+    text: 'Esta ação é irreversível e excluirá permanentemente seu cadastro.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#d33',
+    cancelButtonColor: '#3085d6',
+    confirmButtonText: 'Sim, excluir!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Obter o nome da instituição que está sendo excluída
+      const nomeInstituicaoExcluida = localStorage.getItem('nomeInstituicaoLogada');
+      // Excluir o usuário do localStorage
+      const email = document.querySelector("input#email").value;
+      const indice = usuarios.findIndex((usuario) => usuario.email === email);
+      usuarios.splice(indice, 1);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      // Limpar todos os dados do localStorage
+      localStorage.removeItem("nomeInstituicaoLogada");
+      localStorage.removeItem("cep");
+      localStorage.removeItem("descricao");
+      localStorage.removeItem("rua");
+      localStorage.removeItem("cnpj");
+      localStorage.removeItem("bairro");
+      localStorage.removeItem("cidade");
+      localStorage.removeItem("password");
+      localStorage.removeItem("telefone");
+      localStorage.removeItem("celular");
+      localStorage.removeItem("email");
+      localStorage.removeItem("categorias");
+      localStorage.removeItem("imagemPerfil");
+
+      // Limpar dados sensíveis do localStorage
+      localStorage.removeItem("nomeInstituicaoLogada");
+      localStorage.removeItem("emailUsuarioLogado");
+
+      // Sinalizar que não há usuário logado
+      localStorage.setItem('logado', 'false');
+
+      // Recuperar as postagens armazenadas no localStorage
+      const postagens = JSON.parse(localStorage.getItem('postagens')) || [];
+
+      // Filtrar as postagens para manter apenas aquelas que não pertencem à instituição excluída
+      const postagensAtualizadas = postagens.filter(postagem => postagem.instituicao !== nomeInstituicaoExcluida);
+
+      // Atualizar o localStorage com as postagens filtradas
+      localStorage.setItem('postagens', JSON.stringify(postagensAtualizadas));
+
+      Swal.fire({
+        title: 'Excluído!',
+        text: 'Seu cadastro foi excluído com sucesso.',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        customClass: {
+          confirmButton: "btn btn-success",
+        },
+        buttonsStyling: false
+      }).then(() => {
+        // Redirecionar para a página inicial após a exclusão
+        window.location.href = "feed.html";
+      });
+    }
+  });
+}
