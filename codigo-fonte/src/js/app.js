@@ -62,7 +62,8 @@ cep.addEventListener("input", async () => {
       }
       rua.value = data.logradouro;
       bairro.value = data.bairro;
-      cidade.value = data.localidade + " / " + data.uf;
+      cidade.value = data.localidade;
+      estado.value = data.uf;
     });
 });
 
