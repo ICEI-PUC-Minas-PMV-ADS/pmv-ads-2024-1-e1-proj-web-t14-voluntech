@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Recupera os dados dos usuários cadastrados no localStorage
 const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
@@ -40,7 +39,6 @@ document.querySelector("#descricao").value = localStorage.getItem("usuarios");
 document.querySelector("#rua").value = localStorage.getItem("rua");
 
 document.querySelector("input#cnpj").value = localStorage.getItem("cnpj");
-=======
 // Mostrar os dados do usuário logado
 const usuarios = JSON.parse(localStorage.getItem("usuarios"));
 
@@ -134,4 +132,3 @@ function atualizar() {
       , 2000);
   });
 }
->>>>>>> 7c5ef3e101299052acf6f69e3eb8ca232660ee41
