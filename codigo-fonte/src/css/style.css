@@ -193,21 +193,6 @@ footer p {
   gap: 20px;
 }
 
-.cardONG {
-  height: 400px; /* Altura fixa para todos os cards */
-  display: flex;
-  flex-direction: column;
-}
-
-.card-img-top {
-  flex: 6; /* A imagem ocupa todo o espaço disponível */
-  height: 400px;
-}
-
-.card-body {
-  padding: 2rem;
-}
-
 /* Estilos Gerais da Tatiana */
 
 .page {
