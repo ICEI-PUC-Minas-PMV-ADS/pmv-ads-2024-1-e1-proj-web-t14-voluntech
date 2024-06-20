@@ -193,6 +193,21 @@ footer p {
   gap: 20px;
 }
 
+.cardONG {
+  height: 400px; /* Altura fixa para todos os cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  flex: 6; /* A imagem ocupa todo o espaço disponível */
+  height: 400px;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
 /* Estilos Gerais da Tatiana */
 
 .page {
@@ -382,7 +397,7 @@ form {
 }
 
 .linha-vertical {
-  height: 574px;
+  height: 100vh;;
   border-left: 1px solid;
   margin-left: 300px;
 }
@@ -395,24 +410,42 @@ form {
 
 @media (min-width: 990px) {
   .linha-vertical {
-  height: 560px;
-  border-left: 1px solid;
-  margin-left: 300px;
+    height: 100vh;
+    border-left: 1px solid;
+    margin-left: 300px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
+  h4 {
+    margin-left: 20px; /* Reduzir margem para telas menores */
+    margin-top: 20px; /* Reduzir margem para telas menores */
+    float: none; /* Remover float para que h4 não flutue */
   }
+
+  form {
+    margin-top: 15px; /* Ajustar margem superior do form */
+  }
+
+  .btn-2, .btn-3 {
+    width: 100%; /* Botões ocupam largura total */
+    margin-left: 0; /* Remover margem esquerda */
+    margin-right: 0; /* Remover margem direita */
+  }
+
+  .linha-vertical {
+    height: auto; /* Altura automática para ocupar o espaço disponível */
+    margin-left: 0; /* Remover margem esquerda */
+    border-left: none; /* Remover a borda esquerda */
+  }
+
+  .centered {
+    max-width: 100%; /* Largura máxima para o conteúdo centralizado */
+  }
+
+  /* Adicionar mais ajustes caso necessário */
 }
 
-@media screen and (min-width: 900px) {
-
-}
 
 /* Estilos Gerais do João */
  
