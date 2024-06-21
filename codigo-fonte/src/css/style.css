@@ -193,6 +193,12 @@ footer p {
   gap: 20px;
 }
 
+
+.cardONG {
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 /* Estilos Gerais da Tatiana */
 
 .page {
@@ -393,6 +399,13 @@ form {
   margin: 0 auto;
 }
 
+.btn-exc{
+  position: fixed;
+  bottom: 1rem;  /* Define a distância do botão em relação à parte inferior da tela */
+  left: 1rem;    /* Define a distância do botão em relação à esquerda da tela */
+  z-index: 1000; /* Assegura que o botão fique acima de outros elementos */
+}
+
 @media (min-width: 990px) {
   .linha-vertical {
     height: 100vh;
@@ -412,7 +425,7 @@ form {
     margin-top: 15px; /* Ajustar margem superior do form */
   }
 
-  .btn-2, .btn-3 {
+  .btn-2, .btn-3, .btn-exc {
     width: 100%; /* Botões ocupam largura total */
     margin-left: 0; /* Remover margem esquerda */
     margin-right: 0; /* Remover margem direita */
@@ -426,6 +439,10 @@ form {
 
   .centered {
     max-width: 100%; /* Largura máxima para o conteúdo centralizado */
+  }
+
+  .btn-exc{
+    position: static; /* Remove o alinhamento à esquerda */
   }
 
   /* Adicionar mais ajustes caso necessário */

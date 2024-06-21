@@ -1,0 +1,26 @@
+message: Please cite this software using these metadata.
+title: Voluntech
+authors:
+  - family-names: Vieira Cintra Karklin Tavares
+    given-names: Frederico
+  - family-names: Victor Nery dos Santos
+    given-names: João
+  - family-names: Maria Lima Moreno
+    given-names: Lis
+  - family-names: Barbosa Costa 
+    given-names: Lucas
+  - family-names: Henrique da Silva Durães
+    given-names: Pedro
+  - family-names:  Alves Medeiros
+    given-names: Tatiana
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Nepomuceno Curto
+    given-names: Hayala
+keywords:
+  - Instituição
+  - Caridade
+  - Doador
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-1-e1-proj-web-t14-voluntech
+version: 1.0.0
+date-released: 2024-06-21
