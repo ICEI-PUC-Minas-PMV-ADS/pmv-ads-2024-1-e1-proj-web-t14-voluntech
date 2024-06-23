@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios.forEach((instituicao, index) => {
             const modalId = `infoModal${index}`; // Criando um id único para cada modal
             const cardHTML = `
-                <div class="cardONG box-shadow col-md-4" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
-                    <img class="card-img-top" width="300" height="300" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
+                <div class="cardONG box-shadow col-md-4" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
+                    <img class="card-img-top" width="350" height="350" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
                     <div class="card-body">
                         <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
                         <p class="card-text">${instituicao.descricao}</p>
