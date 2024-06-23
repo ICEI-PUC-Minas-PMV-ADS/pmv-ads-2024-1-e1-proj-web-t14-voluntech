@@ -54,4 +54,4 @@ let cardONG =
     },
   ]
 
-localStorage.setItem("cardONG", JSON.stringify(cardONG));
+//localStorage.setItem("cardONG", JSON.stringify(cardONG));
