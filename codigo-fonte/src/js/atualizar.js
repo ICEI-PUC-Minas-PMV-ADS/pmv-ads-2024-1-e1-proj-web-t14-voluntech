@@ -87,7 +87,7 @@ function atualizar() {
     buttonsStyling: false
   }).then(() => {
     setTimeout(() => {
-      window.location.href = "atualizacao-de-cadastro.html"; // Substitua pelo URL da sua página de feed
+      window.location.href = "feed.html"; // Substitua pelo URL da sua página de feed
     }
       , 2000);
   });

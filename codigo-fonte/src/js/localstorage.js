@@ -18,34 +18,6 @@ form.addEventListener("submit", (event) => {
   if (isFormValid) {
     // Recupera os dados do localStorage, se existirem, ou inicializa um array vazio
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-    // Valida se o e-mail já existe
-    if (usuarios.some(user => user.email === data.email)) {
-      Swal.fire({
-        title: "Aviso!",
-        text: "E-mail já existe!",
-        icon: "error",
-        customClass: {
-          confirmButton: "btn btn-danger",
-        },
-        buttonsStyling: false
-      })
-      return;
-    }
-
-    // Valida se o CNPJ já existe
-    if (usuarios.some(user => user.cnpj === data.cnpj)) {
-      Swal.fire({
-        title: "Aviso!",
-        text: "CNPJ já existe!",
-        icon: "error",
-        customClass: {
-          confirmButton: "btn btn-danger",
-        },
-        buttonsStyling: false
-      })
-      return;
-    }
       
     // Armazena a imagem em base64
     const imageSelected = document.getElementById("input-image").files[0];
@@ -66,6 +38,34 @@ form.addEventListener("submit", (event) => {
       Swal.fire({
         title: "Aviso!",
         text: "Selecione uma imagem!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      })
+      return;
+    }
+
+    // Valida se o e-mail já existe no portal das instituições
+    if (usuarios.some(user => user.email === data.email)) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "E-mail já existe!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      })
+      return;
+    }
+
+    // Valida se o CNPJ já existe
+    if (usuarios.some(user => user.cnpj === data.cnpj)) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "CNPJ já existe!",
         icon: "error",
         customClass: {
           confirmButton: "btn btn-danger",

@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     <!-- Conteúdo será inserido dinamicamente -->
                                     <h5 id="modal-nome"></h5>
                                     <p><strong>Descrição:</strong> ${instituicao.descricao} <span id="modal-descricao"></span></p>
-                                    <p><strong>Missão:</strong> ${instituicao.categorias.toString().trim()}<span id="modal-missao"></span></p>
-                                    <p><strong>Contato:</strong> ${instituicao.telefone + ' - ' + instituicao.celular} <span id="modal-contato"></span></p>
+                                    <p><strong>Missão:</strong> ${instituicao.categorias.toString().trim()} <span id="modal-missao"></span></p>
+                                    <p><strong>Contato:</strong> ${instituicao.telefone} <span id="modal-contato"></span></p>
                                     <p><strong>Email:</strong> ${instituicao.email} <span id="modal-email"></span></p>
-                                    <p><strong>Endereço:</strong> <a href="https://www.google.com/maps/search/${encodeURIComponent(instituicao.rua + ', ' + instituicao.bairro + ', ' + instituicao.cidade + ', ' + instituicao.estado)}" target="_blank">${instituicao.rua + ', ' + instituicao.bairro + ', ' + instituicao.cidade + ' / ' + instituicao.estado}</a></p>
-                                </div>
+                                    <p><strong>Endereço:</strong> <a href="https://www.google.com/maps/search/${encodeURIComponent(instituicao.rua + ', ' + instituicao.bairro + ', ' + instituicao.cidade + ', ' + instituicao.estado)}" target="_blank">${instituicao.rua + ' - ' + instituicao.bairro + ', ' + instituicao.cidade + ' - ' + instituicao.estado + ', ' + instituicao.cep}</a></p>
+                                    </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                                 </div>

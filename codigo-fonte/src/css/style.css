@@ -75,12 +75,12 @@ a {
   margin-bottom: 0.75rem;
   font-size: 85px;
   font-weight: 300;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .card-texto {
   margin-bottom: 0;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .jumbotrons2 {
@@ -101,7 +101,7 @@ a {
 .botao {
   display: inline-block;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -114,9 +114,10 @@ a {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   background-color: transparent;
-  border-color: #FFFFFF;
+  border-color: #ffffff;
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -125,16 +126,16 @@ a {
 
 .botao:link,
 .botao:visited {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .botao:active {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #1f2f30ff;
 }
 
 .botao:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #1f2f30ff;
 }
 
@@ -302,10 +303,10 @@ input:hover {
   height: -80%;
   transform: translate(-10%, 20%);
 }
-.container > div > img {  
-  width: max-content;  
-  height: auto;  
-  object-fit: cover;  
+.container > div > img {
+  width: max-content;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Media query para telas menores que 1200px */
@@ -376,7 +377,7 @@ form {
 }
 
 .linha-vertical {
-  height: 100vh;;
+  height: 100vh;
   border-left: 1px solid;
   margin-left: 300px;
 }
@@ -387,10 +388,10 @@ form {
   margin: 0 auto;
 }
 
-.btn-exc{
+.btn-exc {
   position: fixed;
-  bottom: 1rem;  /* Define a distância do botão em relação à parte inferior da tela */
-  left: 1rem;    /* Define a distância do botão em relação à esquerda da tela */
+  bottom: 1rem; /* Define a distância do botão em relação à parte inferior da tela */
+  left: 1rem; /* Define a distância do botão em relação à esquerda da tela */
   z-index: 1000; /* Assegura que o botão fique acima de outros elementos */
 }
 
@@ -413,7 +414,9 @@ form {
     margin-top: 15px; /* Ajustar margem superior do form */
   }
 
-  .btn-2, .btn-3, .btn-exc {
+  .btn-2,
+  .btn-3,
+  .btn-exc {
     width: 100%; /* Botões ocupam largura total */
     margin-left: 0; /* Remover margem esquerda */
     margin-right: 0; /* Remover margem direita */
@@ -429,26 +432,24 @@ form {
     max-width: 100%; /* Largura máxima para o conteúdo centralizado */
   }
 
-  .btn-exc{
+  .btn-exc {
     position: static; /* Remove o alinhamento à esquerda */
   }
 
   /* Adicionar mais ajustes caso necessário */
 }
 
-
 /* Estilos Gerais do João */
- 
+
 /* Mudar o nome do input para imagem */
-input[type='file'] {
+input[type="file"] {
   display: none;
 }
 
 #image {
-  
   margin: 100px 0px;
   width: 350px;
-  height: 350px;  
+  height: 350px;
   float: right;
 }
 
@@ -457,11 +458,11 @@ input[type='file'] {
   border-radius: 5px;
   color: #fff;
   margin: 10px;
-  padding: 6px 20px
+  padding: 6px 20px;
 }
 
 .image-wrapper label:hover {
-  background-color: #2980b9
+  background-color: #2980b9;
 }
 
 #btnSaveModal {
@@ -481,14 +482,14 @@ input {
 }
 
 /* Style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
+input[type="submit"] {
+  background-color: #04aa6d;
   color: white;
 }
 
 /* The message box is shown when the user clicks on the password field */
 #message {
-  display:none;
+  display: none;
   background: white;
   color: #000;
   position: relative;
