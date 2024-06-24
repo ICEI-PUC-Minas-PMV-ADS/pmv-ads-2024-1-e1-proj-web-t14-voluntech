@@ -2,7 +2,7 @@ document.getElementById('cardProfile').style.display = 'none';
 
 const botaoPublicar = document.querySelector('#publicar');
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const cardProfile = document.getElementById('cardProfile');
   const profileImage = document.getElementById('profileImage');
   const nomeEditarPerfil = document.getElementById('nomeEditarPerfil');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (nomeInstituicaoLogada) {
       // Define o nome da instituição no perfil
       nomeEditarPerfil.innerText = nomeInstituicaoLogada;
-      
+
       // Recupera a imagem do perfil do usuário logado
       const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
       const usuarioLogado = usuarios.find(usuario => usuario.nomeInstituicao === nomeInstituicaoLogada);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const postagens = JSON.parse(localStorage.getItem('postagens')) || [];
 
   // Exibe as postagens na interface do usuário
-  postagens.forEach(function(postagem) {
+  postagens.forEach(function (postagem) {
     exibirPostagem(postagem);
   });
 
@@ -171,18 +171,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Associa uma função anônima ao evento de clique do botão
-  botaoPublicar.addEventListener('click', function() {
+  botaoPublicar.addEventListener('click', function () {
     createAndAddPost();
   });
 
   // Adiciona um evento de clique ao botão de editar perfil
-  document.getElementById('btnEditarPerfil').addEventListener('click', function() {
+  document.getElementById('btnEditarPerfil').addEventListener('click', function () {
     // Redireciona o usuário para a página de atualização de cadastro
     window.location.href = 'atualizacao-de-cadastro.html';
   });
 
   // Adiciona um evento de clique ao botão de denúncia
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
     if (event.target.classList.contains('denunciar-btn')) {
       Swal.fire({
         title: "Denúncia Registrada!",

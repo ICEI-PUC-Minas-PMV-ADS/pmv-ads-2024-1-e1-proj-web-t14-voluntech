@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedCidade = cidadeSelect.value;
         const selectedCategoria = categoriaSelect.value;
   
-        console.log(Estado selecionado: ${selectedEstado});
-        console.log(Cidade selecionada: ${selectedCidade});
-        console.log(Categoria selecionada: ${selectedCategoria});
+        console.log(`Estado selecionado: ${selectedEstado}`);
+        console.log(`Cidade selecionada: ${selectedCidade}`);
+        console.log(`Categoria selecionada: ${selectedCategoria}`);
   
         cards.forEach(card => {
             const cardEstado = card.getAttribute('data-estado');
             const cardCidade = card.getAttribute('data-cidade');
             const cardCategoria = card.getAttribute('data-categoria');
   
-            console.log(Card: Estado: ${cardEstado}, Cidade: ${cardCidade}, Categoria: ${cardCategoria});
+            console.log(`Card: Estado: ${cardEstado}, Cidade: ${cardCidade}, Categoria: ${cardCategoria}`);
   
             if (
-                (selectedEstado === ''  selectedEstado === cardEstado) &&
-                (selectedCidade === ''  selectedCidade === cardCidade) &&
+                (selectedEstado === '' ||  selectedEstado === cardEstado) &&
+                (selectedCidade === '' ||  selectedCidade === cardCidade) &&
                 (selectedCategoria === '' || selectedCategoria === cardCategoria)
             ) {
                 card.style.display = 'block';
