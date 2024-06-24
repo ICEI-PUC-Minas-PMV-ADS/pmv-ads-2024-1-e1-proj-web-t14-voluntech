@@ -19,6 +19,34 @@ form.addEventListener("submit", (event) => {
     // Recupera os dados do localStorage, se existirem, ou inicializa um array vazio
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+    // Valida se o e-mail já existe
+    if (usuarios.some(user => user.email === data.email)) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "E-mail já existe!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      })
+      return;
+    }
+
+    // Valida se o CNPJ já existe
+    if (usuarios.some(user => user.cnpj === data.cnpj)) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "CNPJ já existe!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      })
+      return;
+    }
+      
     // Armazena a imagem em base64
     const imageSelected = document.getElementById("input-image").files[0];
     if (imageSelected) {
@@ -33,6 +61,20 @@ form.addEventListener("submit", (event) => {
       reader.readAsDataURL(imageSelected);
     }
 
+    // Verifica se a imagem foi selecionada
+    if (!imageSelected) {
+      Swal.fire({
+        title: "Aviso!",
+        text: "Selecione uma imagem!",
+        icon: "error",
+        customClass: {
+          confirmButton: "btn btn-danger",
+        },
+        buttonsStyling: false
+      })
+      return;
+    }
+  
     // Adiciona os dados do novo usuário ao array
     usuarios.push(data);
 
@@ -81,7 +123,7 @@ function validateForm(data) {
       }
     }
   }
-
+  
   // Realize qualquer outra validação necessária aqui (por exemplo, validação de senha, formato de email, etc.)
 
   return isFormValid;

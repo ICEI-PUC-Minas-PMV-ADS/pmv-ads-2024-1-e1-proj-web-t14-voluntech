@@ -46,6 +46,18 @@ function atualizar() {
   const email = document.querySelector("input#email").value;
   const categorias = document.querySelector("select#categorias").value;
 
+  localStorage.setItem("nomeInstituicaoLogada", nomeInstituicao);
+  localStorage.setItem("cep", cep);
+  localStorage.setItem("descricao", descricao);
+  localStorage.setItem("rua", rua);
+  localStorage.setItem("cnpj", cnpj);
+  localStorage.setItem("bairro", bairro);
+  localStorage.setItem("cidade", cidade);
+  localStorage.setItem("password", password);
+  localStorage.setItem("telefone", telefone);
+  localStorage.setItem("celular", celular);
+  localStorage.setItem("email", email);
+  localStorage.setItem("categorias", categorias);
 
   // Atualizar os dados do usuário logado
   const indice = usuarios.findIndex((usuario) => usuario.email === email);

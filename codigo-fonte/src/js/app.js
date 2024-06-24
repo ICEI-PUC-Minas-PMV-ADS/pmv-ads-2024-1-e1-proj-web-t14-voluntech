@@ -166,5 +166,6 @@ function readURL(input) {
   $("#image").css("height", "300px");
 
   $("#btnSaveModal").css("width", "600px");
-  $("#btnSaveModal").css("height", "40px");
+  $("#btnSaveModal").css("height", "40px");  
 }
+// Fim da validação do formulário de cadastro geral

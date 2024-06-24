@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// Função para mostrar os detalhes da instituição
 function showModal(button) {
     const card = button.closest('.cardONG');
 
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios.forEach((instituicao, index) => {
             const modalId = `infoModal${index}`; // Criando um id único para cada modal
             const cardHTML = `
-                <div class="cardONG box-shadow col-md-4" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
-                    <img class="card" width="350" height="350" object-fit: "cover;"  id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
+                <div class="cardONG col-md-4 box-shadow" style="width: 1200px;" data-categoria="${instituicao.categorias}" data-estado="${instituicao.estado}" data-cidade="${instituicao.cidade}">
+                    <img class="card" width="350" height="350" object-fit: "cover;" id="image-showed" src="${instituicao.image}" alt="Imagem da instituição">
                     <div class="card-body">
                         <h5 class="card-title">${instituicao.nomeInstituicao}</h5>
                         <p class="card-text">${instituicao.descricao}</p>
